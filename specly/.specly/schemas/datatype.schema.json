@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/V3ConfigDataType",
+  "definitions": {
+    "V3ConfigDataType": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "logicalType": {
+          "type": "string",
+          "description": "ODCS logical type, admin-declared; omitted when derived from the name."
+        },
+        "logicalTypeOptions": {
+          "type": "object",
+          "additionalProperties": {},
+          "description": "ODCS `logicalTypeOptions` columns of this type inherit, admin-declared; omitted when derived from the name."
+        }
+      },
+      "required": [
+        "name",
+        "description"
+      ],
+      "additionalProperties": false,
+      "description": "`Config/*.json` registry entity types — one array element each (the file itself is `V3ConfigX[]`, validated element-by-element the same way a `Tables/*.json` file validates as a single `V3Table`). `uuid` is optional for the same reason as every other entity: a new registry entry omits it and push assigns one. Rule-collection registries (`relation_rules.json`, `flag_rules.json`, `column_sorting_rules.json`) are edited in Specly, not the repo, so they have no type here."
+    }
+  }
+}

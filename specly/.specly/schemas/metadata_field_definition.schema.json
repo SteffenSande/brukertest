@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/V3ConfigMetadataFieldDefinition",
+  "definitions": {
+    "V3ConfigMetadataFieldDefinition": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "entityTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "key": {
+          "type": "string"
+        },
+        "fieldType": {
+          "$ref": "#/definitions/V3MetadataFieldType",
+          "description": "The value's type. In a contract (`customProperties` entry): `kort_tekst` (short text) a string, a list of strings with `isMultiSelect`; `lang_tekst` (long text) a string; `tall`/`decimal` (number) and `int` (integer) a YAML number (7, not \"7\"; a stored value that isn't a number stays text); `dato` (date) `YYYY-MM-DD`; `timestamp` `YYYY-MM-DDTHH:MM`; `klokkeslett` (time of day) `HH:MM`; `boolean` true/false; `person` the person's name; `kildesystem` (source system) its name, a list of names with `isMultiSelect`; `nedtrekksmeny` (dropdown) one of `dropdownOptions`, a list of them with `isMultiSelect`; `tabell` (table fields only, `entityTypes` `tableType`) another table's name, a list of names with `isMultiSelect`; `kolonne` (column fields only, `entityTypes` `column`) the name of another column of the same table, a list of names with `isMultiSelect`; `kolonnereferanse` (relationship fields) `table.column`; `radliste` (relationship fields) a list of maps, one per row; `beregning` (column fields only, `entityTypes` `column`) a calculation as a map: `kloss` (the building block), `kolonner` (the columns it reads, each `table.column`), `valg` (its other choices), `betingelser` (the conditions of the `naar` block) or `sql` (the `fri` block). Absent = `kort_tekst`."
+        },
+        "dropdownOptions": {},
+        "isMultiSelect": {
+          "type": "boolean"
+        },
+        "sortOrder": {
+          "type": "number"
+        },
+        "optionColors": {},
+        "isRequired": {
+          "type": "boolean"
+        },
+        "glossaryLinkable": {
+          "type": "boolean"
+        },
+        "isSharedDropdown": {
+          "type": "boolean"
+        },
+        "odcsTarget": {
+          "type": "string",
+          "description": "Admin-declared ODCS contract slot at the field's level; absent or \"customProperties\" = the customProperties blob."
+        },
+        "odcsPropertyName": {
+          "type": "string",
+          "description": "The customProperties `property` name for this field; absent = the field key."
+        },
+        "suggestible": {
+          "type": "boolean",
+          "description": "Whether a suggestion («Foreslå endringer») may change the field's value; absent = true."
+        },
+        "description": {
+          "type": "string",
+          "description": "Plain-text help text shown next to the field wherever it is filled in; absent = none."
+        },
+        "labelEn": {
+          "type": "string",
+          "description": "English name of the field, shown when the UI is in English; absent = use `label`."
+        },
+        "defaultValue": {
+          "type": "string",
+          "description": "Single-select dropdowns: the option new columns, and empty table fields when a table gets a type, are given in Specly; absent = none."
+        },
+        "columnSources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "`kolonnereferanse`: where the column choices come from (`fromTable`, `upstream`, `toTable`)."
+        },
+        "subFields": {
+          "type": "array",
+          "items": {},
+          "description": "`radliste`: the sub-field definitions of a row."
+        },
+        "appliesToTableTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Table type names. A relationship field shows only on relationships whose `from` table has one of them; a `tabell` field offers only tables of them. Absent = every table type."
+        },
+        "maxValues": {
+          "type": "number",
+          "description": "Governance: at most this many values (multi-select dropdowns; `field.maxValues:<key>`). Absent = no limit."
+        },
+        "parentFieldDefUuid": {
+          "type": "string",
+          "description": "Governance: the `key` of the field whose value this field's options belong under (`field.parent:<key>`). Absent = none."
+        },
+        "optionParents": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": "Governance: option -> the parent field's options it is allowed under; an option without an entry is allowed under any. Absent = none."
+        },
+        "deprecationCondition": {
+          "type": "string",
+          "enum": [
+            "onlyWhenDeprecated",
+            "requiredWhenDeprecated"
+          ],
+          "description": "Governance: the field may be filled only on a deprecated table/column, or must be filled there. Absent = no condition."
+        },
+        "phasingOut": {
+          "type": "boolean",
+          "description": "Governance: the field is being phased out — still allowed, a filled value is a warning (`field.phasingOut:<key>`). Absent = false."
+        },
+        "phasingOutNote": {
+          "type": "string",
+          "description": "Why the field is being phased out, or what to use instead. Absent = none."
+        }
+      },
+      "required": [
+        "label",
+        "entityTypes"
+      ],
+      "additionalProperties": false,
+      "description": "`metadata_field_definitions.json` entries have no `name` — `label` is display text, `key` is the stable handle a table type's `columnFieldDefUuids`/`metadataFieldDefUuids` reference."
+    },
+    "V3MetadataFieldType": {
+      "type": "string",
+      "enum": [
+        "kort_tekst",
+        "lang_tekst",
+        "tall",
+        "int",
+        "decimal",
+        "dato",
+        "timestamp",
+        "klokkeslett",
+        "person",
+        "kildesystem",
+        "nedtrekksmeny",
+        "boolean",
+        "kolonnereferanse",
+        "radliste",
+        "tabell",
+        "kolonne",
+        "beregning"
+      ],
+      "description": "A metadata field definition's `fieldType`: what its values are and how a contract writes them."
+    }
+  }
+}

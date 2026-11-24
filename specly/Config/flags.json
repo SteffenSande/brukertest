@@ -1,0 +1,32 @@
+[
+  {
+    "uuid": "256fdbca-c359-4d1a-92f4-b82cf800392f",
+    "name": "PK",
+    "description": "Primærnøkkel: pk__-kolonnen, ett tall per rad (per versjon når tabellen har historikk). Koden regner den ut.",
+    "icon": "🔑",
+    "order": 0,
+    "systemKey": "primaryKey"
+  },
+  {
+    "uuid": "950b2bbe-4905-4f29-9619-104fc482de82",
+    "name": "BK",
+    "description": "Forretningsnøkkel: de naturlige nøkkelkolonnene som sammen gjør en rad unik. Står aldri på bk__-kolonnen. Koden regner bk__ og pk__ av dem.",
+    "icon": "🏷️",
+    "order": 1,
+    "systemKey": "businessKey"
+  },
+  {
+    "uuid": "bd416aeb-c828-4a95-a6be-91867fa5ad7e",
+    "name": "FK",
+    "description": "Koblingsnøkkel: fb__ i sølv (peker på en annen sølvtabells bk__) og fk__ i gull (peker på en dimensjons pk__). Relasjonen på kolonnen sier hva den peker på.",
+    "icon": "🔗",
+    "order": 2
+  },
+  {
+    "uuid": "a43d05ae-ad64-40f2-8f65-e64983d65b3d",
+    "name": "Eget navn",
+    "description": "Sølv og gull: kolonnen heter med vilje noe annet enn nedstrømsnavnet til oppstrømskolonnen (AKTNR blir butikknummer i slv__butikk). Uten flagget stopper forhåndssjekken, fordi en glemt omdøping ellers ikke synes.",
+    "icon": "✏️",
+    "order": 3
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "columnBusinessNameSource": "downstreamName",
+  "quoteAllStrings": false,
+  "referenceStyle": "namedRefs",
+  "tableTypeFields": true,
+  "tablePhysicalTypeDefault": "table",
+  "deprecatedTableStatusUuids": [],
+  "primaryKeyPosition": false,
+  "primaryKeyRequired": true,
+  "builtinFieldMappings": {
+    "businessKey": {
+      "odcsTarget": "customProperties"
+    },
+    "columnStatus": {
+      "odcsTarget": "customProperties",
+      "odcsPropertyName": "status"
+    },
+    "dataProductStatus": {
+      "odcsTarget": "status"
+    },
+    "databaseName": {
+      "odcsTarget": "customProperties"
+    },
+    "developerNote": {
+      "odcsTarget": "transformDescription"
+    },
+    "downstreamName": {
+      "odcsTarget": "customProperties"
+    },
+    "excludeFromSorting": {
+      "odcsTarget": "customProperties"
+    },
+    "owner": {
+      "odcsTarget": "team.name"
+    },
+    "schemaName": {
+      "odcsTarget": "customProperties"
+    },
+    "sourceSystem": {
+      "odcsTarget": "customProperties"
+    },
+    "tableStatus": {
+      "odcsTarget": "status"
+    },
+    "tableType": {
+      "odcsTarget": "customProperties"
+    },
+    "upstreamColumns": {
+      "odcsTarget": "transformSourceObjects"
+    },
+    "upstreamTables": {
+      "odcsTarget": "customProperties"
+    }
+  }
+}

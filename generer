@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Forhåndssjekk og kodegenerering fra kontraktene (specly/Tables/**/*.odcs.yaml). Snakker ikke med Databricks.
+#   ./generer
+#   SPECLY=<mappe> UT=<mappe> ./generer    mot en annen specly-mappe og til en annen utmappe (testene bruker det)
+#
+# Selve arbeidet står i tools/generer.py (det samme notebooks/kurs_generer_kjor kjører i nettlesersporet):
+# 1. tools/modell.py samler kryss-fakta (oppstrøm, relasjoner, kildesystemenes format, standardkolonner) til modell.j2.
+# 2. tools/forhandssjekk.py stopper med en norsk melding hvis en kontrakt mangler noe malene trenger. Da skrives ingenting.
+# 3. Én `datacontract export custom` per kontrakt, med malen for tabelltypen (maler/pyspark/<type>.py.j2),
+#    til databricks/pyspark/tabeller/<tabell>.py. Konstantene fra maler/pyspark/plattform.j2 går til
+#    databricks/pyspark/plattform/konstanter.py, og taggene i Unity Catalog (maler/pyspark/tags.py.j2, modul 8) til
+#    databricks/pyspark/plattform/tags_data.py. Ingen etterbehandling: filene er det malen skrev.
+# Miljø: DATACONTRACT (ellers datacontract på PATH eller i ~/.local/bin), SPECLY, UT, KONSTANTER, TAGS.
+set -euo pipefail
+cd "$(dirname "$0")"
+exec uv run -q --no-project --with pyyaml python3 tools/generer.py

@@ -1,0 +1,60 @@
+[
+  {
+    "uuid": "1f02e982-a10f-568c-9272-b57a5e314d54",
+    "name": "pk__ først",
+    "ruleType": "pattern_first",
+    "pattern": "^pk__",
+    "direction": "asc",
+    "priority": 0,
+    "isActive": true
+  },
+  {
+    "uuid": "401246ec-5bff-5907-9f86-d873cd1457ea",
+    "name": "bk__ etter pk__",
+    "ruleType": "pattern_first",
+    "pattern": "^bk__",
+    "direction": "asc",
+    "priority": 1,
+    "isActive": true
+  },
+  {
+    "uuid": "a4cbeda9-8a55-54c9-9883-d524b837e836",
+    "name": "fb__ og fk__ etter nøklene",
+    "ruleType": "pattern_first",
+    "pattern": "^(fb|fk)__",
+    "direction": "asc",
+    "priority": 2,
+    "isActive": true
+  },
+  {
+    "uuid": "cb18bd73-adae-5c71-8ba3-95a3ecc5183d",
+    "name": "Kolonner med BK-flagg",
+    "ruleType": "flag_order",
+    "pattern": [
+      "950b2bbe-4905-4f29-9619-104fc482de82"
+    ],
+    "flagNames": [
+      "BK"
+    ],
+    "direction": "asc",
+    "priority": 3,
+    "isActive": true
+  },
+  {
+    "uuid": "76df1afe-b0b7-5631-93ec-7a3c0445f23b",
+    "name": "Systemkolonner sist",
+    "ruleType": "pattern_last",
+    "pattern": "^sys__",
+    "direction": "asc",
+    "priority": 4,
+    "isActive": true
+  },
+  {
+    "uuid": "2699ddde-1561-5247-9850-2402330d76bb",
+    "name": "Resten alfabetisk",
+    "ruleType": "alphabetical",
+    "direction": "asc",
+    "priority": 5,
+    "isActive": true
+  }
+]

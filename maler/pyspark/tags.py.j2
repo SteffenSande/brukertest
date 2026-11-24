@@ -1,0 +1,39 @@
+{%- import 'felles_py.j2' as f -%}
+{%- from 'modell.j2' import modell -%}
+{#- Tags i Unity Catalog for alle tabellene (modul 8). Som konstanter.py.j2: kontrakten malen får, brukes
+    ikke. Alt står i modell.j2, fordi tabelltaggen klassifisering trenger alle kolonnene i tabellen.
+    - tabelltaggen eier: feltet Eier (team.name i kontrakten)
+    - kolonnetaggen klassifisering: feltet Klassifisering (classification på kolonnen)
+    - tabelltaggen klassifisering: den strengeste klassifiseringen blant kolonnene. Rekkefølgen er valgene for feltet
+      Klassifisering i specly/Config (offentlig, intern, fortrolig): den siste som forekommer, er den strengeste.
+    Granularitet blir ingen tag. Den står i kontrakten. -#}
+"""Tags i Unity Catalog per tabell. GENERERT av ./generer (maler/pyspark/tags.py.j2) fra kontraktene. Ikke rediger.
+
+plattform/tags.py setter dem etter at pipelinen er ferdig (modul 8).
+"""
+
+# Nøklene kurset eier. Står en nøkkel her, men ikke på tabellen eller kolonnen, fjernes taggen.
+EIDE_NOKLER = ["eier", "klassifisering"]
+
+TAGS = {
+{%- for navn, t in modell.tabeller|dictsort %}
+{%- set ns = namespace(strengest=none) %}
+{%- set klassifisert = t.kolonner|selectattr('klassifisering')|list %}
+{%- for valg in modell.klassifiseringer %}{% if valg in klassifisert|map(attribute='klassifisering')|list %}{% set ns.strengest = valg %}{% endif %}{% endfor %}
+{%- set tabell = [] %}
+{%- if t.eier %}{% set _ = tabell.append(f.s('eier') ~ ': ' ~ f.s(t.eier)) %}{% endif %}
+{%- if ns.strengest %}{% set _ = tabell.append(f.s('klassifisering') ~ ': ' ~ f.s(ns.strengest)) %}{% endif %}
+    {{ f.s(navn) }}: {
+        "tabell": { {{- tabell|join(', ') -}} },
+{%- if klassifisert %}
+        "kolonner": {
+{%- for c in klassifisert %}
+            {{ f.s(c.navn) }}: {"klassifisering": {{ f.s(c.klassifisering) }}},
+{%- endfor %}
+        },
+{%- else %}
+        "kolonner": {},
+{%- endif %}
+    },
+{%- endfor %}
+}

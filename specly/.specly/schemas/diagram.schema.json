@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/V3Diagram",
+  "definitions": {
+    "V3Diagram": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "tables": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "table": {
+                "type": "string"
+              },
+              "tableUuid": {
+                "type": "string"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "table",
+              "x",
+              "y"
+            ],
+            "additionalProperties": false
+          },
+          "description": "`tableUuid` is additive, same ambiguity rationale as `V3RelationEndpoint`."
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/V3Relation"
+          },
+          "description": "The relations between the tables it places; left out in a contracts-only export, where each relation lives in its `from` table's contract."
+        },
+        "relationBreakpoints": {
+          "type": "object",
+          "additionalProperties": {},
+          "description": "Contracts-only export: relation uuid → that relation's route (`breakpoints`) on this diagram, omitted when no relation has one."
+        },
+        "status": {
+          "type": "string",
+          "description": "Resolved diagram-status name, omitted when null."
+        },
+        "isAutomatic": {
+          "type": "boolean",
+          "description": "Set from YjsDiagramMeta.isAutomatic when defined."
+        },
+        "folder": {
+          "type": "string",
+          "description": "`/`-separated folder path, root first (a literal `/` in a name escaped as `\\/`), omitted when the diagram has no folder."
+        },
+        "sourceSystems": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Resolved source-system names the diagram is linked to, omitted when empty."
+        }
+      },
+      "required": [
+        "description",
+        "name",
+        "tables"
+      ],
+      "additionalProperties": true
+    },
+    "V3Relation": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "from": {
+          "$ref": "#/definitions/V3RelationEndpoint"
+        },
+        "to": {
+          "$ref": "#/definitions/V3RelationEndpoint"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "sourceCardinality": {
+          "type": "string"
+        },
+        "targetCardinality": {
+          "type": "string"
+        },
+        "fromColumns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/V3RelationEndpoint"
+          }
+        },
+        "toColumns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/V3RelationEndpoint"
+          }
+        },
+        "breakpoints": {
+          "description": "Custom routing waypoints for the diagram connector, written straight through to the legacy `Relation.breakpoints` Postgres column (not part of the Yjs entity)."
+        }
+      },
+      "required": [
+        "comment",
+        "from",
+        "to",
+        "uuid"
+      ]
+    },
+    "V3RelationEndpoint": {
+      "type": "object",
+      "properties": {
+        "table": {
+          "type": "string"
+        },
+        "tableUuid": {
+          "type": "string"
+        },
+        "column": {
+          "type": "string"
+        },
+        "columnUuid": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "table",
+        "column"
+      ],
+      "additionalProperties": false,
+      "description": "`tableUuid`/`columnUuid` are additive — Specly allows two tables to share a name (e.g. the same table name across two schemas), so the bare `table`/ `column` name alone can be ambiguous. The importer resolves the uuid first and only falls back to the name when it's absent or unknown (an older export, or a hand-authored file)."
+    }
+  }
+}

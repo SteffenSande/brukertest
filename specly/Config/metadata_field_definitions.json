@@ -1,0 +1,382 @@
+[
+  {
+    "uuid": "eb59a8f1-4a22-46b8-966b-be22ee1354e8",
+    "label": "Beskrivelse",
+    "entityTypes": [
+      "column"
+    ],
+    "key": "description",
+    "fieldType": "lang_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 0,
+    "optionColors": null,
+    "glossaryLinkable": true,
+    "odcsTarget": "customProperties"
+  },
+  {
+    "uuid": "8315bf1e-6c44-43dd-9d66-35be564dfd5b",
+    "label": "Utviklernotat",
+    "entityTypes": [
+      "column"
+    ],
+    "key": "developerNote",
+    "fieldType": "lang_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 1,
+    "optionColors": null,
+    "glossaryLinkable": true,
+    "odcsTarget": "customProperties"
+  },
+  {
+    "uuid": "d68921e9-b40b-4567-992f-c4783f823859",
+    "label": "Rensing",
+    "entityTypes": [
+      "column"
+    ],
+    "key": "rensing",
+    "fieldType": "nedtrekksmeny",
+    "dropdownOptions": [
+      "trim",
+      "tom_til_null",
+      "fjern_ledende_nuller",
+      "store_bokstaver",
+      "ja_nei_til_boolsk"
+    ],
+    "isMultiSelect": true,
+    "sortOrder": 2,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Bronze: rensing før typen settes, alltid i rekkefølgen trim, tom_til_null, fjern_ledende_nuller, store_bokstaver, ja_nei_til_boolsk. Typen (datatypen på kolonnen) og formatet (fra kildesystemet) trenger ikke stå her."
+  },
+  {
+    "uuid": "d37c7d2f-bc0d-4e49-a500-07100e0a78cb",
+    "label": "Beregning",
+    "entityTypes": [
+      "column"
+    ],
+    "key": "beregning",
+    "fieldType": "lang_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 3,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "transformLogic",
+    "description": "Sølv og gull: SQL-uttrykk for verdien, skrevet med kolonnenavnene i denne tabellen (antall * enhetspris_belop - rabatt_belop). Regnes ut etter de andre kolonnene. Resultatet får kolonnens datatype. Forklaringen for mennesker står i Utviklernotat."
+  },
+  {
+    "uuid": "a75cc7ca-1faf-41a4-bd65-5c167404834c",
+    "label": "Datoeffektiv på",
+    "entityTypes": [
+      "column"
+    ],
+    "key": "datoeffektiv_pa",
+    "fieldType": "kolonne",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 4,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Gull fakta, på en fk__ mot en SCD2-dimensjon: datokolonnen som velger hvilken versjon av dimensjonen raden peker på (versjonen som gjaldt ved slutten av dagen)."
+  },
+  {
+    "uuid": "d54f8ca0-c326-4c79-a789-645a3d9fe1be",
+    "label": "Radfilter",
+    "entityTypes": [
+      "tableType"
+    ],
+    "key": "radfilter",
+    "fieldType": "lang_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 5,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Sølv og gull fakta: SQL-predikat for hvilke rader som er med, med kolonnenavnene i oppstrømstabellene (AKTTYPE = 'B'). Står det tabellnavn foran, brukes det."
+  },
+  {
+    "uuid": "ca2f103f-3fd9-46e2-9b99-f646d09416e9",
+    "label": "Union av",
+    "entityTypes": [
+      "tableType"
+    ],
+    "key": "union_av",
+    "fieldType": "tabell",
+    "dropdownOptions": null,
+    "isMultiSelect": true,
+    "sortOrder": 6,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Sølv: tabellen er en union av radene fra disse oppstrømstabellene (én gren per tabell). Hver kolonne har én oppstrømskolonne per gren, eller ingen (da er verdien tom for den grenen). En annen oppstrømstabell kobles til grenen den har en relasjon til. Beregning regnes etter unionen, og kan bruke sys__kildesystem og kolonnens egen verdi fra unionen.",
+    "appliesToTableTypes": [
+      "bronze"
+    ]
+  },
+  {
+    "uuid": "bcb0228a-dd28-4305-a2e0-4f6d2cb2e67a",
+    "label": "Historikk",
+    "entityTypes": [
+      "tableType"
+    ],
+    "key": "historikk",
+    "fieldType": "nedtrekksmeny",
+    "dropdownOptions": [
+      "SCD1",
+      "SCD2"
+    ],
+    "isMultiSelect": false,
+    "sortOrder": 7,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Gull dimensjon: SCD1 = bare gjeldende versjon per nøkkel. SCD2 = alle versjoner med gyldig_fra og gyldig_til, og faktaen slår opp datoeffektivt."
+  },
+  {
+    "uuid": "2fd22808-9f1f-4294-9db7-68a81b984792",
+    "label": "Faktatype",
+    "entityTypes": [
+      "tableType"
+    ],
+    "key": "faktatype",
+    "fieldType": "nedtrekksmeny",
+    "dropdownOptions": [
+      "Transaksjon",
+      "Periodisk øyeblikksbilde"
+    ],
+    "isMultiSelect": false,
+    "sortOrder": 8,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Gull fakta. Transaksjon (tomt): én rad per hendelse, fra gjeldende versjoner i sølv. Periodisk øyeblikksbilde: én rad per nøkkel og dag i kalenderen, med versjonen i sølv som gjaldt ved slutten av dagen, fra første til siste leveranse. Dagen kommer fra en datokolonne med oppstrøm i kalenderen. Målene er semi-additive: de kan summeres over alt unntatt dager."
+  },
+  {
+    "uuid": "1047623d-58fa-4ed5-9468-3a158edf8351",
+    "label": "Filformat",
+    "entityTypes": [
+      "sourceSystem"
+    ],
+    "key": "filformat",
+    "fieldType": "nedtrekksmeny",
+    "dropdownOptions": [
+      "csv",
+      "json",
+      "parquet"
+    ],
+    "isMultiSelect": false,
+    "sortOrder": 9,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Formatet på filene i landing. Raw leser med dette."
+  },
+  {
+    "uuid": "556d13a7-6e87-4428-bce1-7776f42e7cb8",
+    "label": "Skilletegn",
+    "entityTypes": [
+      "sourceSystem"
+    ],
+    "key": "skilletegn",
+    "fieldType": "kort_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 10,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "CSV: tegnet mellom feltene."
+  },
+  {
+    "uuid": "d5211dd6-1e4f-4d32-8b74-2c5fba84e94e",
+    "label": "Desimaltegn",
+    "entityTypes": [
+      "sourceSystem"
+    ],
+    "key": "desimaltegn",
+    "fieldType": "kort_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 11,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Tegnet mellom heltall og desimaler i tall som kommer som tekst. Bronze bruker det når typen er decimal."
+  },
+  {
+    "uuid": "e971b27e-e6e2-4b1a-8760-a7d491765ce9",
+    "label": "Datoformat",
+    "entityTypes": [
+      "sourceSystem"
+    ],
+    "key": "datoformat",
+    "fieldType": "kort_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 12,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Hvordan kilden skriver en dato som tekst (Spark-mønster, f.eks. dd.MM.yyyy). Bronze bruker det når typen er date."
+  },
+  {
+    "uuid": "b4b0dcd7-6363-42f3-963e-46ad1d23443b",
+    "label": "Tidsformat",
+    "entityTypes": [
+      "sourceSystem"
+    ],
+    "key": "tidsformat",
+    "fieldType": "kort_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 13,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Hvordan kilden skriver et tidspunkt som tekst (Spark-mønster). Bronze bruker det når typen er timestamp."
+  },
+  {
+    "uuid": "41639064-0a6e-41b8-ab92-5e783b0de49e",
+    "label": "Tidssone",
+    "entityTypes": [
+      "sourceSystem"
+    ],
+    "key": "tidssone",
+    "fieldType": "kort_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 14,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Tidssonen et tidspunkt uten sone i teksten er skrevet i (f.eks. Europe/Oslo). Bronze gjør tidspunktet om til UTC."
+  },
+  {
+    "uuid": "ea157568-4ccc-462a-96e8-4de2bf07fac3",
+    "label": "Uttrekk",
+    "entityTypes": [
+      "sourceSystem"
+    ],
+    "key": "uttrekk",
+    "fieldType": "nedtrekksmeny",
+    "dropdownOptions": [
+      "Fullt",
+      "Endringer"
+    ],
+    "isMultiSelect": false,
+    "sortOrder": 15,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "customProperties",
+    "description": "Fullt: hver leveranse er hele tabellen, så en rad som mangler er borte i kilden, og versjonen lukkes. Endringer: hver leveranse har bare nye og endrede rader."
+  },
+  {
+    "uuid": "2124ef1a-2e4b-430d-b3dd-fad4f1525ea8",
+    "label": "Eier",
+    "entityTypes": [
+      "tableType"
+    ],
+    "key": "eier",
+    "fieldType": "nedtrekksmeny",
+    "dropdownOptions": [
+      "Salgsanalyse",
+      "Sortiment",
+      "Kundeklubben",
+      "Dataplattform"
+    ],
+    "isMultiSelect": false,
+    "sortOrder": 16,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "team.name",
+    "description": "Teamet som eier tabellen og svarer på spørsmål om den. Blir team.name i kontrakten og taggen eier i Unity Catalog."
+  },
+  {
+    "uuid": "4ef60f08-cddf-452a-8cef-d44d9488a8f3",
+    "label": "Klassifisering",
+    "entityTypes": [
+      "column"
+    ],
+    "key": "klassifisering",
+    "fieldType": "nedtrekksmeny",
+    "dropdownOptions": [
+      "offentlig",
+      "intern",
+      "fortrolig"
+    ],
+    "isMultiSelect": false,
+    "sortOrder": 17,
+    "optionColors": null,
+    "glossaryLinkable": true,
+    "odcsTarget": "classification",
+    "description": "Hvem som kan se verdien: offentlig (alle), intern (alle ansatte), fortrolig (bare de som trenger den). Blir taggen klassifisering i Unity Catalog."
+  },
+  {
+    "uuid": "6af3f004-6961-4f09-8815-9244c6947609",
+    "label": "Granularitet",
+    "entityTypes": [
+      "tableType"
+    ],
+    "key": "granularitet",
+    "fieldType": "lang_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 18,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "dataGranularityDescription",
+    "description": "Gull fakta: hva én rad er («Én rad per varelinje på en kvittering»)."
+  },
+  {
+    "uuid": "fd487456-18fc-4a29-a411-c4e8164c7b25",
+    "label": "Begrensninger",
+    "entityTypes": [
+      "dataProduct"
+    ],
+    "key": "begrensninger",
+    "fieldType": "lang_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 19,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "description.limitations",
+    "description": "Hva dataproduktet ikke kan brukes til, og kjente svakheter."
+  },
+  {
+    "uuid": "6b684e76-4b82-4df8-af87-cfc12c55dcdf",
+    "label": "Bruk",
+    "entityTypes": [
+      "dataProduct"
+    ],
+    "key": "bruk",
+    "fieldType": "kort_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": false,
+    "sortOrder": 20,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "odcsTarget": "description.usage",
+    "description": "Hvordan dataproduktet er ment å brukes, i én setning."
+  },
+  {
+    "uuid": "7ff0d499-85dd-401a-b19c-027f7c1c0eae",
+    "label": "Forbruker",
+    "entityTypes": [
+      "dataProduct"
+    ],
+    "key": "forbruker",
+    "fieldType": "kort_tekst",
+    "dropdownOptions": null,
+    "isMultiSelect": true,
+    "sortOrder": 21,
+    "optionColors": null,
+    "glossaryLinkable": false,
+    "description": "Hvem som bruker dataproduktet: team, rapport eller system."
+  }
+]

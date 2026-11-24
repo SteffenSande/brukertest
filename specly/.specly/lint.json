@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "enums": {
+    "dataTypes": [
+      "bigint",
+      "boolean",
+      "date",
+      "decimal(10,2)",
+      "int",
+      "string",
+      "timestamp"
+    ],
+    "flags": [
+      "BK",
+      "Eget navn",
+      "FK",
+      "PK"
+    ],
+    "tableStatuses": [
+      "I produksjon",
+      "Ikke begynt",
+      "Under arbeid"
+    ],
+    "columnStatuses": [
+      "Ferdig",
+      "Skisse",
+      "Under arbeid"
+    ],
+    "diagramStatuses": [],
+    "dataProductStatuses": []
+  },
+  "rules": {
+    "ambiguousNameReference": true,
+    "lineageTargetMustExist": true,
+    "rejectFabricatedUuids": true
+  },
+  "policy": {
+    "adminOnlyConfigImport": true,
+    "adminConfigFiles": [
+      "business_concept_rules.json",
+      "column_sorting_rules.json",
+      "column_statuses.json",
+      "data_product_statuses.json",
+      "datatypes.json",
+      "diagram_statuses.json",
+      "flag_rules.json",
+      "flags.json",
+      "metadata_field_definitions.json",
+      "odcs.json",
+      "person_roles.json",
+      "relation_rules.json",
+      "table_naming.json",
+      "table_statuses.json",
+      "table_types.json"
+    ],
+    "protectedBranches": []
+  }
+}

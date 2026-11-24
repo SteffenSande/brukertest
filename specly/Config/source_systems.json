@@ -1,0 +1,58 @@
+[
+  {
+    "uuid": "8b3924c6-6ca3-4109-93ed-afb384c813e4",
+    "name": "varius",
+    "description": "Varius, varesystemet til Toppfart: varer, varegrupper og aktører (butikker og leverandører). Fullt uttrekk den 1. hver måned kl. 05. STORE_BOKSTAVER og norske forkortelser."
+  },
+  {
+    "uuid": "467e6c9a-d454-4045-a599-0517d6ec80e2",
+    "name": "kassio",
+    "description": "Kassio, kassesystemet i butikkene: kvitteringer og kvitteringslinjer. Daglig fil kl. 06 for gårsdagen. camelCase på engelsk, tidspunkt i UTC."
+  },
+  {
+    "uuid": "f614b530-7f0d-486c-ba48-8a6b23cfb7cd",
+    "name": "kalender",
+    "description": "Bedriftens kalender: én rad per dag for 2026 og 2027, i én fil.",
+    "metadataValues": {
+      "filformat": "csv",
+      "skilletegn": ",",
+      "datoformat": "yyyy-MM-dd",
+      "uttrekk": "Fullt"
+    },
+    "regexPattern": "__kalender__"
+  },
+  {
+    "uuid": "3fa87cbc-f3bf-4e7c-a2b3-1312574d6b4a",
+    "name": "nettora",
+    "description": "Nettora, nettbutikkplattformen: ordrelinjer. Daglig fil kl. 06 for gårsdagen. snake_case på engelsk, JSON med én rad per linje, tidspunkt i UTC.",
+    "metadataValues": {
+      "filformat": "json",
+      "desimaltegn": ".",
+      "tidsformat": "yyyy-MM-dd'T'HH:mm:ssX",
+      "tidssone": "UTC",
+      "uttrekk": "Endringer"
+    },
+    "regexPattern": "__nettora__"
+  },
+  {
+    "uuid": "35ca9ab3-be64-4197-83e8-2aae26f23586",
+    "name": "lojal",
+    "description": "Lojal, kundeklubben: medlemmer og nivå. Fullt uttrekk hver dag kl. 04. camelCase på engelsk, JSON med én rad per linje.",
+    "metadataValues": {
+      "filformat": "json",
+      "datoformat": "yyyy-MM-dd",
+      "uttrekk": "Fullt"
+    },
+    "regexPattern": "__lojal__"
+  },
+  {
+    "uuid": "938a82d1-e2fe-4046-b814-aa718c771d4d",
+    "name": "lagra",
+    "description": "Lagra, lagersystemet: beholdning per vare og butikk etter dagens telling. Fullt uttrekk mandag til lørdag kl. 23, ingen telling på søndag. Parquet med egne typer.",
+    "metadataValues": {
+      "filformat": "parquet",
+      "uttrekk": "Fullt"
+    },
+    "regexPattern": "__lagra__"
+  }
+]

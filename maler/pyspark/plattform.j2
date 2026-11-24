@@ -1,0 +1,34 @@
+{#- Konstanter for hele plattformen. Endres bare her: malene leser dem, og tools/generer skriver dem til
+    databricks/pyspark/plattform/konstanter.py (maler/pyspark/konstanter.py.j2). Alt tabellspesifikt kommer fra
+    kontraktene og modell.j2. Katalog, skjema og volum står IKKE her: de er variabler i databricks.yml. -#}
+{#- Standardkolonnene (columnTemplates i specly/Config/table_types.json). -#}
+{%- set lastet = 'sys__lastet_tidspunkt' -%}
+{%- set kildefil = 'sys__kildefil' -%}
+{%- set ukjente = 'sys__ukjente_kolonner' -%}
+{%- set kildesystem = 'sys__kildesystem' -%}
+{%- set fra = 'sys__gyldig_fra' -%}
+{%- set til = 'sys__gyldig_til' -%}
+{#- Gyldighetskolonnene en SCD2-dimensjon i gull har. -#}
+{%- set dim_fra = 'gyldig_fra' -%}
+{%- set dim_til = 'gyldig_til' -%}
+{#- Åpen slutt på en versjon. -#}
+{%- set apen_slutt = "TIMESTAMP'9999-12-31 00:00:00'" -%}
+{#- Gyldig fra på ukjent- og mangler-raden i en SCD2-dimensjon. En ekte versjon gjelder fra første lasting. -#}
+{%- set ukjent_fra = "TIMESTAMP'1900-01-01 00:00:00'" -%}
+{#- Tidspunktet i filnavnet: …_ÅÅÅÅMMDDThhmm.<filtype>. -#}
+{%- set filtidspunkt = "to_timestamp(regexp_extract(_metadata.file_name, '_([0-9]{8}T[0-9]{4})', 1), \"yyyyMMdd'T'HHmm\")" -%}
+{#- De to spesialradene i hver gull-dimensjon. -#}
+{%- set ukjent_nokkel = -1 -%}
+{%- set ukjent_tekst = 'Ukjent' -%}
+{%- set mangler_nokkel = -2 -%}
+{%- set mangler_tekst = 'Mangler' -%}
+{#- tom_til_null: disse verdiene blir NULL. -#}
+{%- set tomme_verdier = ["", "N/A", "NA", "-"] -%}
+{#- Hashformelen: tegnet for en tom nøkkeldel, og formatet gyldig fra skrives med i pk__. -#}
+{%- set tom_nokkeldel = '∅' -%}
+{%- set nokkel_tidsformat = 'yyyy-MM-dd HH:mm:ss' -%}
+{#- Ikke funnet: et fb__ i sølv fra en annen oppstrømstabell enn hovedtabellen, når koblingen ikke fant noen rad.
+    Hashen av dette tegnet treffer aldri en ekte nøkkel, så gull gir -1 (ukjent), ikke -2 (mangler). -#}
+{%- set ikke_funnet = '∄' -%}
+{#- Datodimensjonen: pk__ er datoen som tallet ÅÅÅÅMMDD. -#}
+{%- set datonokkel_format = 'yyyyMMdd' -%}

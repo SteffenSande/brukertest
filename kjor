@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+# Fra kontrakt til tabeller i Databricks: generer, rull ut, kjør pipelinen og sett tags.
+#   ./kjor                      genererer koden, ruller ut (bundle deploy), kjører pipelinen og setter tags i Unity
+#                               Catalog etter kontraktene (eier og klassifisering, modul 8)
+#   ./kjor --full               som over, men bygger alle tabellene på nytt (full refresh)
+#   ./kjor --last-opp           laster i tillegg opp alle filene i data/landing til landingsvolumet først
+# Miljø:
+#   DATABRICKS_PROFILE  CLI-profilen (standard: kurs)
+#   SKJEMA              skjemaet (standard: toppfart)
+#   KATALOG, VOLUM      katalogen og landingsvolumet (standard: workspace og landing, som i databricks.yml)
+# Stopper forhåndssjekken, sendes ingenting til Databricks. Ingen token skrives ut.
+{
+set -euo pipefail
+cd "$(dirname "$0")"
+PROFIL="${DATABRICKS_PROFILE:-kurs}"
+SKJEMA="${SKJEMA:-toppfart}"
+KATALOG="${KATALOG:-workspace}"
+VOLUM_NAVN="${VOLUM:-landing}"
+FULL=""; LAST_OPP=""
+for a in "$@"; do
+  case "$a" in
+    --full) FULL=1 ;;
+    --last-opp) LAST_OPP=1 ;;
+    *) echo "Ukjent valg: $a (bruk --full og/eller --last-opp)"; exit 2 ;;
+  esac
+done
+command -v databricks >/dev/null || { echo "Fant ikke Databricks CLI. Se moduler/M0.md, steg 6 (terminalsporet)."; exit 1; }
+VARS=(--var="skjema=$SKJEMA" --var="katalog=$KATALOG" --var="volum=$VOLUM_NAVN")
+
+echo "1/5  Forhåndssjekk og generering fra kontraktene"
+./generer
+
+echo "2/5  Ruller ut til Databricks (bundle deploy)"
+LOGG="$(mktemp)"
+if ! databricks bundle deploy -p "$PROFIL" "${VARS[@]}" --auto-approve >"$LOGG" 2>&1; then
+  tail -20 "$LOGG"; echo "Utrullingen feilet. Pipelinen er ikke startet."
+  if grep -q "SCHEMA_ALREADY_EXISTS" "$LOGG"; then
+    echo
+    echo "Skjemaet $KATALOG.$SKJEMA finnes fra før, men er ikke laget av terminalsporet. Trolig er oppsettet gjort"
+    echo "med notebooken kurs_oppsett (nettlesersporet). Sporene kan ikke blandes i samme skjema. Velg én av disse:"
+    echo "  a) Fortsett i nettlesersporet: kjør notebooks/kurs_generer_kjor i Databricks i stedet for ./kjor."
+    echo "  b) La terminalsporet overta skjemaet og volumet. Filene i volumet blir liggende. Gjør det bare hvis"
+    echo "     pipelinen «Specly-kurs $SKJEMA (notebook)» ikke finnes under Jobs & Pipelines:"
+    echo "       databricks bundle deployment bind skjema $KATALOG.$SKJEMA -p $PROFIL ${VARS[*]} --auto-approve"
+    echo "       databricks bundle deployment bind landing $KATALOG.$SKJEMA.$VOLUM_NAVN -p $PROFIL ${VARS[*]} --auto-approve"
+    echo "     Kjør så samme kommando på nytt."
+  fi
+  exit 1
+fi
+
+if [ -n "$LAST_OPP" ]; then
+  VOLUM="dbfs:/Volumes/$KATALOG/$SKJEMA/$VOLUM_NAVN"
+  echo "3/5  Laster opp data/landing til $VOLUM"
+  databricks fs cp -r --overwrite data/landing "$VOLUM" -p "$PROFIL" >/dev/null
+  echo "       $(find data/landing -type f | wc -l | tr -d ' ') filer lastet opp"
+else
+  echo "3/5  (ingen opplasting; bruk --last-opp for å laste opp data/landing)"
+fi
+
+echo "4/5  Kjører pipelinen${FULL:+ (full refresh: alle tabeller bygges på nytt)}"
+if ! databricks bundle run toppfart -p "$PROFIL" "${VARS[@]}" ${FULL:+--full-refresh-all} >"$LOGG" 2>&1; then
+  grep -iE "error|exception|failed" "$LOGG" | head -30; echo "Pipelinen feilet."; exit 1
+fi
+grep -E "Update .* is COMPLETED|Update ID" "$LOGG" | sed 's/^/       /' || true
+
+# Pipelinen kan ikke sette tags selv (dekoratoren har ingen tags). Derfor et eget steg når den er ferdig.
+echo "5/5  Tags i Unity Catalog etter kontraktene (databricks/pyspark/plattform/tags_data.py)"
+if ! DATABRICKS_PROFILE="$PROFIL" KATALOG="$KATALOG" SKJEMA="$SKJEMA" \
+    uv run -q --no-project --with pyyaml python3 tools/sett_tags.py; then
+  echo "Taggene ble ikke satt. Tabellene er bygget. Kjør steget alene med: uv run -q --no-project python3 tools/sett_tags.py"
+  exit 1
+fi
+echo "Ferdig. Sjekk mot fasit med: ./kurs sjekk M<n> (n = modulen du er ferdig med)"
+}

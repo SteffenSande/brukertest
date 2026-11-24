@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Specly-kurset</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: en smal lesekolonne med brede innslag for diagrammene. Lagene raw, bronze, sølv og gull
+   får ekte metallfarger og er den ene sterke ideen; resten er rolig blågrønt på hvitt. */
+:root {
+  --bg: oklch(1 0 0);
+  --surface: oklch(0.965 0.012 195);
+  --ink: oklch(0.22 0.025 205);
+  --muted: oklch(0.46 0.02 205);
+  --line: oklch(0.89 0.014 200);
+  --teal: oklch(0.48 0.09 190);
+  --teal-fill: oklch(0.72 0.10 188);
+  --teal-wash: oklch(0.93 0.035 188);
+
+  /* Lagfargene. Samme i begge temaer, med mørk tekst oppå. */
+  --raw: oklch(0.80 0.012 205);
+  --bronze: oklch(0.71 0.095 55);
+  --solv: oklch(0.86 0.008 240);
+  --gull: oklch(0.85 0.13 88);
+  --on-metal: oklch(0.20 0.02 60);
+
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Literata", Georgia, "Times New Roman", serif;
+  --font-code: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --measure: 66ch;
+  --wide: 1080px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: oklch(0.17 0.018 205);
+    --surface: oklch(0.215 0.022 205);
+    --ink: oklch(0.94 0.01 200);
+    --muted: oklch(0.74 0.02 200);
+    --line: oklch(0.33 0.022 205);
+    --teal: oklch(0.80 0.10 188);
+    --teal-fill: oklch(0.66 0.10 188);
+    --teal-wash: oklch(0.28 0.045 190);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: oklch(0.17 0.018 205);
+  --surface: oklch(0.215 0.022 205);
+  --ink: oklch(0.94 0.01 200);
+  --muted: oklch(0.74 0.02 200);
+  --line: oklch(0.33 0.022 205);
+  --teal: oklch(0.80 0.10 188);
+  --teal-fill: oklch(0.66 0.10 188);
+  --teal-wash: oklch(0.28 0.045 190);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+img, svg { max-width: 100%; }
+a { color: var(--teal); text-underline-offset: 0.18em; }
+a:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+code {
+  font-family: var(--font-code);
+  font-size: 0.84em;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.05em 0.3em;
+  overflow-wrap: anywhere;
+}
+p { margin: 0; text-wrap: pretty; }
+ul, ol { margin: 0; }
+
+.wrap { max-width: var(--wide); margin-inline: auto; padding-inline: clamp(16px, 4vw, 40px); }
+.prose { max-width: var(--measure); }
+
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.05; }
+h2 { font-size: clamp(1.9rem, 1.3rem + 2.4vw, 3rem); font-weight: 800; font-stretch: 78%; letter-spacing: -0.01em; }
+h3 { font-size: 1.2rem; font-weight: 700; font-stretch: 92%; line-height: 1.2; }
+.h3-big { font-size: 1.4rem; font-stretch: 80%; font-weight: 800; }
+.lead { font-size: clamp(1.12rem, 1rem + 0.5vw, 1.3rem); line-height: 1.5; }
+.muted { color: var(--muted); }
+
+section { padding-block: clamp(56px, 8vw, 104px); border-top: 1px solid var(--line); }
+.section-head { display: grid; gap: 14px; margin-bottom: clamp(28px, 4vw, 44px); }
+.sub-block { margin-top: clamp(40px, 6vw, 64px); display: grid; gap: 16px; }
+
+/* ---------- Topp ---------- */
+.top { padding-block: clamp(28px, 5vw, 56px) clamp(48px, 7vw, 88px); }
+.mast {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  font-family: var(--font-display); font-size: 0.92rem; color: var(--muted);
+  margin-bottom: clamp(32px, 5vw, 64px);
+}
+.mast strong { color: var(--ink); font-weight: 700; }
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast nav a { color: var(--muted); text-decoration: none; }
+.mast nav a:hover { color: var(--teal); }
+.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: end; }
+.hero h1 { font-size: clamp(3.2rem, 1.6rem + 7vw, 6rem); font-weight: 900; font-stretch: 70%; letter-spacing: -0.02em; line-height: 0.9; }
+.hero h1 span { color: var(--teal); }
+.hero .thesis {
+  font-family: var(--font-display); font-size: clamp(1.35rem, 1rem + 1.4vw, 1.9rem);
+  font-weight: 600; font-stretch: 88%; line-height: 1.2; margin-top: 22px; max-width: 24ch;
+}
+.hero .lead { margin-top: 20px; max-width: 54ch; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 28px 0 0; padding: 0; list-style: none; font-family: var(--font-display); font-size: 0.98rem; }
+.facts li { display: grid; }
+.facts b { font-weight: 800; font-stretch: 80%; font-size: 1.45rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.facts span { color: var(--muted); font-size: 0.88rem; }
+.podium { width: 100%; height: auto; display: block; }
+.podium text { font-family: var(--font-display); fill: var(--on-metal); }
+.podium .code { font-family: var(--font-code); font-size: 10px; }
+.podium .name { font-size: 19px; font-weight: 800; font-stretch: 85%; }
+.podium .desc { font-size: 11.5px; }
+.podium .base { stroke: var(--line); }
+.podium-cap { font-family: var(--font-display); font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+
+/* ---------- Læringsmål ---------- */
+.outcomes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; border-top: 2px solid var(--ink); }
+.outcomes > li { padding: 24px clamp(16px, 2.4vw, 28px) 8px 0; display: grid; gap: 14px; align-content: start; }
+.outcomes > li + li { padding-left: clamp(16px, 2.4vw, 28px); border-left: 1px solid var(--line); }
+.outcomes .n { font-family: var(--font-display); font-weight: 900; font-stretch: 70%; font-size: 3rem; line-height: 0.8; color: var(--teal); }
+.can { padding: 0; list-style: none; display: grid; gap: 10px; font-size: 0.97rem; }
+.can li { padding-left: 22px; position: relative; }
+.can li::before {
+  content: ""; position: absolute; left: 1px; top: 0.5em; width: 11px; height: 6px;
+  border-left: 2px solid var(--teal); border-bottom: 2px solid var(--teal); transform: rotate(-45deg);
+}
+
+/* ---------- Kjeden ---------- */
+.chain { width: 100%; height: auto; display: block; }
+.chain text { font-family: var(--font-display); fill: var(--ink); }
+.chain .t { font-size: 17px; font-weight: 800; font-stretch: 88%; }
+.chain .s { font-size: 13px; fill: var(--muted); }
+.chain .node { fill: var(--bg); stroke: var(--ink); stroke-width: 1.5; }
+.chain .node.own { fill: var(--teal-wash); stroke: var(--teal); }
+.chain .arrow { stroke: var(--ink); stroke-width: 1.5; fill: none; }
+.chain .back { stroke: var(--muted); stroke-width: 1.3; fill: none; stroke-dasharray: 5 5; }
+.chain .bracket { stroke: var(--teal); stroke-width: 1.5; fill: none; }
+.chain .btxt { fill: var(--teal); font-size: 13px; font-weight: 700; }
+.chain .flow { fill: var(--teal-fill); }
+.chain-tall { display: none; max-width: 380px; margin-inline: auto; }
+@media (max-width: 720px) { .chain-wide { display: none; } .chain-tall { display: block; } }
+.nolock { margin-top: clamp(28px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 48px); align-items: start; }
+.stamp { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px; display: grid; gap: 10px; }
+.stamp h3 { font-size: 1.35rem; font-stretch: 80%; font-weight: 800; }
+
+.trio { display: grid; grid-template-columns: 0.8fr 1.1fr 1.1fr; gap: 14px; margin-top: clamp(32px, 4vw, 48px); }
+.trio figure { margin: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+.trio figcaption {
+  font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; padding: 10px 14px;
+  border-bottom: 1px solid var(--line); background: var(--surface); display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+}
+.trio figcaption span { color: var(--muted); font-weight: 500; }
+.trio pre { margin: 0; padding: 14px; font-family: var(--font-code); font-size: 0.78rem; line-height: 1.55; overflow-x: auto; color: var(--ink); }
+.trio .hl { background: var(--teal-wash); color: var(--ink); border-radius: 3px; padding: 0 2px; }
+.trio .k { color: var(--muted); }
+.specly-card { padding: 14px; display: grid; gap: 10px; font-family: var(--font-display); font-size: 0.95rem; align-content: start; }
+.specly-card .row { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+.specly-card .row span:first-child { color: var(--muted); }
+.flag { font-family: var(--font-code); font-size: 0.75rem; font-weight: 600; background: var(--teal); color: var(--bg); padding: 1px 6px; border-radius: 3px; }
+.trio-note { margin-top: 14px; font-size: 0.95rem; }
+
+/* ---------- Toppfart ---------- */
+.firm { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 64px); }
+.stores { margin: 18px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 18px; font-family: var(--font-display); font-size: 0.95rem; }
+.stores li { border-bottom: 1px solid var(--line); padding-bottom: 6px; display: flex; justify-content: space-between; gap: 8px; }
+.stores li span { color: var(--muted); }
+.table-scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.93rem; }
+th, td { text-align: left; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; color: var(--muted); }
+td:first-child code { font-weight: 600; }
+.qa { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+.questions { padding: 0; list-style: none; border-top: 2px solid var(--ink); }
+.questions li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 2px 16px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.mod-label {
+  grid-row: span 2; justify-self: start; font-family: var(--font-display); font-weight: 800; font-stretch: 82%;
+  font-size: 0.92rem; color: var(--teal); border: 1px solid currentColor; border-radius: 999px; padding: 1px 10px;
+  white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+.questions q { font-size: 1.02rem; quotes: "«" "»"; }
+.questions .who { font-family: var(--font-display); font-size: 0.85rem; color: var(--muted); }
+.star { width: 100%; height: auto; display: block; }
+.star text { font-family: var(--font-code); fill: var(--ink); }
+.star .lbl { font-size: 13px; font-weight: 600; }
+.star .sub { font-family: var(--font-display); font-size: 12px; fill: var(--muted); }
+.star .dim { fill: var(--bg); stroke: var(--ink); stroke-width: 1.4; }
+.star .fact { fill: var(--gull); stroke: var(--on-metal); stroke-width: 1.4; }
+.star .ftxt { fill: var(--on-metal); }
+.star .ln { stroke: var(--ink); stroke-width: 1.4; }
+.star .fk { font-size: 11px; fill: var(--muted); }
+.star .tag { fill: var(--teal); font-family: var(--font-display); font-size: 11px; font-weight: 800; }
+.star-cap { font-size: 0.92rem; color: var(--muted); margin-top: 10px; }
+
+/* ---------- Modulkartet ---------- */
+.track { display: flex; gap: 3px; margin: 0 0 10px; padding: 0; list-style: none; height: 46px; }
+.track li {
+  flex: var(--min) 1 0; min-width: 0; border-radius: 4px; background: var(--surface); border: 1px solid var(--line);
+  display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-stretch: 75%; font-size: 0.95rem;
+  color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.track li.core { background: var(--teal-fill); border-color: var(--teal-fill); color: oklch(0.18 0.03 200); }
+.track li.pre { background: repeating-linear-gradient(135deg, var(--surface) 0 5px, var(--line) 5px 6px); color: var(--ink); }
+.track-legend { display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: var(--font-display); font-size: 0.86rem; color: var(--muted); margin-bottom: clamp(28px, 4vw, 40px); }
+.track-legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; border: 1px solid var(--line); background: var(--surface); }
+.track-legend .l-core::before { background: var(--teal-fill); border-color: var(--teal-fill); }
+.track-legend .l-pre::before { background: repeating-linear-gradient(135deg, var(--surface) 0 3px, var(--line) 3px 4px); }
+
+.modules { padding: 0; list-style: none; border-top: 2px solid var(--ink); }
+.modules > li {
+  display: grid; grid-template-columns: 56px minmax(0, 1fr) 84px 190px; gap: 6px 18px;
+  padding: 16px 10px; border-bottom: 1px solid var(--line); align-items: baseline;
+  transition: background-color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.modules > li:hover { background: var(--surface); }
+.modules > li.core { background: var(--teal-wash); }
+.modules .num { font-family: var(--font-display); font-weight: 900; font-stretch: 70%; font-size: 2rem; line-height: 0.9; font-variant-numeric: tabular-nums; }
+.modules h3 { font-size: 1.12rem; }
+.modules p { font-size: 0.93rem; color: var(--muted); margin-top: 3px; }
+.modules .time { font-family: var(--font-display); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.who-list { display: flex; flex-wrap: wrap; gap: 5px; }
+.who-tag { font-family: var(--font-display); font-size: 0.8rem; font-weight: 600; border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px; background: var(--bg); }
+.modules > li.group-row {
+  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  font-family: var(--font-display); font-weight: 800; font-stretch: 85%; font-size: 0.95rem; padding: 18px 10px 8px;
+}
+.modules > li.group-row:hover { background: none; }
+.group-row span { font-weight: 500; color: var(--muted); }
+
+/* ---------- Slik tar du kurset ---------- */
+.format { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--ink); margin-bottom: clamp(36px, 5vw, 56px); }
+.format div { padding: 18px 18px 0 0; display: grid; gap: 4px; align-content: start; }
+.format div + div { padding-left: 18px; border-left: 1px solid var(--line); }
+.format b { font-family: var(--font-display); font-weight: 800; font-stretch: 80%; font-size: 1.45rem; line-height: 1.1; }
+.format span { font-size: 0.93rem; color: var(--muted); }
+.ways { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 3vw, 36px) clamp(28px, 5vw, 64px); }
+.way { display: grid; gap: 8px; align-content: start; }
+.way p { font-size: 0.98rem; }
+.ex { font-size: 0.93rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+.ex b { font-family: var(--font-display); }
+.loop { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; list-style: none; counter-reset: s; }
+.loop li { counter-increment: s; font-family: var(--font-display); font-size: 0.88rem; border: 1px solid var(--line); border-radius: 6px; padding: 3px 9px; }
+.loop li::before { content: counter(s) " "; font-weight: 800; color: var(--teal); }
+.tracks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.tr { border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px; display: grid; gap: 10px; align-content: start; }
+.tr p { font-size: 0.97rem; }
+.done { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
+.done div { padding: 18px 18px 0 0; display: grid; gap: 4px; align-content: start; }
+.done div + div { padding-left: 18px; border-left: 1px solid var(--line); }
+.done b { font-family: var(--font-display); font-weight: 800; font-stretch: 85%; font-size: 1.15rem; }
+.done span { font-size: 0.93rem; color: var(--muted); }
+
+/* ---------- Hvem ---------- */
+.roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 clamp(20px, 3vw, 36px); }
+.roles div { padding: 16px 0; border-top: 1px solid var(--line); display: grid; gap: 6px; align-content: start; }
+.roles h3 { font-size: 1.1rem; }
+.roles .seq { font-family: var(--font-display); font-weight: 800; font-stretch: 80%; font-size: 1.3rem; color: var(--teal); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+.roles p { font-size: 0.93rem; color: var(--muted); }
+
+/* ---------- Forutsetninger ---------- */
+.know { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0 clamp(18px, 2.6vw, 30px); }
+.know div { padding: 14px 0; border-top: 1px solid var(--line); display: grid; gap: 4px; align-content: start; }
+.know h3 { font-size: 1.02rem; }
+.know p { font-size: 0.93rem; }
+.access { padding: 0; list-style: none; border-top: 2px solid var(--ink); }
+.access li { display: grid; grid-template-columns: 26px minmax(0, 1fr) 210px; gap: 4px 14px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.box { width: 16px; height: 16px; border: 1.5px solid var(--ink); border-radius: 3px; margin-top: 4px; }
+.access b { font-family: var(--font-display); font-weight: 700; font-size: 1rem; }
+.access .use { display: block; font-size: 0.93rem; color: var(--muted); }
+.which { display: flex; flex-wrap: wrap; gap: 5px; justify-content: flex-end; }
+.pill { font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; border-radius: 999px; padding: 1px 9px; border: 1px solid var(--line); white-space: nowrap; }
+.pill.both { background: var(--teal-wash); border-color: var(--teal-wash); }
+.pill.opt { color: var(--muted); border-style: dashed; }
+.access-note { margin-top: 14px; font-size: 0.95rem; }
+
+footer { border-top: 1px solid var(--line); padding-block: 32px 48px; font-family: var(--font-display); font-size: 0.9rem; color: var(--muted); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Bevegelse ---------- */
+@keyframes rise { from { transform: translateY(14px); } to { transform: none; } }
+.podium .step { animation: rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both; transform-box: fill-box; }
+.podium .step:nth-of-type(2) { animation-delay: 90ms; }
+.podium .step:nth-of-type(3) { animation-delay: 180ms; }
+.podium .step:nth-of-type(4) { animation-delay: 270ms; }
+@media (prefers-reduced-motion: reduce) {
+  .podium .step { animation: none; }
+  .chain .flow { display: none; }
+  .modules > li { transition: none; }
+}
+
+/* ---------- Smal skjerm ---------- */
+@media (max-width: 860px) {
+  .hero, .firm, .nolock, .ways, .qa { grid-template-columns: minmax(0, 1fr); }
+  .hero { align-items: start; }
+  .podium-wrap { max-width: 460px; }
+  .trio { grid-template-columns: minmax(0, 1fr); }
+  .modules > li { grid-template-columns: 48px minmax(0, 1fr) auto; }
+  .modules .who-list { grid-column: 2 / -1; }
+  .format { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .format div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .format div:nth-child(n+3) { padding-top: 18px; }
+  .star-wrap { max-width: 520px; }
+}
+@media (max-width: 640px) {
+  .outcomes, .done, .tracks { grid-template-columns: minmax(0, 1fr); }
+  .outcomes > li, .outcomes > li + li { padding: 20px 0 8px; border-left: 0; }
+  .outcomes > li + li { border-top: 1px solid var(--line); }
+  .done div, .done div + div { padding: 14px 0; border-left: 0; }
+  .done div + div { border-top: 1px solid var(--line); }
+  .stores { grid-template-columns: minmax(0, 1fr); }
+  .mast nav { display: none; }
+  .track { height: 38px; }
+  .track li { font-size: 0.8rem; }
+  .modules > li { grid-template-columns: 40px minmax(0, 1fr); padding-inline: 6px; }
+  .modules .time { grid-column: 2; }
+  .modules .num { font-size: 1.7rem; }
+  .questions li { grid-template-columns: minmax(0, 1fr); }
+  .mod-label { grid-row: auto; }
+  .access li { grid-template-columns: 26px minmax(0, 1fr); }
+  .which { grid-column: 2; justify-content: flex-start; }
+}
+@media (max-width: 420px) {
+  .format { grid-template-columns: minmax(0, 1fr); }
+  .format div, .format div + div { padding: 14px 0 0; border-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="mast">
+      <strong>Specly × Databricks</strong>
+      <nav aria-label="Innhold">
+        <a href="#laer">Hva du lærer</a>
+        <a href="#kjeden">Slik virker det</a>
+        <a href="#toppfart">Toppfart Sport</a>
+        <a href="#moduler">Modulene</a>
+        <a href="#praksis">Slik tar du kurset</a>
+        <a href="#forutsetninger">Forutsetninger</a>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1>Specly-<br><span>kurset</span></h1>
+        <p class="thesis">Fra fil til stjerne i Databricks, med en modell du eier.</p>
+        <p class="lead">Du modellerer en hel sportskjede lag for lag i Specly. Hver endring blir en åpen datakontrakt i ditt eget Git-repo, og koden som bygger tabellene genereres fra kontraktene. Du skriver ingen pipelinekode selv, og etter hver modul ser du tabellene stå i Databricks.</p>
+        <ul class="facts">
+          <li><b>12 moduler</b><span>20–75 minutter hver</span></li>
+          <li><b>ca. 3,5 timer</b><span>kjerneløpet, fra fil til stjerne</span></li>
+          <li><b>Databricks Free</b><span>holder for hele kurset</span></li>
+        </ul>
+      </div>
+
+      <div class="podium-wrap">
+        <svg class="podium" viewBox="0 0 460 290" role="img" aria-labelledby="podium-t">
+          <title id="podium-t">De fire lagene som trappetrinn: raw nederst, så bronze, sølv og gull øverst</title>
+          <g class="step">
+            <rect x="2" y="196" width="108" height="84" rx="4" fill="var(--raw)"/>
+            <text class="name" x="12" y="221">raw</text>
+            <text class="code" x="12" y="239">raw__…</text>
+            <text class="desc" x="12" y="258">filene slik</text>
+            <text class="desc" x="12" y="272">de kom</text>
+          </g>
+          <g class="step">
+            <rect x="118" y="150" width="108" height="130" rx="4" fill="var(--bronze)"/>
+            <text class="name" x="128" y="176">bronze</text>
+            <text class="code" x="128" y="194">brz__…</text>
+            <text class="desc" x="128" y="214">1:1 med kilden,</text>
+            <text class="desc" x="128" y="229">alltid SCD2</text>
+          </g>
+          <g class="step">
+            <rect x="234" y="96" width="108" height="184" rx="4" fill="var(--solv)"/>
+            <text class="name" x="244" y="122">sølv</text>
+            <text class="code" x="244" y="140">slv__…</text>
+            <text class="desc" x="244" y="160">felles modell</text>
+            <text class="desc" x="244" y="175">på norsk</text>
+          </g>
+          <g class="step">
+            <rect x="350" y="40" width="108" height="240" rx="4" fill="var(--gull)"/>
+            <text class="name" x="360" y="66">gull</text>
+            <text class="code" x="360" y="84">gld__d__…</text>
+            <text class="code" x="360" y="98">gld__f__…</text>
+            <text class="desc" x="360" y="118">stjerner for</text>
+            <text class="desc" x="360" y="133">analyse</text>
+          </g>
+          <line class="base" x1="0" y1="284" x2="460" y2="284" stroke-width="1.5"/>
+        </svg>
+        <p class="podium-cap">Fire lag, fire prefikser. Navnestandarden følger deg hele veien.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="laer">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Etter kurset kan du</h2>
+      <p class="lead prose muted">Du trener tre ting på én gang. Du lærer modelleringen ved å gjøre den i Specly, og du ser den bli til kjørende tabeller.</p>
+    </div>
+    <ol class="outcomes">
+      <li>
+        <span class="n" aria-hidden="true">1</span>
+        <h3>Modellere en dataplattform</h3>
+        <ul class="can">
+          <li>dele plattformen i raw, bronze, sølv og gull, og si hva hvert lag skal gjøre</li>
+          <li>velge forretningsnøkler og bruke hash-nøkler som treffer på tvers av tabeller</li>
+          <li>ta vare på historikk med SCD2 og finne versjonen som gjaldt da noe skjedde</li>
+          <li>designe et stjerneskjema med Kimballs fire steg</li>
+          <li>slå sammen to kilder i én sølvtabell, og bygge et periodisk øyeblikksbilde</li>
+          <li>følge en navnestandard som en maskin kan sjekke</li>
+        </ul>
+      </li>
+      <li>
+        <span class="n" aria-hidden="true">2</span>
+        <h3>Bruke Specly</h3>
+        <ul class="can">
+          <li>sette opp kildesystemer, tabelltyper og regler, og bruke dem på mange tabeller samtidig</li>
+          <li>lage tabeller fra oppstrøm og styre navnene med nedstrømsnavn</li>
+          <li>tegne relasjoner og diagrammer</li>
+          <li>gå rundturen mellom Specly og Git, også med endringer gjort i Git</li>
+          <li>kreve eier og klassifisering, og knytte kolonner til forretningsbegreper og dataprodukter</li>
+        </ul>
+      </li>
+      <li>
+        <span class="n" aria-hidden="true">3</span>
+        <h3>Kjøre ekte tabeller i Databricks</h3>
+        <ul class="can">
+          <li>eksportere modellen som ODCS-kontrakter til ditt eget repo</li>
+          <li>generere PySpark-koden for en Lakeflow-pipeline med <code>datacontract export</code> og Jinja-maler</li>
+          <li>kjøre pipelinen og kontrollere at dataene ble som du ventet</li>
+          <li>se beskrivelser som COMMENT og klassifisering som tags i Unity Catalog</li>
+          <li>svare på et forretningsspørsmål med én spørring mot gull</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="kjeden">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Slik blir modellen til tabeller</h2>
+      <p class="lead prose muted">Hele kurset bygger på denne kjeden. Du ser hvert ledd, og du kan peke på hvor en endring i Specly havner i koden.</p>
+    </div>
+
+    <svg class="chain chain-wide" viewBox="0 0 1000 232" role="img" aria-labelledby="chain-t">
+      <title id="chain-t">Specly, så ODCS-kontrakt i Git, så Data Contract CLI med Jinja-maler, så generert kode, så Databricks. Databricks kan leses tilbake inn i Specly.</title>
+      <defs>
+        <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--ink)"/></marker>
+        <marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker>
+      </defs>
+      <circle class="flow" r="6" cx="0" cy="0"><animateMotion dur="5s" repeatCount="indefinite" path="M2,94 H998"/></circle>
+      <path class="bracket" d="M210,34 V22 H790 V34"/>
+      <text class="btxt" x="500" y="14" text-anchor="middle">I ditt eget Git-repo, i åpne formater</text>
+
+      <rect class="node" x="2" y="46" width="166" height="96" rx="8"/>
+      <text class="t" x="85" y="86" text-anchor="middle">Specly</text>
+      <text class="s" x="85" y="108" text-anchor="middle">du modellerer</text>
+
+      <rect class="node own" x="210" y="46" width="166" height="96" rx="8"/>
+      <text class="t" x="293" y="82" text-anchor="middle">ODCS-kontrakt</text>
+      <text class="s" x="293" y="104" text-anchor="middle">én YAML-fil</text>
+      <text class="s" x="293" y="121" text-anchor="middle">per tabell</text>
+
+      <rect class="node own" x="418" y="46" width="166" height="96" rx="8"/>
+      <text class="t" x="501" y="82" text-anchor="middle">Data Contract CLI</text>
+      <text class="s" x="501" y="104" text-anchor="middle">datacontract export</text>
+      <text class="s" x="501" y="121" text-anchor="middle">+ Jinja-maler</text>
+
+      <rect class="node own" x="626" y="46" width="166" height="96" rx="8"/>
+      <text class="t" x="709" y="82" text-anchor="middle">Generert kode</text>
+      <text class="s" x="709" y="104" text-anchor="middle">PySpark / Lakeflow</text>
+      <text class="s" x="709" y="121" text-anchor="middle">én fil per tabell</text>
+
+      <rect class="node" x="834" y="46" width="164" height="96" rx="8"/>
+      <text class="t" x="916" y="82" text-anchor="middle">Databricks</text>
+      <text class="s" x="916" y="104" text-anchor="middle">pipelinen bygger</text>
+      <text class="s" x="916" y="121" text-anchor="middle">tabellene</text>
+
+      <line class="arrow" x1="170" y1="94" x2="206" y2="94" marker-end="url(#ah)"/>
+      <line class="arrow" x1="378" y1="94" x2="414" y2="94" marker-end="url(#ah)"/>
+      <line class="arrow" x1="586" y1="94" x2="622" y2="94" marker-end="url(#ah)"/>
+      <line class="arrow" x1="794" y1="94" x2="830" y2="94" marker-end="url(#ah)"/>
+
+      <path class="back" d="M916,146 V190 Q916,200 906,200 H95 Q85,200 85,190 V150" marker-end="url(#ahm)"/>
+      <text class="s" x="500" y="222" text-anchor="middle">Importer fra Databricks og Valider mot Databricks leser tabellene tilbake</text>
+    </svg>
+
+    <svg class="chain chain-tall" viewBox="0 0 340 640" role="img" aria-labelledby="chain-t2">
+      <title id="chain-t2">Kjeden ovenfra og ned: Specly, ODCS-kontrakt, Data Contract CLI, generert kode, Databricks</title>
+      <defs>
+        <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--ink)"/></marker>
+        <marker id="ahm2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker>
+      </defs>
+      <circle class="flow" r="6" cx="0" cy="0"><animateMotion dur="5s" repeatCount="indefinite" path="M165,20 V600"/></circle>
+      <path class="bracket" d="M44,150 H32 V454 H44"/>
+      <text class="btxt" transform="translate(22 302) rotate(-90)" text-anchor="middle">I ditt eget Git-repo</text>
+
+      <rect class="node" x="52" y="20" width="226" height="84" rx="8"/>
+      <text class="t" x="165" y="56" text-anchor="middle">Specly</text>
+      <text class="s" x="165" y="78" text-anchor="middle">du modellerer</text>
+
+      <rect class="node own" x="52" y="140" width="226" height="84" rx="8"/>
+      <text class="t" x="165" y="174" text-anchor="middle">ODCS-kontrakt</text>
+      <text class="s" x="165" y="196" text-anchor="middle">én YAML-fil per tabell</text>
+
+      <rect class="node own" x="52" y="260" width="226" height="84" rx="8"/>
+      <text class="t" x="165" y="292" text-anchor="middle">Data Contract CLI</text>
+      <text class="s" x="165" y="314" text-anchor="middle">datacontract export + Jinja</text>
+
+      <rect class="node own" x="52" y="380" width="226" height="84" rx="8"/>
+      <text class="t" x="165" y="412" text-anchor="middle">Generert kode</text>
+      <text class="s" x="165" y="434" text-anchor="middle">PySpark / Lakeflow</text>
+
+      <rect class="node" x="52" y="500" width="226" height="84" rx="8"/>
+      <text class="t" x="165" y="534" text-anchor="middle">Databricks</text>
+      <text class="s" x="165" y="556" text-anchor="middle">pipelinen bygger tabellene</text>
+
+      <line class="arrow" x1="165" y1="106" x2="165" y2="136" marker-end="url(#ah2)"/>
+      <line class="arrow" x1="165" y1="226" x2="165" y2="256" marker-end="url(#ah2)"/>
+      <line class="arrow" x1="165" y1="346" x2="165" y2="376" marker-end="url(#ah2)"/>
+      <line class="arrow" x1="165" y1="466" x2="165" y2="496" marker-end="url(#ah2)"/>
+
+      <path class="back" d="M280,542 H310 Q318,542 318,534 V70 Q318,62 310,62 H284" marker-end="url(#ahm2)"/>
+      <text class="s" x="165" y="620" text-anchor="middle">Specly kan lese tabellene tilbake</text>
+    </svg>
+
+    <div class="nolock">
+      <p class="prose">Specly skriver én fil per tabell i <b>Open Data Contract Standard</b> (ODCS) til ditt eget repo. Data Contract CLI, et åpent verktøy, leser filene, og én Jinja-mal per tabelltype gjør hver kontrakt til kode. Koden kaller en liten felles plattformpakke for det som alltid er likt: nøkler, historikk og typer.</p>
+      <div class="stamp">
+        <h3>Ingen innlåsing</h3>
+        <p>Modellen ligger som åpne standardfiler i ditt eget Git-repo, og verktøyet som lager koden er åpent. Slutter du å bruke Specly, har du fortsatt kontraktene, malene og koden.</p>
+      </div>
+    </div>
+
+    <div class="trio" aria-label="Den samme rensingen i Specly, i kontrakten og i koden">
+      <figure>
+        <figcaption>Specly <span>kolonnen VARENR</span></figcaption>
+        <div class="specly-card">
+          <div class="row"><span>Tabell</span><span>brz__varius__vare</span></div>
+          <div class="row"><span>Flagg</span><span class="flag">BK</span></div>
+          <div class="row"><span>Rensing</span><span>trim, fjern ledende nuller</span></div>
+          <div class="row"><span>Nedstrømsnavn</span><span>varenummer</span></div>
+        </div>
+      </figure>
+      <figure>
+        <figcaption>Kontrakten <span>brz__varius__vare.odcs.yaml</span></figcaption>
+<pre><span class="k">- name:</span> VARENR
+  <span class="k">physicalType:</span> string
+  <span class="k">businessName:</span> varenummer
+  <span class="k">customProperties:</span>
+    <span class="k">- property:</span> businessKey
+      <span class="k">value:</span> true
+    <span class="k">- property:</span> rensing
+      <span class="k">value:</span>
+        <span class="hl">- trim</span>
+        <span class="hl">- fjern_ledende_nuller</span></pre>
+      </figure>
+      <figure>
+        <figcaption>Koden <span>generert, ikke skrevet</span></figcaption>
+<pre>renset = rens_og_cast(
+  les_tabell(<span class="k">"raw__varius__vare"</span>),
+  kildeformat=KILDEFORMAT,
+  kolonner=[
+    Rens(<span class="k">"VARENR"</span>,
+      rensing=[<span class="hl">"trim"</span>,
+        <span class="hl">"fjern_ledende_nuller"</span>]),
+    Rens(<span class="k">"UTPRIS"</span>,
+      til_type=<span class="k">"decimal(10,2)"</span>),
+    ...</pre>
+      </figure>
+    </div>
+    <p class="trio-note prose muted">Ett valg i Specly, ett felt i kontrakten, én linje i koden.</p>
+  </div>
+</section>
+
+<section id="toppfart">
+  <div class="wrap">
+    <div class="firm">
+      <div>
+        <div class="section-head">
+          <h2>Toppfart Sport AS</h2>
+          <p class="prose">Kurset følger en oppdiktet sportskjede med seks butikker og en nettbutikk. Den selger utstyr og klær til ski, løping, friluftsliv og sykkel, og har en kundeklubb med nivåene Bronse, Sølv og Gull. Dataene dekker august til oktober 2026.</p>
+        </div>
+        <ul class="stores" aria-label="Butikkene">
+          <li>Majorstuen <span>Oslo</span></li>
+          <li>Bergen sentrum <span>Bergen</span></li>
+          <li>Solsiden <span>Trondheim</span></li>
+          <li>Stavanger <span>Stavanger</span></li>
+          <li>Tromsø <span>Tromsø</span></li>
+          <li>Lillehammer <span>åpner 5. sept.</span></li>
+          <li>Nettbutikken <span>butikk 107</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 8px">Fem kildesystemer, hver med sin egen stil</h3>
+        <p class="muted" style="font-size: 0.95rem; margin-bottom: 12px">Akkurat som i virkeligheten. Navnene oversettes til forretningens språk ett sted.</p>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">System</th><th scope="col">Hva det er</th><th scope="col">Navnestil</th><th scope="col">Format</th></tr></thead>
+            <tbody>
+              <tr><td><code>varius</code></td><td>varesystemet</td><td><code>STORE_BOKSTAVER</code></td><td>CSV med <code>;</code> og desimalkomma</td></tr>
+              <tr><td><code>kassio</code></td><td>kassene i butikkene</td><td><code>camelCase</code></td><td>CSV, tidspunkt i UTC</td></tr>
+              <tr><td><code>nettora</code></td><td>nettbutikken</td><td><code>snake_case</code></td><td>JSON, én linje per rad</td></tr>
+              <tr><td><code>lojal</code></td><td>kundeklubben</td><td><code>camelCase</code></td><td>JSON</td></tr>
+              <tr><td><code>lagra</code></td><td>lagersystemet</td><td>korte navn</td><td>Parquet</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-block">
+      <h3 class="h3-big">Spørsmålene vi svarer på, modul for modul</h3>
+      <div class="qa">
+        <ol class="questions" aria-label="Spørsmålene forretningen stiller, per modul">
+          <li><span class="mod-label">Modul 5</span><q>Hva er omsetningen per butikk og varegruppe per uke? Og hvor mye blir returnert?</q><span class="who">Salgssjefen</span></li>
+          <li><span class="mod-label">Modul 6</span><q>Hvor stor del av salget skjer på nett, og hvordan utvikler det seg?</q><span class="who">Salgssjefen</span></li>
+          <li><span class="mod-label">Modul 7</span><q>Hvor mye handler Gull-medlemmene, og var de Gull da de handlet?</q><span class="who">Kundeklubbansvarlig</span></li>
+          <li><span class="mod-label">Modul 8</span><q>Hvem eier tallene i salgsrapporten? Og hvilke kolonner er fortrolige?</q><span class="who">Personvern- og sikkerhetsansvarlig</span></li>
+          <li><span class="mod-label">Modul 9</span><q>Når vi sier butikk, produkt og salgsbeløp, skal det bety det samme i alle tabeller.</q><span class="who">Dataeieren</span></li>
+          <li><span class="mod-label">Modul 10</span><q>Hva får de, egentlig? Hvem spør de hvis noe er rart?</q><span class="who">Salgssjefen, som deler tallene</span></li>
+          <li><span class="mod-label">Modul 11</span><q>Hvor mye har vi på lager av hver vare, per butikk og dag? Hvilke varer går tomme?</q><span class="who">Innkjøpssjefen</span></li>
+        </ol>
+        <div class="star-wrap">
+          <svg class="star" viewBox="0 0 520 330" role="img" aria-labelledby="star-t">
+            <title id="star-t">Stjerneskjemaet for salg: faktaen gld__f__salg i midten med dimensjonene dato, produkt, butikk og kunde rundt</title>
+            <line class="ln" x1="260" y1="78" x2="260" y2="138"/>
+            <line class="ln" x1="140" y1="170" x2="185" y2="170"/>
+            <line class="ln" x1="335" y1="170" x2="380" y2="170"/>
+            <line class="ln" x1="260" y1="202" x2="260" y2="262"/>
+            <rect class="dim" x="185" y="30" width="150" height="48" rx="6"/>
+            <text class="lbl" x="260" y="52" text-anchor="middle">gld__d__dato</text>
+            <text class="sub" x="260" y="69" text-anchor="middle">nøkkel 20260801</text>
+            <rect class="dim" x="4" y="146" width="136" height="48" rx="6"/>
+            <text class="lbl" x="72" y="168" text-anchor="middle">gld__d__produkt</text>
+            <text class="sub" x="72" y="185" text-anchor="middle">SCD1</text>
+            <rect class="dim" x="380" y="146" width="136" height="48" rx="6"/>
+            <text class="lbl" x="448" y="168" text-anchor="middle">gld__d__butikk</text>
+            <text class="sub" x="448" y="185" text-anchor="middle">SCD1</text>
+            <rect class="fact" x="185" y="138" width="150" height="64" rx="6"/>
+            <text class="lbl ftxt" x="260" y="166" text-anchor="middle">gld__f__salg</text>
+            <text class="sub ftxt" x="260" y="185" text-anchor="middle">én rad per salgslinje</text>
+            <rect class="dim" x="185" y="262" width="150" height="48" rx="6"/>
+            <text class="lbl" x="260" y="284" text-anchor="middle">gld__d__kunde</text>
+            <text class="sub" x="260" y="301" text-anchor="middle">versjonen som gjaldt</text>
+            <text class="tag" x="343" y="280">SCD2</text>
+            <text class="fk" x="268" y="236">Datoeffektiv på salg_dato</text>
+          </svg>
+          <p class="star-cap">Stjernen som svarer salgssjefen bygges i modul 5. Kunden med historikk kommer til i modul 7.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="moduler">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Modulkartet</h2>
+      <p class="lead prose muted">Tolv moduler. Kjerneløpet tar deg fra fil til stjerne på omtrent tre og en halv time. Resten velger du etter rollen din.</p>
+    </div>
+
+    <ol class="track" aria-label="Modulene i forhold til hverandre, bredde etter minutter">
+      <li class="pre" style="--min: 30" title="Modul 0, 30 min">0</li>
+      <li style="--min: 40" title="Modul 1, 40 min">1</li>
+      <li class="core" style="--min: 35" title="Modul 2, 35 min">2</li>
+      <li class="core" style="--min: 45" title="Modul 3, 45 min">3</li>
+      <li class="core" style="--min: 75" title="Modul 4, 75 min">4</li>
+      <li class="core" style="--min: 60" title="Modul 5, 60 min">5</li>
+      <li style="--min: 60" title="Modul 6, 60 min">6</li>
+      <li style="--min: 45" title="Modul 7, 45 min">7</li>
+      <li style="--min: 45" title="Modul 8, 45 min">8</li>
+      <li style="--min: 45" title="Modul 9, 45 min">9</li>
+      <li style="--min: 20" title="Modul 10, 20 min">10</li>
+      <li style="--min: 60" title="Modul 11, 60 min">11</li>
+    </ol>
+    <div class="track-legend">
+      <span class="l-pre">oppsett før kursdagen</span>
+      <span class="l-core">kjerneløpet, 215 min</span>
+      <span>fordypning etter rolle</span>
+    </div>
+
+    <ol class="modules">
+      <li class="group-row" aria-hidden="true">Før kursdagen <span>30 min</span></li>
+      <li>
+        <span class="num">0</span>
+        <div><h3>Oppsett</h3><p>Ditt eget repo, ditt eget Specly-prosjekt og din egen Databricks-arbeidsflate. Kildefilene havner i Databricks før du modellerer noe.</p></div>
+        <span class="time">30 min</span>
+        <span class="who-list"><span class="who-tag">alle</span></span>
+      </li>
+
+      <li class="group-row" aria-hidden="true">Kjerneløpet: fra fil til stjerne <span>215 min</span></li>
+      <li class="core">
+        <span class="num">2</span>
+        <div><h3>Raw fra kilden</h3><p>Importer fra Databricks, kildesystem og tabelltype for mange tabeller på én gang. Den første rundturen.</p></div>
+        <span class="time">35 min</span>
+        <span class="who-list"><span class="who-tag">alle</span></span>
+      </li>
+      <li class="core">
+        <span class="num">3</span>
+        <div><h3>Bronze</h3><p>Kolonner fra oppstrøm, BK og hash-nøkler, rensing, datatype og nedstrømsnavn. Hvorfor bronze tar vare på alle versjoner.</p></div>
+        <span class="time">45 min</span>
+        <span class="who-list"><span class="who-tag">modellerer</span></span>
+      </li>
+      <li class="core">
+        <span class="num">4</span>
+        <div><h3>Sølv</h3><p>Den felles modellen. Radfilter, «Eget navn», relasjoner og <code>fb__</code>, Beregning og de første diagrammene.</p></div>
+        <span class="time">75 min</span>
+        <span class="who-list"><span class="who-tag">modellerer</span></span>
+      </li>
+      <li class="core">
+        <span class="num">5</span>
+        <div><h3>Første stjerne</h3><p>Fakta og dimensjon, <code>pk__</code> og <code>fk__</code>, -1 og -2, datodimensjonen og stjernediagrammet. Første svar til salgssjefen.</p></div>
+        <span class="time">60 min</span>
+        <span class="who-list"><span class="who-tag">modellerer</span></span>
+      </li>
+
+      <li class="group-row" aria-hidden="true">Fordypning etter rolle</li>
+      <li>
+        <span class="num">1</span>
+        <div><h3>Prosjektoppsett</h3><p>Valgfri lesemodul. Tabelltyper, standardkolonner, navneregler, datatyper, kildesystemer, ODCS-innstillinger og roller.</p></div>
+        <span class="time">40 min</span>
+        <span class="who-list"><span class="who-tag">admin</span></span>
+      </li>
+      <li>
+        <span class="num">6</span>
+        <div><h3>Ny kilde: nettbutikken</h3><p>Nettsalget inn i den samme salgslinjen. Union av to kilder, Beregning etter unionen, og en endring gjort via Git.</p></div>
+        <span class="time">60 min</span>
+        <span class="who-list"><span class="who-tag">modellerer</span></span>
+      </li>
+      <li>
+        <span class="num">7</span>
+        <div><h3>Kunden og historikk</h3><p>En SCD2-dimensjon og «Datoeffektiv på»: hva medlemmet er nå, og hva det var da det handlet.</p></div>
+        <span class="time">45 min</span>
+        <span class="who-list"><span class="who-tag">modellerer</span></span>
+      </li>
+      <li>
+        <span class="num">8</span>
+        <div><h3>Dokumentasjon og styring</h3><p>Påkrevde felt, eier og klassifisering, og hvordan de blir COMMENT og tags i Unity Catalog.</p></div>
+        <span class="time">45 min</span>
+        <span class="who-list"><span class="who-tag">admin</span><span class="who-tag">forvalter</span></span>
+      </li>
+      <li>
+        <span class="num">9</span>
+        <div><h3>Forretningsbegreper</h3><p>Ett ord, én definisjon. Begrepsregler kobler kolonnene, og kolonnene arver beskrivelsen.</p></div>
+        <span class="time">45 min</span>
+        <span class="who-list"><span class="who-tag">forvalter</span></span>
+      </li>
+      <li>
+        <span class="num">10</span>
+        <div><h3>Dataprodukt</h3><p>Salg som én leveranse, med eier, forbrukere og kjente begrensninger. Én fil i det åpne formatet ODPS.</p></div>
+        <span class="time">20 min</span>
+        <span class="who-list"><span class="who-tag">forvalter</span><span class="who-tag">eier</span></span>
+      </li>
+      <li>
+        <span class="num">11</span>
+        <div><h3>Lagerbeholdning</h3><p>En Parquet-kilde, et periodisk øyeblikksbilde over kalenderen og semi-additive mål.</p></div>
+        <span class="time">60 min</span>
+        <span class="who-list"><span class="who-tag">erfaren</span></span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="praksis">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Slik tar du kurset</h2>
+      <p class="lead prose muted">Korte moduler, mye å se, lite å lese. Hvert steg sier hva du lærer og hvorfor, før du klikker.</p>
+    </div>
+
+    <div class="format">
+      <div><b>30 min</b><span>oppsett før kursdagen, modul 0</span></div>
+      <div><b>ca. 3,5 timer</b><span>kjerneløpet, modul 2–5</span></div>
+      <div><b>20–60 min</b><span>per fordypningsmodul</span></div>
+      <div><b>2 spor</b><span>nettleser eller terminal</span></div>
+    </div>
+
+    <div class="ways">
+      <div class="way">
+        <h3>Start hvor du vil</h3>
+        <p>Hver modul har et startpunkt og en fasit. Én kommando, eller én notebook i nettlesersporet, setter prosjektet ditt der modulen begynner. Etterpå committer du og henter modellen inn i Specly. Du kan gå rett til modul 7.</p>
+      </div>
+      <div class="way">
+        <h3>Se virkningen hver gang</h3>
+        <p>Hver endring går samme vei, og du ser resultatet i din egen Databricks-arbeidsflate:</p>
+        <ol class="loop"><li>Endre i Specly</li><li>Eksporter til Git</li><li>Generer koden</li><li>Kjør pipelinen</li><li>Kontroller</li></ol>
+      </div>
+      <div class="way">
+        <h3>Gjett før du kjører</h3>
+        <p class="ex"><b>Hva tror du?</b> <code>raw__varius__vare</code> har 450 rader: 150 varer i tre uttrekk. Hvor mange rader får <code>brz__varius__vare</code>?</p>
+      </div>
+      <div class="way">
+        <h3>Feil med vilje</h3>
+        <p>Noen steg lar deg gjøre en vanlig feil. Gir du en sølvkolonne et annet navn uten flagget «Eget navn», stopper forhåndssjekken med en norsk melding før noe genereres.</p>
+      </div>
+    </div>
+
+    <div class="sub-block">
+      <h3 class="h3-big">To spor, samme resultat</h3>
+      <div class="tracks">
+        <div class="tr">
+          <h3>Nettleser</h3>
+          <p>Specly, GitHub og notebooks i Databricks. Ingenting å installere. Velg dette sporet hvis du er usikker.</p>
+        </div>
+        <div class="tr">
+          <h3>Terminal</h3>
+          <p>En lokal klone og kommandoene <code>./generer</code>, <code>./kjor</code> og <code>./kurs</code>. Hver kommando står ferdig til å kopieres, med én setning om hva den gjør.</p>
+        </div>
+      </div>
+      <p class="access-note muted">Velg ett spor i modul 0, og hold deg til det. De to sporene kan ikke dele et skjema i Databricks.</p>
+    </div>
+
+    <div class="sub-block">
+      <h3 class="h3-big">Når du er ferdig, har du</h3>
+      <div class="done">
+        <div><b>Et Specly-prosjekt</b><span>med hele modellen, lag for lag, med relasjoner og diagrammer</span></div>
+        <div><b>Et Git-repo</b><span>med ODCS-kontraktene, malene og den genererte koden</span></div>
+        <div><b>En Databricks</b><span>med en pipeline som bygger tabellene og stjernene</span></div>
+      </div>
+      <p class="muted" style="font-size: 0.95rem">Alt er ditt eget. Du kan prøve og feile uten å ødelegge for andre, og ta med deg oppsettet videre.</p>
+    </div>
+  </div>
+</section>
+
+<section id="hvem">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Hvem kurset er for</h2>
+      <p class="lead prose muted">Folk som bygger og forvalter dataplattformer. Alle tar kjerneløpet eller deler av det, og velger så modulene som passer rollen.</p>
+    </div>
+    <div class="roles">
+      <div><h3>Modellerer</h3><span class="seq">0 · 2 · 3 · 4 · 5 · 6 · 7</span><p>Bygger modellen. Kjerneløpet, og så nettbutikken og kunden med historikk.</p></div>
+      <div><h3>Erfaren modellerer</h3><span class="seq">+ 11</span><p>Vil videre: periodisk øyeblikksbilde og semi-additive mål.</p></div>
+      <div><h3>Admin</h3><span class="seq">0 · 1 · 2 · 8</span><p>Setter opp prosjektet: tabelltyper, regler, roller og krav til dokumentasjon. Ca. 2 t 30 min.</p></div>
+      <div><h3>Forvalter</h3><span class="seq">0 · 8 · 9 · 10</span><p>Dokumenterer og eier data: styring, begreper og dataprodukter. Ca. 2 t 20 min.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="forutsetninger">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Forutsetninger</h2>
+    </div>
+
+    <h3 class="h3-big" style="margin-bottom: 14px">Forkunnskaper</h3>
+    <div class="know">
+      <div><h3>Databricks</h3><p>Du kjenner grensesnittet litt. Har du jobbet mest i Microsoft Fabric, går det fint. Det som er spesielt for Databricks forklares kort.</p></div>
+      <div><h3>Modellering</h3><p>Du kan prinsippene: fakta, dimensjoner, nøkler, historikk. Du trenger ikke være ekspert.</p></div>
+      <div><h3>Specly</h3><p>Ingen. Hvert konsept forklares grundig der det innføres.</p></div>
+      <div><h3>ODCS</h3><p>Litt kjennskap holder. Kurset viser hvilket felt hvert valg gir.</p></div>
+      <div><h3>Terminal</h3><p>Valgfritt. Hele kurset kan gjøres i nettleseren.</p></div>
+    </div>
+
+    <div class="sub-block">
+      <h3 class="h3-big">Tilgang og verktøy</h3>
+      <ul class="access">
+        <li><span class="box" aria-hidden="true"></span><div><b>GitHub-konto og eget repo fra malrepoet</b><span class="use">Der modellen, malene og koden ligger. Repoet er ditt.</span></div><span class="which"><span class="pill both">begge spor</span></span></li>
+        <li><span class="box" aria-hidden="true"></span><div><b>Specly sin GitHub-app på repoet</b><span class="use">Lar Specly lese og skrive filer i akkurat det ene repoet. Ingen token.</span></div><span class="which"><span class="pill both">begge spor</span></span></li>
+        <li><span class="box" aria-hidden="true"></span><div><b>Medlemskap i kursorganisasjonen i Specly</b><span class="use">Der du modellerer. Kursholder inviterer, og du lager ditt eget prosjekt i modul 0.</span></div><span class="which"><span class="pill both">begge spor</span></span></li>
+        <li><span class="box" aria-hidden="true"></span><div><b>Databricks-arbeidsflate eller Databricks Free</b><span class="use">Der tabellene bygges. Free er gratis, med registrering på e-post.</span></div><span class="which"><span class="pill both">begge spor</span></span></li>
+        <li><span class="box" aria-hidden="true"></span><div><b>Personlig token i Databricks</b><span class="use">Til «Importer fra Databricks» i Specly i modul 2. Specly holder det bare i nettleseren din. Kan du ikke lage token, har modul 2 en omvei med en CSV-fil.</span></div><span class="which"><span class="pill both">begge spor</span></span></li>
+        <li><span class="box" aria-hidden="true"></span><div><b><code>git</code>, <code>gh</code>, <code>uv</code> og Databricks CLI</b><span class="use">Logge inn i GitHub, klone repoet, kjøre kursverktøyene og rulle ut pipelinen. <code>uv</code> henter riktig Python selv.</span></div><span class="which"><span class="pill">terminal</span></span></li>
+        <li><span class="box" aria-hidden="true"></span><div><b>Claude Code</b><span class="use">Én måte å endre modellen via Git. Ikke nødvendig.</span></div><span class="which"><span class="pill opt">valgfritt</span></span></li>
+      </ul>
+      <p class="access-note muted">Nettlesersporet krever ingen lokal installasjon. Data Contract CLI installeres i notebooken i Databricks. Alle data i kurset er oppdiktet, og tokens deles aldri.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Specly-kurset · Specly × Databricks</span>
+    <span>Toppfart Sport AS er en oppdiktet bedrift.</span>
+  </div>
+</footer>
+
+</body>
+</html>

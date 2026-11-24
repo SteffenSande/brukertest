@@ -1,0 +1,28 @@
+[
+  {
+    "uuid": "20f6cec5-c619-559a-982f-12067be4a408",
+    "name": "fb__ peker på bk__",
+    "description": "Sølv: fb__<tabell> i en sølvtabell peker på bk__<tabell> i sølvtabellen med samme navn.",
+    "fromPattern": "^fb__{toTable}$",
+    "toPattern": "^bk__{toTable}$",
+    "fromTablePattern": "^slv__",
+    "toTablePattern": "^slv__",
+    "defaultSourceCardinality": "zero-or-more",
+    "defaultTargetCardinality": "zero-or-one",
+    "isActive": true,
+    "order": 0
+  },
+  {
+    "uuid": "36f6ac70-3a8a-55f0-a74a-b278d45de048",
+    "name": "fk__ peker på pk__",
+    "description": "Gull: fk__<dimensjon> i en fakta peker på pk__<dimensjon> i dimensjonen med samme navn. -1 og -2 gjør at den alltid treffer.",
+    "fromPattern": "^fk__{toTable}$",
+    "toPattern": "^pk__{toTable}$",
+    "fromTablePattern": "^gld__f__",
+    "toTablePattern": "^gld__d__",
+    "defaultSourceCardinality": "zero-or-more",
+    "defaultTargetCardinality": "exactly-one",
+    "isActive": true,
+    "order": 1
+  }
+]

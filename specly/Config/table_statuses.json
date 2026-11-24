@@ -1,0 +1,30 @@
+[
+  {
+    "uuid": "d08d9a2d-d42c-464e-9950-ae0307e5dae7",
+    "name": "Ikke begynt",
+    "description": "",
+    "statusType": "not_started",
+    "color": "#94a3b8",
+    "isActive": true,
+    "order": 0
+  },
+  {
+    "uuid": "218a270c-e5b5-41f4-9ccf-525e91e10f79",
+    "name": "Under arbeid",
+    "description": "",
+    "statusType": "in_progress",
+    "color": "#3b82f6",
+    "isActive": true,
+    "order": 1,
+    "isDefault": true
+  },
+  {
+    "uuid": "ba6d2e70-d636-4146-9353-adde960f67c3",
+    "name": "I produksjon",
+    "description": "",
+    "statusType": "done",
+    "color": "#22c55e",
+    "isActive": true,
+    "order": 2
+  }
+]

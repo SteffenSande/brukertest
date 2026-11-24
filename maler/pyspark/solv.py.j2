@@ -1,0 +1,168 @@
+{%- import 'felles_py.j2' as f -%}
+{%- import 'plattform.j2' as p -%}
+{%- from 'modell.j2' import modell -%}
+{#- Sølv: oppstrømstabellene satt sammen over tid, Beregning og Radfilter, så historikk (SCD2).
+    Hovedtabell = tabellen til den første BK-kolonnens oppstrøm. De andre oppstrømstabellene kobles med relasjonen
+    mellom dem og hovedtabellen (LEFT). En kolonne med relasjon til en annen sølvtabells bk__ er et fb__: hashen av
+    oppstrømsverdiene. En kolonne med Beregning regnes etter de andre, over sølvnavnene. Ellers er kolonnen en kopi.
+    Union (feltet «Union av»): én gren per tabell i feltet, hver med sin hovedtabell. En annen
+    oppstrømstabell kobles til grenen den har en relasjon til. I hver gren får en kolonne verdien fra sin
+    oppstrømskolonne i grenen, eller ingen verdi når grenen ikke har noen. Radene fra grenene stables, og Beregning
+    regnes etter unionen. En Beregning som bruker kolonnens eget navn, får først verdien fra grenene. -#}
+{%- set dc = data_contract -%}
+{%- set t = modell.tabeller[dc.schema_[0].name] -%}
+{%- set bk = t.kolonner|selectattr('bk')|list -%}
+{%- set hoved = bk[0].opp[0].rsplit('.', 1)[0] -%}
+{%- set data = t.kolonner|rejectattr('navn', 'in', t.standard)|list -%}
+{%- set unionen = t.union or [] -%}
+{%- set grener = unionen if unionen else [hoved] -%}
+{#- Beregning som bruker kolonnens egen verdi (bare i en union): verdien fra grenene først, så Beregning. -#}
+{%- set forverdi = [] -%}
+{%- if unionen %}{% for c in data if c.beregning and c.navn in c.beregning_bruker %}{% set _ = forverdi.append(c.navn) %}{% endfor %}{% endif -%}
+{#- Oppstrømstabellene som må kobles på: fra kolonnene (unntatt Beregning, der oppstrømmen bare er sporing) og fra Oppstrømstabeller. -#}
+{%- set andre = [] -%}
+{%- for c in data if not c.beregning or c.navn in forverdi %}{% for o in c.opp %}{% set tb = o.rsplit('.', 1)[0] %}{% if tb not in grener and tb not in andre %}{% set _ = andre.append(tb) %}{% endif %}{% endfor %}{% endfor -%}
+{%- for tb in t.oppstromstabeller %}{% if tb not in grener and tb not in andre %}{% set _ = andre.append(tb) %}{% endif %}{% endfor -%}
+{#- Grenen hver annen tabell kobles til: uten union hovedtabellen, i en union grenen den har en relasjon til. -#}
+{%- set gren_for = {} -%}
+{%- for tb in andre -%}
+{%- if not unionen %}{% set _ = gren_for.update({tb: hoved}) %}{% endif -%}
+{%- for g in grener if unionen %}{% for r in modell.relasjoner %}{% set ft = r.fra[0].rsplit('.', 1)[0] %}{% set tt = r.til[0].rsplit('.', 1)[0] -%}
+{%- if tb not in gren_for and ((ft == tb and tt == g) or (ft == g and tt == tb)) %}{% set _ = gren_for.update({tb: g}) %}{% endif -%}
+{%- endfor %}{% endfor -%}
+{%- endfor -%}
+
+{#- Kolonneparene i relasjonen mellom en annen tabell og grenens hovedtabell: [(kolonne i den andre, hovedtabell.kolonne)]. -#}
+{%- macro par(annen, h) -%}
+{%- set ns = namespace(par=[]) -%}
+{%- for r in modell.relasjoner if not ns.par -%}
+{%- set ft = r.fra[0].rsplit('.', 1)[0] -%}{%- set tt = r.til[0].rsplit('.', 1)[0] -%}
+{%- if ft == annen and tt == h -%}{% for i in range(r.fra|length) %}{% set ns.par = ns.par + [(r.fra[i].rsplit('.', 1)[1], r.til[i])] %}{% endfor -%}
+{%- elif ft == h and tt == annen -%}{% for i in range(r.fra|length) %}{% set ns.par = ns.par + [(r.til[i].rsplit('.', 1)[1], r.fra[i])] %}{% endfor -%}
+{%- endif -%}
+{%- endfor -%}
+[{% for d, e in ns.par %}({{ f.s(d) }}, {{ f.s(e) }}){{ ', ' if not loop.last }}{% endfor %}]
+{%- endmacro -%}
+
+{#- Sann når hovedtabellens koblingskolonne har en verdi, men koblingen til den andre tabellen ikke fant noen rad. -#}
+{%- macro ingen_treff(annen, h) -%}
+{%- set ns = namespace(b='') -%}
+{%- for r in modell.relasjoner if not ns.b -%}
+{%- set ft = r.fra[0].rsplit('.', 1)[0] -%}{%- set tt = r.til[0].rsplit('.', 1)[0] -%}
+{%- if ft == annen and tt == h -%}{% set ns.b = f.s(r.til[0]) ~ ', ' ~ f.s(r.fra[0]) -%}
+{%- elif ft == h and tt == annen -%}{% set ns.b = f.s(r.fra[0]) ~ ', ' ~ f.s(r.til[0]) -%}
+{%- endif -%}
+{%- endfor -%}
+ingen_treff({{ ns.b }})
+{%- endmacro -%}
+
+{#- Oppstrømskolonnene til en kolonne i grenen med hovedtabell h (uten union: alle). -#}
+{%- macro i_grenen(c, h) -%}
+{%- for o in c.opp %}{% set tb = o.rsplit('.', 1)[0] %}{% if not unionen or tb == h or gren_for.get(tb) == h %}{{ o }}|{% endif %}{% endfor -%}
+{%- endmacro -%}
+
+{#- Verdien til en kolonne som ikke er Beregning, i grenen med hovedtabell h. -#}
+{%- macro verdi(c, h) -%}
+{%- set opp = i_grenen(c, h).split('|')|reject('equalto', '')|list -%}
+{%- set ns = namespace(hash=false) -%}
+{%- for r in c.rel %}{% set tt, tk = r.rsplit('.', 1) %}{% if tk == 'bk__' ~ tt %}{% set ns.hash = true %}{% endif %}{% endfor -%}
+{%- set refs = [] %}{% for o in opp %}{% set _ = refs.append(f.s(o)) %}{% endfor -%}
+{%- set koblet = [] %}{% for o in opp %}{% set tb = o.rsplit('.', 1)[0] %}{% if tb != h and tb not in koblet %}{% set _ = koblet.append(tb) %}{% endif %}{% endfor -%}
+{%- if not opp -%}tom({{ f.s(c.type) }})
+{%- elif ns.hash and koblet -%}nokkel_av({{ refs|join(', ') }}, ikke_funnet_nar={% for tb in koblet %}{{ ingen_treff(tb, h) }}{{ ' | ' if not loop.last }}{% endfor %})
+{%- elif ns.hash -%}nokkel_av({{ refs|join(', ') }})
+{%- else -%}kopi({{ refs[0] }})
+{%- endif -%}
+{%- endmacro -%}
+{%- set kopier = data|rejectattr('beregning')|list + data|selectattr('navn', 'in', forverdi)|list -%}
+{%- set kopier = data|selectattr('navn', 'in', kopier|map(attribute='navn')|list)|list -%}
+{%- set beregnet = data|selectattr('beregning')|list -%}
+{%- set imp = ['Kolonne', 'ddl', 'egenskaper', 'kopi'] -%}
+{%- set ns = namespace(nokkel=false, treff=false, tom=false) -%}
+{%- for g in grener %}{% for c in kopier %}{% set v = verdi(c, g) %}{% if v.startswith('nokkel_av') %}{% set ns.nokkel = true %}{% endif %}{% if 'ingen_treff(' in v %}{% set ns.treff = true %}{% endif %}{% if v.startswith('tom(') %}{% set ns.tom = true %}{% endif %}{% endfor %}{% endfor -%}
+{%- if ns.treff %}{% set _ = imp.append('ingen_treff') %}{% endif -%}
+{%- if ns.nokkel %}{% set _ = imp.append('nokkel_av') %}{% endif -%}
+{%- if ns.tom %}{% set _ = imp.append('tom') %}{% endif -%}
+{%- set _ = imp.append('velg') -%}
+{%- macro koblinger(h, innrykk) -%}
+{%- for tb in andre if gren_for.get(tb) == h %}
+{{ innrykk }}    Kobling({{ f.s(tb) }}, par={{ par(tb, h) }}),
+{%- endfor -%}
+{%- endmacro -%}
+{%- macro kolonnene(h, innrykk) -%}
+{%- for c in kopier %}
+{{ innrykk }}    {{ f.s(c.navn) }}: {{ verdi(c, h) }},
+{%- endfor %}
+{%- if p.kildesystem in t.standard %}
+{{ innrykk }}    {{ f.s(p.kildesystem) }}: kopi({{ f.s(h ~ '.' ~ p.kildesystem) }}),
+{%- endif %}
+{%- endmacro -%}
+{{ f.topp(dc, t) }}
+from pyspark import pipelines as dp
+
+from plattform.felles import {{ imp|join(', ') }}
+from plattform.historikk import lag_historikk
+{%- if unionen %}
+from plattform.solv import Gren, {{ 'Kobling, ' if andre }}sett_sammen_union
+{%- else %}
+from plattform.solv import {{ 'Kobling, ' if andre }}sett_sammen_over_tid
+{%- endif %}
+
+{{ f.kolonner(dc) }}
+
+
+{{ f.dekorator(dc, 'materialized_view') }}
+def {{ t.navn }}():
+{%- if unionen %}
+    """Historikk (SCD2) over unionen av {{ grener|join(' og ') }}{{ (' (koblet: ' ~ andre|join(', ') ~ ')') if andre }}. Beregning etter unionen."""
+    rader, tidspunkter = sett_sammen_union(
+        grener=[
+{%- for g in grener %}
+            Gren(
+                hovedtabell={{ f.s(g) }},
+{%- if gren_for.values()|select('equalto', g)|list %}
+                koblinger=[
+{{- koblinger(g, '                ') }}
+                ],
+{%- endif %}
+                kolonner={
+{{- kolonnene(g, '                ') }}
+                },
+            ),
+{%- endfor %}
+        ],
+{%- if t.radfilter %}
+        radfilter={{ f.s(t.radfilter) }},
+{%- endif %}
+{%- else %}
+    """Historikk (SCD2) over {{ ([hoved] + andre)|join(' + ') }}. Hovedtabell: {{ hoved }}."""
+    rader, tidspunkter = sett_sammen_over_tid(
+        hovedtabell={{ f.s(hoved) }},
+{%- if andre %}
+        koblinger=[
+{{- koblinger(hoved, '        ') }}
+        ],
+{%- endif %}
+{%- if t.radfilter %}
+        radfilter={{ f.s(t.radfilter) }},
+{%- endif %}
+        kolonner={
+{{- kolonnene(hoved, '        ') }}
+        },
+{%- endif %}
+{%- if beregnet %}
+        beregninger={
+{%- for c in beregnet %}
+            {{ f.s(c.navn) }}: ({{ f.s(c.beregning) }}, {{ f.s(c.type) }}),
+{%- endfor %}
+        },
+{%- endif %}
+    )
+    versjoner = lag_historikk(
+        rader,
+        nokkel={{ f.liste(bk|map(attribute='navn')|list) }},
+        tabell={{ f.s(t.navn) }},
+        tid="_tidspunkt",
+        tidspunkter=tidspunkter,
+    )
+    return velg(versjoner, KOLONNER)

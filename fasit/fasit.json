@@ -1,0 +1,8628 @@
+{
+ "om": {
+  "generator": "tools/lag_data.py",
+  "seed": 20261122,
+  "periode": [
+   "2026-08-01",
+   "2026-10-31"
+  ],
+  "salgsdato": "norsk dato (Europe/Oslo) av soldAt/ordered_at, ikke filens dato",
+  "belop": "antall * enhetspris - rabatt, kroner med mva; nettbutikkens pris er etter rabatt, rabatt 0",
+  "regnet_fra": "generatorens sannhet, ikke filene og ikke pipelinen"
+ },
+ "filer": {
+  "antall": 457,
+  "per_fil": {
+   "data/landing/kalender/dag/dag_20260731T0600.csv": 730,
+   "data/landing/kassio/kvittering/kvittering_20260802T0600.csv": 265,
+   "data/landing/kassio/kvittering/kvittering_20260803T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20260804T0600.csv": 221,
+   "data/landing/kassio/kvittering/kvittering_20260805T0600.csv": 235,
+   "data/landing/kassio/kvittering/kvittering_20260806T0600.csv": 248,
+   "data/landing/kassio/kvittering/kvittering_20260807T0600.csv": 258,
+   "data/landing/kassio/kvittering/kvittering_20260808T0600.csv": 274,
+   "data/landing/kassio/kvittering/kvittering_20260809T0600.csv": 272,
+   "data/landing/kassio/kvittering/kvittering_20260810T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20260811T0600.csv": 238,
+   "data/landing/kassio/kvittering/kvittering_20260812T0600.csv": 227,
+   "data/landing/kassio/kvittering/kvittering_20260813T0600.csv": 242,
+   "data/landing/kassio/kvittering/kvittering_20260814T0600.csv": 275,
+   "data/landing/kassio/kvittering/kvittering_20260815T0600.csv": 264,
+   "data/landing/kassio/kvittering/kvittering_20260816T0600.csv": 268,
+   "data/landing/kassio/kvittering/kvittering_20260817T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20260818T0600.csv": 226,
+   "data/landing/kassio/kvittering/kvittering_20260819T0600.csv": 214,
+   "data/landing/kassio/kvittering/kvittering_20260820T0600.csv": 238,
+   "data/landing/kassio/kvittering/kvittering_20260821T0600.csv": 263,
+   "data/landing/kassio/kvittering/kvittering_20260822T0600.csv": 278,
+   "data/landing/kassio/kvittering/kvittering_20260823T0600.csv": 262,
+   "data/landing/kassio/kvittering/kvittering_20260824T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20260825T0600.csv": 227,
+   "data/landing/kassio/kvittering/kvittering_20260826T0600.csv": 230,
+   "data/landing/kassio/kvittering/kvittering_20260827T0600.csv": 244,
+   "data/landing/kassio/kvittering/kvittering_20260828T0600.csv": 271,
+   "data/landing/kassio/kvittering/kvittering_20260829T0600.csv": 272,
+   "data/landing/kassio/kvittering/kvittering_20260830T0600.csv": 272,
+   "data/landing/kassio/kvittering/kvittering_20260831T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20260901T0600.csv": 222,
+   "data/landing/kassio/kvittering/kvittering_20260902T0600.csv": 230,
+   "data/landing/kassio/kvittering/kvittering_20260903T0600.csv": 240,
+   "data/landing/kassio/kvittering/kvittering_20260904T0600.csv": 264,
+   "data/landing/kassio/kvittering/kvittering_20260905T0600.csv": 266,
+   "data/landing/kassio/kvittering/kvittering_20260906T0600.csv": 332,
+   "data/landing/kassio/kvittering/kvittering_20260907T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20260908T0600.csv": 231,
+   "data/landing/kassio/kvittering/kvittering_20260909T0600.csv": 217,
+   "data/landing/kassio/kvittering/kvittering_20260910T0600.csv": 241,
+   "data/landing/kassio/kvittering/kvittering_20260911T0600.csv": 262,
+   "data/landing/kassio/kvittering/kvittering_20260912T0600.csv": 272,
+   "data/landing/kassio/kvittering/kvittering_20260914T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20260914T0930.csv": 274,
+   "data/landing/kassio/kvittering/kvittering_20260915T0600.csv": 212,
+   "data/landing/kassio/kvittering/kvittering_20260916T0600.csv": 225,
+   "data/landing/kassio/kvittering/kvittering_20260917T0600.csv": 236,
+   "data/landing/kassio/kvittering/kvittering_20260918T0600.csv": 271,
+   "data/landing/kassio/kvittering/kvittering_20260919T0600.csv": 274,
+   "data/landing/kassio/kvittering/kvittering_20260920T0600.csv": 285,
+   "data/landing/kassio/kvittering/kvittering_20260921T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20260922T0600.csv": 226,
+   "data/landing/kassio/kvittering/kvittering_20260923T0600.csv": 229,
+   "data/landing/kassio/kvittering/kvittering_20260924T0600.csv": 245,
+   "data/landing/kassio/kvittering/kvittering_20260925T0600.csv": 257,
+   "data/landing/kassio/kvittering/kvittering_20260926T0600.csv": 265,
+   "data/landing/kassio/kvittering/kvittering_20260927T0600.csv": 273,
+   "data/landing/kassio/kvittering/kvittering_20260928T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20260929T0600.csv": 228,
+   "data/landing/kassio/kvittering/kvittering_20260930T0600.csv": 231,
+   "data/landing/kassio/kvittering/kvittering_20261001T0600.csv": 233,
+   "data/landing/kassio/kvittering/kvittering_20261002T0600.csv": 254,
+   "data/landing/kassio/kvittering/kvittering_20261003T0600.csv": 275,
+   "data/landing/kassio/kvittering/kvittering_20261004T0600.csv": 289,
+   "data/landing/kassio/kvittering/kvittering_20261005T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20261006T0600.csv": 227,
+   "data/landing/kassio/kvittering/kvittering_20261007T0600.csv": 222,
+   "data/landing/kassio/kvittering/kvittering_20261008T0600.csv": 230,
+   "data/landing/kassio/kvittering/kvittering_20261009T0600.csv": 269,
+   "data/landing/kassio/kvittering/kvittering_20261010T0600.csv": 271,
+   "data/landing/kassio/kvittering/kvittering_20261011T0600.csv": 272,
+   "data/landing/kassio/kvittering/kvittering_20261012T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20261013T0600.csv": 221,
+   "data/landing/kassio/kvittering/kvittering_20261014T0600.csv": 228,
+   "data/landing/kassio/kvittering/kvittering_20261015T0600.csv": 241,
+   "data/landing/kassio/kvittering/kvittering_20261016T0600.csv": 258,
+   "data/landing/kassio/kvittering/kvittering_20261017T0600.csv": 271,
+   "data/landing/kassio/kvittering/kvittering_20261018T0600.csv": 283,
+   "data/landing/kassio/kvittering/kvittering_20261019T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20261020T0600.csv": 230,
+   "data/landing/kassio/kvittering/kvittering_20261021T0600.csv": 222,
+   "data/landing/kassio/kvittering/kvittering_20261022T0600.csv": 232,
+   "data/landing/kassio/kvittering/kvittering_20261023T0600.csv": 256,
+   "data/landing/kassio/kvittering/kvittering_20261024T0600.csv": 288,
+   "data/landing/kassio/kvittering/kvittering_20261025T0600.csv": 268,
+   "data/landing/kassio/kvittering/kvittering_20261026T0600.csv": 0,
+   "data/landing/kassio/kvittering/kvittering_20261027T0600.csv": 222,
+   "data/landing/kassio/kvittering/kvittering_20261028T0600.csv": 216,
+   "data/landing/kassio/kvittering/kvittering_20261029T0600.csv": 234,
+   "data/landing/kassio/kvittering/kvittering_20261030T0600.csv": 277,
+   "data/landing/kassio/kvittering/kvittering_20261031T0600.csv": 272,
+   "data/landing/kassio/kvittering/kvittering_20261101T0600.csv": 292,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260802T0600.csv": 501,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260803T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260804T0600.csv": 450,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260805T0600.csv": 456,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260806T0600.csv": 510,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260807T0600.csv": 480,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260808T0600.csv": 535,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260809T0600.csv": 504,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260810T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260811T0600.csv": 468,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260812T0600.csv": 423,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260813T0600.csv": 501,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260814T0600.csv": 551,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260815T0600.csv": 532,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260816T0600.csv": 519,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260817T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260818T0600.csv": 439,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260819T0600.csv": 400,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260820T0600.csv": 432,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260821T0600.csv": 520,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260822T0600.csv": 509,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260823T0600.csv": 516,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260824T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260825T0600.csv": 422,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260826T0600.csv": 429,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260827T0600.csv": 488,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260828T0600.csv": 512,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260829T0600.csv": 534,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260830T0600.csv": 544,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260831T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260901T0600.csv": 423,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260902T0600.csv": 440,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260903T0600.csv": 482,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260904T0600.csv": 532,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260905T0600.csv": 517,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260906T0600.csv": 668,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260907T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260908T0600.csv": 469,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260909T0600.csv": 424,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260910T0600.csv": 465,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260911T0600.csv": 520,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260912T0600.csv": 549,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260914T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260914T0930.csv": 521,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260915T0600.csv": 433,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260916T0600.csv": 435,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260917T0600.csv": 442,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260918T0600.csv": 543,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260919T0600.csv": 521,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260920T0600.csv": 550,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260921T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260922T0600.csv": 434,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260923T0600.csv": 460,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260924T0600.csv": 482,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260925T0600.csv": 502,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260926T0600.csv": 512,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260927T0600.csv": 530,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260928T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260929T0600.csv": 430,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260930T0600.csv": 453,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261001T0600.csv": 477,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261002T0600.csv": 487,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261003T0600.csv": 543,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261004T0600.csv": 558,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261005T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261006T0600.csv": 464,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261007T0600.csv": 424,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261008T0600.csv": 462,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261009T0600.csv": 513,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261010T0600.csv": 527,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261011T0600.csv": 519,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261012T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261013T0600.csv": 417,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261014T0600.csv": 443,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261015T0600.csv": 466,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261016T0600.csv": 488,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261017T0600.csv": 524,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261018T0600.csv": 527,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261019T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261020T0600.csv": 435,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261021T0600.csv": 433,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261022T0600.csv": 445,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261023T0600.csv": 521,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261024T0600.csv": 574,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261025T0600.csv": 534,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261026T0600.csv": 0,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261027T0600.csv": 446,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261028T0600.csv": 422,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261029T0600.csv": 446,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261030T0600.csv": 527,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261031T0600.csv": 488,
+   "data/landing/kassio/kvitteringslinje/kvitteringslinje_20261101T0600.csv": 591,
+   "data/landing/lagra/beholdning/beholdning_20260801T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260803T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260804T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260805T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260806T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260807T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260808T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260810T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260811T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260812T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260813T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260814T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260815T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260817T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260818T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260819T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260820T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260821T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260822T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260824T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260825T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260826T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260827T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260828T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260829T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260831T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260901T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260902T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260903T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260904T2300.parquet": 750,
+   "data/landing/lagra/beholdning/beholdning_20260905T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260907T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260908T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260909T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260910T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260911T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260912T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260914T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260915T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260916T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260917T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260918T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260919T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260921T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260922T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260923T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260924T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260925T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260926T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260928T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260929T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20260930T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261001T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261002T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261003T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261005T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261006T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261007T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261008T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261009T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261010T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261012T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261013T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261014T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261015T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261016T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261017T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261019T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261020T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261021T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261022T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261023T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261024T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261026T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261027T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261028T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261029T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261030T2300.parquet": 900,
+   "data/landing/lagra/beholdning/beholdning_20261031T2300.parquet": 900,
+   "data/landing/lojal/medlem/medlem_20260801T0400.json": 780,
+   "data/landing/lojal/medlem/medlem_20260802T0400.json": 781,
+   "data/landing/lojal/medlem/medlem_20260803T0400.json": 782,
+   "data/landing/lojal/medlem/medlem_20260804T0400.json": 782,
+   "data/landing/lojal/medlem/medlem_20260805T0400.json": 782,
+   "data/landing/lojal/medlem/medlem_20260806T0400.json": 782,
+   "data/landing/lojal/medlem/medlem_20260807T0400.json": 782,
+   "data/landing/lojal/medlem/medlem_20260808T0400.json": 782,
+   "data/landing/lojal/medlem/medlem_20260809T0400.json": 782,
+   "data/landing/lojal/medlem/medlem_20260810T0400.json": 782,
+   "data/landing/lojal/medlem/medlem_20260811T0400.json": 784,
+   "data/landing/lojal/medlem/medlem_20260812T0400.json": 784,
+   "data/landing/lojal/medlem/medlem_20260813T0400.json": 784,
+   "data/landing/lojal/medlem/medlem_20260814T0400.json": 784,
+   "data/landing/lojal/medlem/medlem_20260815T0400.json": 784,
+   "data/landing/lojal/medlem/medlem_20260816T0400.json": 785,
+   "data/landing/lojal/medlem/medlem_20260817T0400.json": 785,
+   "data/landing/lojal/medlem/medlem_20260818T0400.json": 786,
+   "data/landing/lojal/medlem/medlem_20260819T0400.json": 786,
+   "data/landing/lojal/medlem/medlem_20260820T0400.json": 786,
+   "data/landing/lojal/medlem/medlem_20260821T0400.json": 786,
+   "data/landing/lojal/medlem/medlem_20260822T0400.json": 786,
+   "data/landing/lojal/medlem/medlem_20260823T0400.json": 786,
+   "data/landing/lojal/medlem/medlem_20260824T0400.json": 786,
+   "data/landing/lojal/medlem/medlem_20260825T0400.json": 786,
+   "data/landing/lojal/medlem/medlem_20260826T0400.json": 786,
+   "data/landing/lojal/medlem/medlem_20260827T0400.json": 787,
+   "data/landing/lojal/medlem/medlem_20260828T0400.json": 788,
+   "data/landing/lojal/medlem/medlem_20260829T0400.json": 789,
+   "data/landing/lojal/medlem/medlem_20260830T0400.json": 789,
+   "data/landing/lojal/medlem/medlem_20260831T0400.json": 789,
+   "data/landing/lojal/medlem/medlem_20260901T0400.json": 789,
+   "data/landing/lojal/medlem/medlem_20260902T0400.json": 789,
+   "data/landing/lojal/medlem/medlem_20260903T0400.json": 789,
+   "data/landing/lojal/medlem/medlem_20260904T0400.json": 789,
+   "data/landing/lojal/medlem/medlem_20260905T0400.json": 789,
+   "data/landing/lojal/medlem/medlem_20260906T0400.json": 790,
+   "data/landing/lojal/medlem/medlem_20260907T0400.json": 791,
+   "data/landing/lojal/medlem/medlem_20260908T0400.json": 791,
+   "data/landing/lojal/medlem/medlem_20260909T0400.json": 792,
+   "data/landing/lojal/medlem/medlem_20260910T0400.json": 792,
+   "data/landing/lojal/medlem/medlem_20260911T0400.json": 793,
+   "data/landing/lojal/medlem/medlem_20260912T0400.json": 793,
+   "data/landing/lojal/medlem/medlem_20260913T0400.json": 794,
+   "data/landing/lojal/medlem/medlem_20260914T0400.json": 794,
+   "data/landing/lojal/medlem/medlem_20260915T0400.json": 794,
+   "data/landing/lojal/medlem/medlem_20260916T0400.json": 795,
+   "data/landing/lojal/medlem/medlem_20260917T0400.json": 795,
+   "data/landing/lojal/medlem/medlem_20260918T0400.json": 795,
+   "data/landing/lojal/medlem/medlem_20260919T0400.json": 795,
+   "data/landing/lojal/medlem/medlem_20260920T0400.json": 795,
+   "data/landing/lojal/medlem/medlem_20260921T0400.json": 796,
+   "data/landing/lojal/medlem/medlem_20260922T0400.json": 796,
+   "data/landing/lojal/medlem/medlem_20260923T0400.json": 796,
+   "data/landing/lojal/medlem/medlem_20260924T0400.json": 796,
+   "data/landing/lojal/medlem/medlem_20260925T0400.json": 796,
+   "data/landing/lojal/medlem/medlem_20260926T0400.json": 797,
+   "data/landing/lojal/medlem/medlem_20260927T0400.json": 798,
+   "data/landing/lojal/medlem/medlem_20260928T0400.json": 798,
+   "data/landing/lojal/medlem/medlem_20260929T0400.json": 798,
+   "data/landing/lojal/medlem/medlem_20260930T0400.json": 798,
+   "data/landing/lojal/medlem/medlem_20261001T0400.json": 799,
+   "data/landing/lojal/medlem/medlem_20261002T0400.json": 800,
+   "data/landing/lojal/medlem/medlem_20261003T0400.json": 800,
+   "data/landing/lojal/medlem/medlem_20261004T0400.json": 800,
+   "data/landing/lojal/medlem/medlem_20261005T0400.json": 801,
+   "data/landing/lojal/medlem/medlem_20261006T0400.json": 801,
+   "data/landing/lojal/medlem/medlem_20261007T0400.json": 801,
+   "data/landing/lojal/medlem/medlem_20261008T0400.json": 801,
+   "data/landing/lojal/medlem/medlem_20261009T0400.json": 802,
+   "data/landing/lojal/medlem/medlem_20261010T0400.json": 802,
+   "data/landing/lojal/medlem/medlem_20261011T0400.json": 803,
+   "data/landing/lojal/medlem/medlem_20261012T0400.json": 803,
+   "data/landing/lojal/medlem/medlem_20261013T0400.json": 803,
+   "data/landing/lojal/medlem/medlem_20261014T0400.json": 803,
+   "data/landing/lojal/medlem/medlem_20261015T0400.json": 804,
+   "data/landing/lojal/medlem/medlem_20261016T0400.json": 804,
+   "data/landing/lojal/medlem/medlem_20261017T0400.json": 804,
+   "data/landing/lojal/medlem/medlem_20261018T0400.json": 804,
+   "data/landing/lojal/medlem/medlem_20261019T0400.json": 804,
+   "data/landing/lojal/medlem/medlem_20261020T0400.json": 805,
+   "data/landing/lojal/medlem/medlem_20261021T0400.json": 805,
+   "data/landing/lojal/medlem/medlem_20261022T0400.json": 805,
+   "data/landing/lojal/medlem/medlem_20261023T0400.json": 805,
+   "data/landing/lojal/medlem/medlem_20261024T0400.json": 805,
+   "data/landing/lojal/medlem/medlem_20261025T0400.json": 805,
+   "data/landing/lojal/medlem/medlem_20261026T0400.json": 805,
+   "data/landing/lojal/medlem/medlem_20261027T0400.json": 805,
+   "data/landing/lojal/medlem/medlem_20261028T0400.json": 806,
+   "data/landing/lojal/medlem/medlem_20261029T0400.json": 806,
+   "data/landing/lojal/medlem/medlem_20261030T0400.json": 806,
+   "data/landing/lojal/medlem/medlem_20261031T0400.json": 806,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260802T0600.json": 60,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260803T0600.json": 74,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260804T0600.json": 53,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260805T0600.json": 54,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260806T0600.json": 57,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260807T0600.json": 59,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260808T0600.json": 51,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260809T0600.json": 70,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260810T0600.json": 71,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260811T0600.json": 65,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260812T0600.json": 56,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260813T0600.json": 65,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260814T0600.json": 64,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260815T0600.json": 67,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260816T0600.json": 67,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260817T0600.json": 77,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260818T0600.json": 56,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260819T0600.json": 51,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260820T0600.json": 65,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260821T0600.json": 56,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260822T0600.json": 61,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260823T0600.json": 66,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260824T0600.json": 64,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260825T0600.json": 56,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260826T0600.json": 48,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260827T0600.json": 59,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260828T0600.json": 63,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260829T0600.json": 58,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260830T0600.json": 64,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260831T0600.json": 65,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260901T0600.json": 43,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260902T0600.json": 75,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260903T0600.json": 54,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260904T0600.json": 58,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260905T0600.json": 64,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260906T0600.json": 54,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260907T0600.json": 77,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260908T0600.json": 53,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260909T0600.json": 51,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260910T0600.json": 58,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260911T0600.json": 63,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260912T0600.json": 60,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260913T0600.json": 54,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260914T0600.json": 81,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260915T0600.json": 65,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260916T0600.json": 57,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260917T0600.json": 57,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260918T0600.json": 61,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260919T0600.json": 59,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260920T0600.json": 60,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260921T0600.json": 60,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260922T0600.json": 62,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260923T0600.json": 65,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260924T0600.json": 64,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260925T0600.json": 52,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260926T0600.json": 65,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260927T0600.json": 68,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260928T0600.json": 54,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260929T0600.json": 63,
+   "data/landing/nettora/ordrelinje/ordrelinje_20260930T0600.json": 63,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261001T0600.json": 58,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261002T0600.json": 73,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261003T0600.json": 67,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261004T0600.json": 56,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261005T0600.json": 69,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261006T0600.json": 60,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261007T0600.json": 58,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261008T0600.json": 72,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261009T0600.json": 67,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261010T0600.json": 62,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261011T0600.json": 51,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261012T0600.json": 65,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261013T0600.json": 76,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261014T0600.json": 63,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261015T0600.json": 66,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261016T0600.json": 52,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261017T0600.json": 70,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261018T0600.json": 58,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261019T0600.json": 64,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261020T0600.json": 52,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261021T0600.json": 59,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261022T0600.json": 56,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261023T0600.json": 62,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261024T0600.json": 69,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261025T0600.json": 60,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261026T0600.json": 58,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261027T0600.json": 47,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261028T0600.json": 51,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261029T0600.json": 57,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261030T0600.json": 68,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261031T0600.json": 58,
+   "data/landing/nettora/ordrelinje/ordrelinje_20261101T0600.json": 67,
+   "data/landing/varius/aktor/aktor_20260801T0500.csv": 16,
+   "data/landing/varius/aktor/aktor_20260901T0500.csv": 17,
+   "data/landing/varius/aktor/aktor_20261001T0500.csv": 17,
+   "data/landing/varius/vare/vare_20260801T0500.csv": 150,
+   "data/landing/varius/vare/vare_20260901T0500.csv": 150,
+   "data/landing/varius/vare/vare_20261001T0500.csv": 150,
+   "data/landing/varius/varegruppe/varegruppe_20260801T0500.csv": 12,
+   "data/landing/varius/varegruppe/varegruppe_20260901T0500.csv": 12,
+   "data/landing/varius/varegruppe/varegruppe_20261001T0500.csv": 12
+  }
+ },
+ "modul2_raw": {
+  "rader_per_tabell": {
+   "raw__kalender__dag": {
+    "filer": 1,
+    "rader": 730
+   },
+   "raw__kassio__kvittering": {
+    "filer": 92,
+    "rader": 19845
+   },
+   "raw__kassio__kvitteringslinje": {
+    "filer": 92,
+    "rader": 38613
+   },
+   "raw__lagra__beholdning": {
+    "filer": 79,
+    "rader": 66600
+   },
+   "raw__lojal__medlem": {
+    "filer": 92,
+    "rader": 73039
+   },
+   "raw__nettora__ordrelinje": {
+    "filer": 92,
+    "rader": 5633
+   },
+   "raw__varius__aktor": {
+    "filer": 3,
+    "rader": 50
+   },
+   "raw__varius__vare": {
+    "filer": 3,
+    "rader": 450
+   },
+   "raw__varius__varegruppe": {
+    "filer": 3,
+    "rader": 36
+   }
+  }
+ },
+ "modul3_bronze": {
+  "rader_per_tabell": {
+   "brz__varius__vare": 153,
+   "brz__varius__varegruppe": 12,
+   "brz__varius__aktor": 17,
+   "brz__kassio__kvittering": 19845,
+   "brz__kassio__kvitteringslinje": 38612,
+   "brz__nettora__ordrelinje": 5633,
+   "brz__lojal__medlem": 808,
+   "brz__lagra__beholdning": 66600,
+   "brz__kalender__dag": 730
+  },
+  "gjeldende_rader": {
+   "brz__varius__vare": 150,
+   "brz__varius__aktor": 17,
+   "brz__lojal__medlem": 806,
+   "brz__lagra__beholdning": 900
+  },
+  "vare_004711_versjoner": [
+   {
+    "UTPRIS": 1299.0,
+    "fra_uttrekk": "2026-08-01T05:00:00",
+    "til_uttrekk": "2026-10-01T05:00:00"
+   },
+   {
+    "UTPRIS": 1399.0,
+    "fra_uttrekk": "2026-10-01T05:00:00",
+    "til_uttrekk": null
+   }
+  ],
+  "varer_med_flere_versjoner": {
+   "003178": 2,
+   "004711": 2,
+   "006652": 2
+  },
+  "kvitteringslinje_raw_minus_bronze": 1,
+  "h11_fil": "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260822T0600.csv"
+ },
+ "modul4_solv": {
+  "slv__salgslinje_rader_kasse": 38612,
+  "slv__butikk_rader": 7,
+  "slv__leverandor_rader": 10,
+  "slv__produkt_rader": 150,
+  "slv__produktgruppe_rader": 12,
+  "fb__slv__produkt_uten_treff": {
+   "linjer": 6,
+   "varenummer": "9999",
+   "salgsdato": "2026-08-14"
+  },
+  "lillehammer": {
+   "forste_salgsdato": "2026-09-05",
+   "forste_solgt_tidspunkt_utc": "2026-09-04T22:05:07Z",
+   "linjer": 3497
+  },
+  "h12_salgsdato_2026_09_12": {
+   "fil": "data/landing/kassio/kvitteringslinje/kvitteringslinje_20260914T0930.csv",
+   "linjer": 521
+  },
+  "h13_kasse": {
+   "linjer_utc_dato_ulik_salgsdato": 92,
+   "kvitteringer": 44,
+   "per_salgsdato": {
+    "2026-08-29": 24,
+    "2026-09-05": 53,
+    "2026-10-31": 15
+   }
+  },
+  "salgslinjer_per_butikk_valgte_datoer": {
+   "2026-08-14": {
+    "101": {
+     "linjer": 130,
+     "belop": 94518.85
+    },
+    "102": {
+     "linjer": 128,
+     "belop": 110608.95
+    },
+    "103": {
+     "linjer": 99,
+     "belop": 134133.75
+    },
+    "104": {
+     "linjer": 92,
+     "belop": 85815.65
+    },
+    "105": {
+     "linjer": 83,
+     "belop": 96334.5
+    }
+   },
+   "2026-08-21": {
+    "101": {
+     "linjer": 142,
+     "belop": 128767.0
+    },
+    "102": {
+     "linjer": 110,
+     "belop": 103517.25
+    },
+    "103": {
+     "linjer": 89,
+     "belop": 100894.3
+    },
+    "104": {
+     "linjer": 82,
+     "belop": 59225.35
+    },
+    "105": {
+     "linjer": 85,
+     "belop": 55930.95
+    }
+   },
+   "2026-08-29": {
+    "101": {
+     "linjer": 183,
+     "belop": 158406.6
+    },
+    "102": {
+     "linjer": 102,
+     "belop": 116312.1
+    },
+    "103": {
+     "linjer": 95,
+     "belop": 68428.65
+    },
+    "104": {
+     "linjer": 89,
+     "belop": 64610.15
+    },
+    "105": {
+     "linjer": 75,
+     "belop": 48744.4
+    }
+   },
+   "2026-09-05": {
+    "101": {
+     "linjer": 128,
+     "belop": 112743.45
+    },
+    "102": {
+     "linjer": 123,
+     "belop": 152989.75
+    },
+    "103": {
+     "linjer": 91,
+     "belop": 57576.6
+    },
+    "104": {
+     "linjer": 86,
+     "belop": 76573.2
+    },
+    "105": {
+     "linjer": 65,
+     "belop": 69739.6
+    },
+    "106": {
+     "linjer": 175,
+     "belop": 153849.2
+    }
+   },
+   "2026-09-12": {
+    "101": {
+     "linjer": 129,
+     "belop": 106026.55
+    },
+    "102": {
+     "linjer": 90,
+     "belop": 69041.15
+    },
+    "103": {
+     "linjer": 75,
+     "belop": 57411.25
+    },
+    "104": {
+     "linjer": 75,
+     "belop": 53010.45
+    },
+    "105": {
+     "linjer": 80,
+     "belop": 80716.0
+    },
+    "106": {
+     "linjer": 72,
+     "belop": 85987.85
+    }
+   },
+   "2026-09-29": {
+    "101": {
+     "linjer": 112,
+     "belop": 81440.65
+    },
+    "102": {
+     "linjer": 78,
+     "belop": 56645.1
+    },
+    "103": {
+     "linjer": 66,
+     "belop": 72160.5
+    },
+    "104": {
+     "linjer": 81,
+     "belop": 57012.05
+    },
+    "105": {
+     "linjer": 59,
+     "belop": 73834.3
+    },
+    "106": {
+     "linjer": 57,
+     "belop": 59822.0
+    }
+   },
+   "2026-10-01": {
+    "101": {
+     "linjer": 114,
+     "belop": 101585.9
+    },
+    "102": {
+     "linjer": 75,
+     "belop": 43147.65
+    },
+    "103": {
+     "linjer": 84,
+     "belop": 65393.4
+    },
+    "104": {
+     "linjer": 86,
+     "belop": 91316.2
+    },
+    "105": {
+     "linjer": 69,
+     "belop": 45546.1
+    },
+    "106": {
+     "linjer": 59,
+     "belop": 50647.9
+    }
+   },
+   "2026-10-31": {
+    "101": {
+     "linjer": 144,
+     "belop": 98650.7
+    },
+    "102": {
+     "linjer": 105,
+     "belop": 95374.65
+    },
+    "103": {
+     "linjer": 90,
+     "belop": 103100.8
+    },
+    "104": {
+     "linjer": 98,
+     "belop": 115980.9
+    },
+    "105": {
+     "linjer": 72,
+     "belop": 78848.9
+    },
+    "106": {
+     "linjer": 82,
+     "belop": 56626.25
+    }
+   }
+  },
+  "salgslinjer_per_butikk_per_dato": {
+   "2026-08-01": {
+    "101": {
+     "linjer": 159,
+     "belop": 183436.9
+    },
+    "102": {
+     "linjer": 95,
+     "belop": 106184.45
+    },
+    "103": {
+     "linjer": 91,
+     "belop": 66774.65
+    },
+    "104": {
+     "linjer": 96,
+     "belop": 63775.45
+    },
+    "105": {
+     "linjer": 60,
+     "belop": 44561.7
+    }
+   },
+   "2026-08-03": {
+    "101": {
+     "linjer": 128,
+     "belop": 82133.8
+    },
+    "102": {
+     "linjer": 85,
+     "belop": 40752.85
+    },
+    "103": {
+     "linjer": 86,
+     "belop": 51998.3
+    },
+    "104": {
+     "linjer": 87,
+     "belop": 97140.2
+    },
+    "105": {
+     "linjer": 64,
+     "belop": 63467.6
+    }
+   },
+   "2026-08-04": {
+    "101": {
+     "linjer": 122,
+     "belop": 124777.25
+    },
+    "102": {
+     "linjer": 99,
+     "belop": 102847.6
+    },
+    "103": {
+     "linjer": 89,
+     "belop": 107507.15
+    },
+    "104": {
+     "linjer": 85,
+     "belop": 53564.75
+    },
+    "105": {
+     "linjer": 61,
+     "belop": 29109.15
+    }
+   },
+   "2026-08-05": {
+    "101": {
+     "linjer": 123,
+     "belop": 116688.7
+    },
+    "102": {
+     "linjer": 127,
+     "belop": 157775.35
+    },
+    "103": {
+     "linjer": 92,
+     "belop": 65783.75
+    },
+    "104": {
+     "linjer": 92,
+     "belop": 76811.7
+    },
+    "105": {
+     "linjer": 76,
+     "belop": 103068.85
+    }
+   },
+   "2026-08-06": {
+    "101": {
+     "linjer": 121,
+     "belop": 179379.3
+    },
+    "102": {
+     "linjer": 90,
+     "belop": 95673.95
+    },
+    "103": {
+     "linjer": 90,
+     "belop": 96682.65
+    },
+    "104": {
+     "linjer": 106,
+     "belop": 84671.6
+    },
+    "105": {
+     "linjer": 73,
+     "belop": 70399.5
+    }
+   },
+   "2026-08-07": {
+    "101": {
+     "linjer": 132,
+     "belop": 110878.45
+    },
+    "102": {
+     "linjer": 110,
+     "belop": 170896.9
+    },
+    "103": {
+     "linjer": 105,
+     "belop": 101858.25
+    },
+    "104": {
+     "linjer": 111,
+     "belop": 102980.85
+    },
+    "105": {
+     "linjer": 77,
+     "belop": 65020.05
+    }
+   },
+   "2026-08-08": {
+    "101": {
+     "linjer": 122,
+     "belop": 138822.35
+    },
+    "102": {
+     "linjer": 120,
+     "belop": 93706.3
+    },
+    "103": {
+     "linjer": 105,
+     "belop": 65169.95
+    },
+    "104": {
+     "linjer": 98,
+     "belop": 69461.6
+    },
+    "105": {
+     "linjer": 59,
+     "belop": 38820.65
+    }
+   },
+   "2026-08-10": {
+    "101": {
+     "linjer": 113,
+     "belop": 75831.75
+    },
+    "102": {
+     "linjer": 113,
+     "belop": 104340.15
+    },
+    "103": {
+     "linjer": 84,
+     "belop": 69197.15
+    },
+    "104": {
+     "linjer": 92,
+     "belop": 66694.2
+    },
+    "105": {
+     "linjer": 66,
+     "belop": 81274.15
+    }
+   },
+   "2026-08-11": {
+    "101": {
+     "linjer": 118,
+     "belop": 93372.65
+    },
+    "102": {
+     "linjer": 89,
+     "belop": 62987.3
+    },
+    "103": {
+     "linjer": 79,
+     "belop": 54583.4
+    },
+    "104": {
+     "linjer": 84,
+     "belop": 90472.4
+    },
+    "105": {
+     "linjer": 53,
+     "belop": 57551.3
+    }
+   },
+   "2026-08-12": {
+    "101": {
+     "linjer": 123,
+     "belop": 134045.9
+    },
+    "102": {
+     "linjer": 108,
+     "belop": 117336.1
+    },
+    "103": {
+     "linjer": 95,
+     "belop": 140134.45
+    },
+    "104": {
+     "linjer": 100,
+     "belop": 66653.5
+    },
+    "105": {
+     "linjer": 75,
+     "belop": 79984.5
+    }
+   },
+   "2026-08-13": {
+    "101": {
+     "linjer": 157,
+     "belop": 148843.6
+    },
+    "102": {
+     "linjer": 119,
+     "belop": 130702.35
+    },
+    "103": {
+     "linjer": 106,
+     "belop": 89372.1
+    },
+    "104": {
+     "linjer": 101,
+     "belop": 91508.8
+    },
+    "105": {
+     "linjer": 68,
+     "belop": 73268.05
+    }
+   },
+   "2026-08-14": {
+    "101": {
+     "linjer": 130,
+     "belop": 94518.85
+    },
+    "102": {
+     "linjer": 128,
+     "belop": 110608.95
+    },
+    "103": {
+     "linjer": 99,
+     "belop": 134133.75
+    },
+    "104": {
+     "linjer": 92,
+     "belop": 85815.65
+    },
+    "105": {
+     "linjer": 83,
+     "belop": 96334.5
+    }
+   },
+   "2026-08-15": {
+    "101": {
+     "linjer": 141,
+     "belop": 143612.6
+    },
+    "102": {
+     "linjer": 135,
+     "belop": 131831.6
+    },
+    "103": {
+     "linjer": 88,
+     "belop": 65544.8
+    },
+    "104": {
+     "linjer": 92,
+     "belop": 78290.45
+    },
+    "105": {
+     "linjer": 63,
+     "belop": 64143.85
+    }
+   },
+   "2026-08-17": {
+    "101": {
+     "linjer": 120,
+     "belop": 87671.65
+    },
+    "102": {
+     "linjer": 93,
+     "belop": 102047.05
+    },
+    "103": {
+     "linjer": 74,
+     "belop": 47601.3
+    },
+    "104": {
+     "linjer": 97,
+     "belop": 91246.9
+    },
+    "105": {
+     "linjer": 55,
+     "belop": 44376.75
+    }
+   },
+   "2026-08-18": {
+    "101": {
+     "linjer": 107,
+     "belop": 94308.3
+    },
+    "102": {
+     "linjer": 81,
+     "belop": 93797.9
+    },
+    "103": {
+     "linjer": 87,
+     "belop": 70441.35
+    },
+    "104": {
+     "linjer": 75,
+     "belop": 56284.1
+    },
+    "105": {
+     "linjer": 50,
+     "belop": 32777.75
+    }
+   },
+   "2026-08-19": {
+    "101": {
+     "linjer": 109,
+     "belop": 108974.9
+    },
+    "102": {
+     "linjer": 83,
+     "belop": 50082.95
+    },
+    "103": {
+     "linjer": 99,
+     "belop": 83381.45
+    },
+    "104": {
+     "linjer": 92,
+     "belop": 131865.75
+    },
+    "105": {
+     "linjer": 49,
+     "belop": 41021.75
+    }
+   },
+   "2026-08-20": {
+    "101": {
+     "linjer": 153,
+     "belop": 179004.45
+    },
+    "102": {
+     "linjer": 112,
+     "belop": 70457.65
+    },
+    "103": {
+     "linjer": 100,
+     "belop": 125779.3
+    },
+    "104": {
+     "linjer": 79,
+     "belop": 71025.65
+    },
+    "105": {
+     "linjer": 76,
+     "belop": 72232.95
+    }
+   },
+   "2026-08-21": {
+    "101": {
+     "linjer": 142,
+     "belop": 128767.0
+    },
+    "102": {
+     "linjer": 110,
+     "belop": 103517.25
+    },
+    "103": {
+     "linjer": 89,
+     "belop": 100894.3
+    },
+    "104": {
+     "linjer": 82,
+     "belop": 59225.35
+    },
+    "105": {
+     "linjer": 85,
+     "belop": 55930.95
+    }
+   },
+   "2026-08-22": {
+    "101": {
+     "linjer": 145,
+     "belop": 191530.55
+    },
+    "102": {
+     "linjer": 100,
+     "belop": 107594.45
+    },
+    "103": {
+     "linjer": 100,
+     "belop": 86005.35
+    },
+    "104": {
+     "linjer": 105,
+     "belop": 79612.3
+    },
+    "105": {
+     "linjer": 66,
+     "belop": 40516.75
+    }
+   },
+   "2026-08-24": {
+    "101": {
+     "linjer": 116,
+     "belop": 80434.45
+    },
+    "102": {
+     "linjer": 85,
+     "belop": 62996.85
+    },
+    "103": {
+     "linjer": 91,
+     "belop": 70969.15
+    },
+    "104": {
+     "linjer": 64,
+     "belop": 55156.4
+    },
+    "105": {
+     "linjer": 66,
+     "belop": 51007.5
+    }
+   },
+   "2026-08-25": {
+    "101": {
+     "linjer": 103,
+     "belop": 134934.1
+    },
+    "102": {
+     "linjer": 90,
+     "belop": 103352.45
+    },
+    "103": {
+     "linjer": 88,
+     "belop": 70280.0
+    },
+    "104": {
+     "linjer": 77,
+     "belop": 67951.9
+    },
+    "105": {
+     "linjer": 71,
+     "belop": 64279.25
+    }
+   },
+   "2026-08-26": {
+    "101": {
+     "linjer": 137,
+     "belop": 103585.3
+    },
+    "102": {
+     "linjer": 101,
+     "belop": 88724.75
+    },
+    "103": {
+     "linjer": 89,
+     "belop": 91403.25
+    },
+    "104": {
+     "linjer": 99,
+     "belop": 92326.25
+    },
+    "105": {
+     "linjer": 62,
+     "belop": 36878.9
+    }
+   },
+   "2026-08-27": {
+    "101": {
+     "linjer": 145,
+     "belop": 147208.15
+    },
+    "102": {
+     "linjer": 109,
+     "belop": 146883.2
+    },
+    "103": {
+     "linjer": 99,
+     "belop": 115941.75
+    },
+    "104": {
+     "linjer": 103,
+     "belop": 97111.55
+    },
+    "105": {
+     "linjer": 56,
+     "belop": 36974.75
+    }
+   },
+   "2026-08-28": {
+    "101": {
+     "linjer": 144,
+     "belop": 170407.85
+    },
+    "102": {
+     "linjer": 109,
+     "belop": 131370.8
+    },
+    "103": {
+     "linjer": 108,
+     "belop": 127715.15
+    },
+    "104": {
+     "linjer": 96,
+     "belop": 95645.65
+    },
+    "105": {
+     "linjer": 77,
+     "belop": 50866.9
+    }
+   },
+   "2026-08-29": {
+    "101": {
+     "linjer": 183,
+     "belop": 158406.6
+    },
+    "102": {
+     "linjer": 102,
+     "belop": 116312.1
+    },
+    "103": {
+     "linjer": 95,
+     "belop": 68428.65
+    },
+    "104": {
+     "linjer": 89,
+     "belop": 64610.15
+    },
+    "105": {
+     "linjer": 75,
+     "belop": 48744.4
+    }
+   },
+   "2026-08-31": {
+    "101": {
+     "linjer": 106,
+     "belop": 72154.15
+    },
+    "102": {
+     "linjer": 94,
+     "belop": 68107.1
+    },
+    "103": {
+     "linjer": 80,
+     "belop": 99417.6
+    },
+    "104": {
+     "linjer": 82,
+     "belop": 90316.8
+    },
+    "105": {
+     "linjer": 61,
+     "belop": 31117.45
+    }
+   },
+   "2026-09-01": {
+    "101": {
+     "linjer": 122,
+     "belop": 156935.55
+    },
+    "102": {
+     "linjer": 87,
+     "belop": 71310.85
+    },
+    "103": {
+     "linjer": 78,
+     "belop": 55677.15
+    },
+    "104": {
+     "linjer": 92,
+     "belop": 90781.9
+    },
+    "105": {
+     "linjer": 61,
+     "belop": 39790.1
+    }
+   },
+   "2026-09-02": {
+    "101": {
+     "linjer": 118,
+     "belop": 77746.65
+    },
+    "102": {
+     "linjer": 106,
+     "belop": 90292.15
+    },
+    "103": {
+     "linjer": 98,
+     "belop": 83874.1
+    },
+    "104": {
+     "linjer": 103,
+     "belop": 72449.0
+    },
+    "105": {
+     "linjer": 57,
+     "belop": 51537.05
+    }
+   },
+   "2026-09-03": {
+    "101": {
+     "linjer": 127,
+     "belop": 96528.2
+    },
+    "102": {
+     "linjer": 119,
+     "belop": 122561.4
+    },
+    "103": {
+     "linjer": 107,
+     "belop": 105541.3
+    },
+    "104": {
+     "linjer": 97,
+     "belop": 107722.65
+    },
+    "105": {
+     "linjer": 82,
+     "belop": 112918.7
+    }
+   },
+   "2026-09-04": {
+    "101": {
+     "linjer": 134,
+     "belop": 150388.35
+    },
+    "102": {
+     "linjer": 109,
+     "belop": 98130.4
+    },
+    "103": {
+     "linjer": 99,
+     "belop": 77928.0
+    },
+    "104": {
+     "linjer": 103,
+     "belop": 85036.75
+    },
+    "105": {
+     "linjer": 72,
+     "belop": 71345.1
+    }
+   },
+   "2026-09-05": {
+    "101": {
+     "linjer": 128,
+     "belop": 112743.45
+    },
+    "102": {
+     "linjer": 123,
+     "belop": 152989.75
+    },
+    "103": {
+     "linjer": 91,
+     "belop": 57576.6
+    },
+    "104": {
+     "linjer": 86,
+     "belop": 76573.2
+    },
+    "105": {
+     "linjer": 65,
+     "belop": 69739.6
+    },
+    "106": {
+     "linjer": 175,
+     "belop": 153849.2
+    }
+   },
+   "2026-09-07": {
+    "101": {
+     "linjer": 108,
+     "belop": 76620.65
+    },
+    "102": {
+     "linjer": 82,
+     "belop": 71159.7
+    },
+    "103": {
+     "linjer": 81,
+     "belop": 68306.1
+    },
+    "104": {
+     "linjer": 73,
+     "belop": 50845.7
+    },
+    "105": {
+     "linjer": 56,
+     "belop": 37758.25
+    },
+    "106": {
+     "linjer": 69,
+     "belop": 72983.05
+    }
+   },
+   "2026-09-08": {
+    "101": {
+     "linjer": 86,
+     "belop": 58543.0
+    },
+    "102": {
+     "linjer": 81,
+     "belop": 79874.3
+    },
+    "103": {
+     "linjer": 68,
+     "belop": 44062.8
+    },
+    "104": {
+     "linjer": 70,
+     "belop": 43092.8
+    },
+    "105": {
+     "linjer": 51,
+     "belop": 49377.75
+    },
+    "106": {
+     "linjer": 68,
+     "belop": 42085.6
+    }
+   },
+   "2026-09-09": {
+    "101": {
+     "linjer": 100,
+     "belop": 96591.0
+    },
+    "102": {
+     "linjer": 90,
+     "belop": 58464.6
+    },
+    "103": {
+     "linjer": 91,
+     "belop": 83124.15
+    },
+    "104": {
+     "linjer": 67,
+     "belop": 62824.0
+    },
+    "105": {
+     "linjer": 54,
+     "belop": 44124.6
+    },
+    "106": {
+     "linjer": 63,
+     "belop": 45579.65
+    }
+   },
+   "2026-09-10": {
+    "101": {
+     "linjer": 108,
+     "belop": 121503.9
+    },
+    "102": {
+     "linjer": 85,
+     "belop": 46292.25
+    },
+    "103": {
+     "linjer": 96,
+     "belop": 69263.3
+    },
+    "104": {
+     "linjer": 89,
+     "belop": 60053.2
+    },
+    "105": {
+     "linjer": 61,
+     "belop": 64991.25
+    },
+    "106": {
+     "linjer": 81,
+     "belop": 45309.0
+    }
+   },
+   "2026-09-11": {
+    "101": {
+     "linjer": 138,
+     "belop": 180731.15
+    },
+    "102": {
+     "linjer": 106,
+     "belop": 86852.1
+    },
+    "103": {
+     "linjer": 85,
+     "belop": 75865.0
+    },
+    "104": {
+     "linjer": 85,
+     "belop": 63146.45
+    },
+    "105": {
+     "linjer": 63,
+     "belop": 33756.2
+    },
+    "106": {
+     "linjer": 72,
+     "belop": 104792.2
+    }
+   },
+   "2026-09-12": {
+    "101": {
+     "linjer": 129,
+     "belop": 106026.55
+    },
+    "102": {
+     "linjer": 90,
+     "belop": 69041.15
+    },
+    "103": {
+     "linjer": 75,
+     "belop": 57411.25
+    },
+    "104": {
+     "linjer": 75,
+     "belop": 53010.45
+    },
+    "105": {
+     "linjer": 80,
+     "belop": 80716.0
+    },
+    "106": {
+     "linjer": 72,
+     "belop": 85987.85
+    }
+   },
+   "2026-09-14": {
+    "101": {
+     "linjer": 95,
+     "belop": 63903.25
+    },
+    "102": {
+     "linjer": 78,
+     "belop": 58524.2
+    },
+    "103": {
+     "linjer": 79,
+     "belop": 49228.05
+    },
+    "104": {
+     "linjer": 75,
+     "belop": 44224.1
+    },
+    "105": {
+     "linjer": 54,
+     "belop": 57573.45
+    },
+    "106": {
+     "linjer": 52,
+     "belop": 33782.2
+    }
+   },
+   "2026-09-15": {
+    "101": {
+     "linjer": 99,
+     "belop": 58521.55
+    },
+    "102": {
+     "linjer": 80,
+     "belop": 48080.1
+    },
+    "103": {
+     "linjer": 68,
+     "belop": 88809.3
+    },
+    "104": {
+     "linjer": 71,
+     "belop": 37151.0
+    },
+    "105": {
+     "linjer": 52,
+     "belop": 36597.6
+    },
+    "106": {
+     "linjer": 65,
+     "belop": 43617.8
+    }
+   },
+   "2026-09-16": {
+    "101": {
+     "linjer": 98,
+     "belop": 91270.4
+    },
+    "102": {
+     "linjer": 72,
+     "belop": 36282.5
+    },
+    "103": {
+     "linjer": 80,
+     "belop": 67084.6
+    },
+    "104": {
+     "linjer": 84,
+     "belop": 78868.2
+    },
+    "105": {
+     "linjer": 45,
+     "belop": 77533.25
+    },
+    "106": {
+     "linjer": 63,
+     "belop": 56053.65
+    }
+   },
+   "2026-09-17": {
+    "101": {
+     "linjer": 112,
+     "belop": 80896.3
+    },
+    "102": {
+     "linjer": 111,
+     "belop": 64299.85
+    },
+    "103": {
+     "linjer": 101,
+     "belop": 107265.05
+    },
+    "104": {
+     "linjer": 96,
+     "belop": 89409.6
+    },
+    "105": {
+     "linjer": 59,
+     "belop": 33686.8
+    },
+    "106": {
+     "linjer": 64,
+     "belop": 47317.45
+    }
+   },
+   "2026-09-18": {
+    "101": {
+     "linjer": 107,
+     "belop": 82346.85
+    },
+    "102": {
+     "linjer": 95,
+     "belop": 70255.25
+    },
+    "103": {
+     "linjer": 84,
+     "belop": 66462.45
+    },
+    "104": {
+     "linjer": 86,
+     "belop": 59265.75
+    },
+    "105": {
+     "linjer": 70,
+     "belop": 52036.45
+    },
+    "106": {
+     "linjer": 79,
+     "belop": 43076.75
+    }
+   },
+   "2026-09-19": {
+    "101": {
+     "linjer": 133,
+     "belop": 100020.25
+    },
+    "102": {
+     "linjer": 96,
+     "belop": 71397.1
+    },
+    "103": {
+     "linjer": 86,
+     "belop": 70801.6
+    },
+    "104": {
+     "linjer": 88,
+     "belop": 99098.35
+    },
+    "105": {
+     "linjer": 65,
+     "belop": 53945.45
+    },
+    "106": {
+     "linjer": 82,
+     "belop": 65212.3
+    }
+   },
+   "2026-09-21": {
+    "101": {
+     "linjer": 88,
+     "belop": 62921.9
+    },
+    "102": {
+     "linjer": 78,
+     "belop": 50643.7
+    },
+    "103": {
+     "linjer": 77,
+     "belop": 37928.4
+    },
+    "104": {
+     "linjer": 76,
+     "belop": 79377.15
+    },
+    "105": {
+     "linjer": 58,
+     "belop": 71112.85
+    },
+    "106": {
+     "linjer": 57,
+     "belop": 46905.55
+    }
+   },
+   "2026-09-22": {
+    "101": {
+     "linjer": 119,
+     "belop": 79219.25
+    },
+    "102": {
+     "linjer": 106,
+     "belop": 79168.45
+    },
+    "103": {
+     "linjer": 81,
+     "belop": 51435.05
+    },
+    "104": {
+     "linjer": 56,
+     "belop": 36797.85
+    },
+    "105": {
+     "linjer": 48,
+     "belop": 36020.95
+    },
+    "106": {
+     "linjer": 50,
+     "belop": 44135.2
+    }
+   },
+   "2026-09-23": {
+    "101": {
+     "linjer": 110,
+     "belop": 169912.5
+    },
+    "102": {
+     "linjer": 86,
+     "belop": 54994.45
+    },
+    "103": {
+     "linjer": 79,
+     "belop": 75171.7
+    },
+    "104": {
+     "linjer": 75,
+     "belop": 36768.0
+    },
+    "105": {
+     "linjer": 63,
+     "belop": 45310.8
+    },
+    "106": {
+     "linjer": 69,
+     "belop": 49164.2
+    }
+   },
+   "2026-09-24": {
+    "101": {
+     "linjer": 112,
+     "belop": 84466.35
+    },
+    "102": {
+     "linjer": 100,
+     "belop": 69816.4
+    },
+    "103": {
+     "linjer": 78,
+     "belop": 83586.4
+    },
+    "104": {
+     "linjer": 77,
+     "belop": 44190.0
+    },
+    "105": {
+     "linjer": 62,
+     "belop": 55065.05
+    },
+    "106": {
+     "linjer": 73,
+     "belop": 56561.75
+    }
+   },
+   "2026-09-25": {
+    "101": {
+     "linjer": 119,
+     "belop": 93065.25
+    },
+    "102": {
+     "linjer": 94,
+     "belop": 66951.1
+    },
+    "103": {
+     "linjer": 93,
+     "belop": 79959.7
+    },
+    "104": {
+     "linjer": 71,
+     "belop": 44426.55
+    },
+    "105": {
+     "linjer": 72,
+     "belop": 56763.5
+    },
+    "106": {
+     "linjer": 63,
+     "belop": 54665.0
+    }
+   },
+   "2026-09-26": {
+    "101": {
+     "linjer": 120,
+     "belop": 94683.75
+    },
+    "102": {
+     "linjer": 95,
+     "belop": 65211.3
+    },
+    "103": {
+     "linjer": 74,
+     "belop": 46392.0
+    },
+    "104": {
+     "linjer": 80,
+     "belop": 66938.9
+    },
+    "105": {
+     "linjer": 78,
+     "belop": 42715.1
+    },
+    "106": {
+     "linjer": 83,
+     "belop": 72460.55
+    }
+   },
+   "2026-09-28": {
+    "101": {
+     "linjer": 74,
+     "belop": 79221.6
+    },
+    "102": {
+     "linjer": 70,
+     "belop": 36494.65
+    },
+    "103": {
+     "linjer": 80,
+     "belop": 47722.85
+    },
+    "104": {
+     "linjer": 86,
+     "belop": 63366.3
+    },
+    "105": {
+     "linjer": 54,
+     "belop": 45143.2
+    },
+    "106": {
+     "linjer": 66,
+     "belop": 49396.65
+    }
+   },
+   "2026-09-29": {
+    "101": {
+     "linjer": 112,
+     "belop": 81440.65
+    },
+    "102": {
+     "linjer": 78,
+     "belop": 56645.1
+    },
+    "103": {
+     "linjer": 66,
+     "belop": 72160.5
+    },
+    "104": {
+     "linjer": 81,
+     "belop": 57012.05
+    },
+    "105": {
+     "linjer": 59,
+     "belop": 73834.3
+    },
+    "106": {
+     "linjer": 57,
+     "belop": 59822.0
+    }
+   },
+   "2026-09-30": {
+    "101": {
+     "linjer": 101,
+     "belop": 78170.45
+    },
+    "102": {
+     "linjer": 92,
+     "belop": 106929.05
+    },
+    "103": {
+     "linjer": 81,
+     "belop": 40415.7
+    },
+    "104": {
+     "linjer": 75,
+     "belop": 63652.15
+    },
+    "105": {
+     "linjer": 56,
+     "belop": 32575.3
+    },
+    "106": {
+     "linjer": 72,
+     "belop": 36596.55
+    }
+   },
+   "2026-10-01": {
+    "101": {
+     "linjer": 114,
+     "belop": 101585.9
+    },
+    "102": {
+     "linjer": 75,
+     "belop": 43147.65
+    },
+    "103": {
+     "linjer": 84,
+     "belop": 65393.4
+    },
+    "104": {
+     "linjer": 86,
+     "belop": 91316.2
+    },
+    "105": {
+     "linjer": 69,
+     "belop": 45546.1
+    },
+    "106": {
+     "linjer": 59,
+     "belop": 50647.9
+    }
+   },
+   "2026-10-02": {
+    "101": {
+     "linjer": 105,
+     "belop": 97691.65
+    },
+    "102": {
+     "linjer": 101,
+     "belop": 147740.7
+    },
+    "103": {
+     "linjer": 84,
+     "belop": 87169.45
+    },
+    "104": {
+     "linjer": 103,
+     "belop": 82965.35
+    },
+    "105": {
+     "linjer": 67,
+     "belop": 51438.0
+    },
+    "106": {
+     "linjer": 83,
+     "belop": 101091.1
+    }
+   },
+   "2026-10-03": {
+    "101": {
+     "linjer": 129,
+     "belop": 141024.85
+    },
+    "102": {
+     "linjer": 95,
+     "belop": 111030.45
+    },
+    "103": {
+     "linjer": 88,
+     "belop": 102899.1
+    },
+    "104": {
+     "linjer": 108,
+     "belop": 105456.55
+    },
+    "105": {
+     "linjer": 59,
+     "belop": 55882.95
+    },
+    "106": {
+     "linjer": 79,
+     "belop": 63456.8
+    }
+   },
+   "2026-10-05": {
+    "101": {
+     "linjer": 97,
+     "belop": 77569.6
+    },
+    "102": {
+     "linjer": 87,
+     "belop": 96154.25
+    },
+    "103": {
+     "linjer": 71,
+     "belop": 82971.65
+    },
+    "104": {
+     "linjer": 83,
+     "belop": 73352.65
+    },
+    "105": {
+     "linjer": 57,
+     "belop": 31107.05
+    },
+    "106": {
+     "linjer": 69,
+     "belop": 40645.65
+    }
+   },
+   "2026-10-06": {
+    "101": {
+     "linjer": 100,
+     "belop": 136728.4
+    },
+    "102": {
+     "linjer": 90,
+     "belop": 54140.0
+    },
+    "103": {
+     "linjer": 66,
+     "belop": 39419.55
+    },
+    "104": {
+     "linjer": 57,
+     "belop": 39869.1
+    },
+    "105": {
+     "linjer": 56,
+     "belop": 40725.45
+    },
+    "106": {
+     "linjer": 55,
+     "belop": 24603.8
+    }
+   },
+   "2026-10-07": {
+    "101": {
+     "linjer": 106,
+     "belop": 98444.4
+    },
+    "102": {
+     "linjer": 99,
+     "belop": 92794.0
+    },
+    "103": {
+     "linjer": 70,
+     "belop": 42273.35
+    },
+    "104": {
+     "linjer": 67,
+     "belop": 57450.85
+    },
+    "105": {
+     "linjer": 52,
+     "belop": 33280.95
+    },
+    "106": {
+     "linjer": 68,
+     "belop": 35382.9
+    }
+   },
+   "2026-10-08": {
+    "101": {
+     "linjer": 103,
+     "belop": 82371.45
+    },
+    "102": {
+     "linjer": 102,
+     "belop": 80794.45
+    },
+    "103": {
+     "linjer": 77,
+     "belop": 54095.75
+    },
+    "104": {
+     "linjer": 96,
+     "belop": 72010.9
+    },
+    "105": {
+     "linjer": 61,
+     "belop": 45696.25
+    },
+    "106": {
+     "linjer": 74,
+     "belop": 46554.95
+    }
+   },
+   "2026-10-09": {
+    "101": {
+     "linjer": 128,
+     "belop": 136846.35
+    },
+    "102": {
+     "linjer": 86,
+     "belop": 82537.05
+    },
+    "103": {
+     "linjer": 98,
+     "belop": 119191.0
+    },
+    "104": {
+     "linjer": 83,
+     "belop": 53351.5
+    },
+    "105": {
+     "linjer": 57,
+     "belop": 32418.25
+    },
+    "106": {
+     "linjer": 75,
+     "belop": 52188.6
+    }
+   },
+   "2026-10-10": {
+    "101": {
+     "linjer": 99,
+     "belop": 75208.95
+    },
+    "102": {
+     "linjer": 110,
+     "belop": 105588.55
+    },
+    "103": {
+     "linjer": 73,
+     "belop": 54934.6
+    },
+    "104": {
+     "linjer": 96,
+     "belop": 55063.75
+    },
+    "105": {
+     "linjer": 64,
+     "belop": 49121.95
+    },
+    "106": {
+     "linjer": 77,
+     "belop": 99644.05
+    }
+   },
+   "2026-10-12": {
+    "101": {
+     "linjer": 93,
+     "belop": 92706.1
+    },
+    "102": {
+     "linjer": 86,
+     "belop": 68500.35
+    },
+    "103": {
+     "linjer": 73,
+     "belop": 49333.35
+    },
+    "104": {
+     "linjer": 58,
+     "belop": 49771.75
+    },
+    "105": {
+     "linjer": 40,
+     "belop": 33193.5
+    },
+    "106": {
+     "linjer": 67,
+     "belop": 52369.7
+    }
+   },
+   "2026-10-13": {
+    "101": {
+     "linjer": 102,
+     "belop": 74979.15
+    },
+    "102": {
+     "linjer": 80,
+     "belop": 51085.05
+    },
+    "103": {
+     "linjer": 66,
+     "belop": 43131.0
+    },
+    "104": {
+     "linjer": 81,
+     "belop": 85605.7
+    },
+    "105": {
+     "linjer": 51,
+     "belop": 34261.05
+    },
+    "106": {
+     "linjer": 63,
+     "belop": 45468.55
+    }
+   },
+   "2026-10-14": {
+    "101": {
+     "linjer": 104,
+     "belop": 118624.85
+    },
+    "102": {
+     "linjer": 90,
+     "belop": 70495.45
+    },
+    "103": {
+     "linjer": 64,
+     "belop": 53124.9
+    },
+    "104": {
+     "linjer": 90,
+     "belop": 91659.15
+    },
+    "105": {
+     "linjer": 50,
+     "belop": 76821.4
+    },
+    "106": {
+     "linjer": 68,
+     "belop": 39691.55
+    }
+   },
+   "2026-10-15": {
+    "101": {
+     "linjer": 107,
+     "belop": 93918.7
+    },
+    "102": {
+     "linjer": 104,
+     "belop": 104780.3
+    },
+    "103": {
+     "linjer": 72,
+     "belop": 48645.05
+    },
+    "104": {
+     "linjer": 80,
+     "belop": 66461.95
+    },
+    "105": {
+     "linjer": 58,
+     "belop": 39883.95
+    },
+    "106": {
+     "linjer": 67,
+     "belop": 43202.35
+    }
+   },
+   "2026-10-16": {
+    "101": {
+     "linjer": 114,
+     "belop": 88076.3
+    },
+    "102": {
+     "linjer": 92,
+     "belop": 80718.65
+    },
+    "103": {
+     "linjer": 89,
+     "belop": 90403.25
+    },
+    "104": {
+     "linjer": 82,
+     "belop": 64606.75
+    },
+    "105": {
+     "linjer": 76,
+     "belop": 56996.35
+    },
+    "106": {
+     "linjer": 71,
+     "belop": 48676.8
+    }
+   },
+   "2026-10-17": {
+    "101": {
+     "linjer": 108,
+     "belop": 102411.7
+    },
+    "102": {
+     "linjer": 83,
+     "belop": 127002.9
+    },
+    "103": {
+     "linjer": 98,
+     "belop": 67470.4
+    },
+    "104": {
+     "linjer": 84,
+     "belop": 60518.25
+    },
+    "105": {
+     "linjer": 73,
+     "belop": 63532.6
+    },
+    "106": {
+     "linjer": 81,
+     "belop": 51042.55
+    }
+   },
+   "2026-10-19": {
+    "101": {
+     "linjer": 96,
+     "belop": 90282.9
+    },
+    "102": {
+     "linjer": 76,
+     "belop": 42743.1
+    },
+    "103": {
+     "linjer": 71,
+     "belop": 103654.1
+    },
+    "104": {
+     "linjer": 74,
+     "belop": 90793.15
+    },
+    "105": {
+     "linjer": 52,
+     "belop": 38483.55
+    },
+    "106": {
+     "linjer": 66,
+     "belop": 34257.9
+    }
+   },
+   "2026-10-20": {
+    "101": {
+     "linjer": 102,
+     "belop": 85774.1
+    },
+    "102": {
+     "linjer": 74,
+     "belop": 66879.45
+    },
+    "103": {
+     "linjer": 61,
+     "belop": 73375.05
+    },
+    "104": {
+     "linjer": 80,
+     "belop": 56474.1
+    },
+    "105": {
+     "linjer": 54,
+     "belop": 45056.1
+    },
+    "106": {
+     "linjer": 62,
+     "belop": 66656.75
+    }
+   },
+   "2026-10-21": {
+    "101": {
+     "linjer": 102,
+     "belop": 85327.1
+    },
+    "102": {
+     "linjer": 69,
+     "belop": 62461.65
+    },
+    "103": {
+     "linjer": 71,
+     "belop": 41195.0
+    },
+    "104": {
+     "linjer": 79,
+     "belop": 97364.45
+    },
+    "105": {
+     "linjer": 54,
+     "belop": 45103.7
+    },
+    "106": {
+     "linjer": 70,
+     "belop": 93738.8
+    }
+   },
+   "2026-10-22": {
+    "101": {
+     "linjer": 118,
+     "belop": 96579.05
+    },
+    "102": {
+     "linjer": 82,
+     "belop": 92934.25
+    },
+    "103": {
+     "linjer": 82,
+     "belop": 62733.85
+    },
+    "104": {
+     "linjer": 102,
+     "belop": 80452.4
+    },
+    "105": {
+     "linjer": 68,
+     "belop": 47156.4
+    },
+    "106": {
+     "linjer": 69,
+     "belop": 34028.55
+    }
+   },
+   "2026-10-23": {
+    "101": {
+     "linjer": 117,
+     "belop": 113243.05
+    },
+    "102": {
+     "linjer": 116,
+     "belop": 90819.85
+    },
+    "103": {
+     "linjer": 80,
+     "belop": 60662.25
+    },
+    "104": {
+     "linjer": 93,
+     "belop": 161667.05
+    },
+    "105": {
+     "linjer": 81,
+     "belop": 65832.75
+    },
+    "106": {
+     "linjer": 87,
+     "belop": 61846.7
+    }
+   },
+   "2026-10-24": {
+    "101": {
+     "linjer": 129,
+     "belop": 120045.85
+    },
+    "102": {
+     "linjer": 86,
+     "belop": 65846.15
+    },
+    "103": {
+     "linjer": 98,
+     "belop": 70911.3
+    },
+    "104": {
+     "linjer": 71,
+     "belop": 52058.05
+    },
+    "105": {
+     "linjer": 80,
+     "belop": 58071.15
+    },
+    "106": {
+     "linjer": 70,
+     "belop": 64941.15
+    }
+   },
+   "2026-10-26": {
+    "101": {
+     "linjer": 89,
+     "belop": 55259.55
+    },
+    "102": {
+     "linjer": 73,
+     "belop": 57803.5
+    },
+    "103": {
+     "linjer": 77,
+     "belop": 46496.2
+    },
+    "104": {
+     "linjer": 67,
+     "belop": 44871.2
+    },
+    "105": {
+     "linjer": 67,
+     "belop": 55757.2
+    },
+    "106": {
+     "linjer": 73,
+     "belop": 49733.75
+    }
+   },
+   "2026-10-27": {
+    "101": {
+     "linjer": 96,
+     "belop": 75621.8
+    },
+    "102": {
+     "linjer": 73,
+     "belop": 54325.85
+    },
+    "103": {
+     "linjer": 65,
+     "belop": 42218.0
+    },
+    "104": {
+     "linjer": 74,
+     "belop": 48938.45
+    },
+    "105": {
+     "linjer": 49,
+     "belop": 34382.8
+    },
+    "106": {
+     "linjer": 65,
+     "belop": 66060.85
+    }
+   },
+   "2026-10-28": {
+    "101": {
+     "linjer": 96,
+     "belop": 111491.5
+    },
+    "102": {
+     "linjer": 80,
+     "belop": 119954.55
+    },
+    "103": {
+     "linjer": 82,
+     "belop": 50522.95
+    },
+    "104": {
+     "linjer": 74,
+     "belop": 48003.2
+    },
+    "105": {
+     "linjer": 56,
+     "belop": 31591.0
+    },
+    "106": {
+     "linjer": 58,
+     "belop": 36011.35
+    }
+   },
+   "2026-10-29": {
+    "101": {
+     "linjer": 127,
+     "belop": 108291.55
+    },
+    "102": {
+     "linjer": 98,
+     "belop": 92062.2
+    },
+    "103": {
+     "linjer": 67,
+     "belop": 90173.1
+    },
+    "104": {
+     "linjer": 97,
+     "belop": 73213.2
+    },
+    "105": {
+     "linjer": 66,
+     "belop": 43779.9
+    },
+    "106": {
+     "linjer": 72,
+     "belop": 53826.5
+    }
+   },
+   "2026-10-30": {
+    "101": {
+     "linjer": 105,
+     "belop": 137828.6
+    },
+    "102": {
+     "linjer": 85,
+     "belop": 78688.9
+    },
+    "103": {
+     "linjer": 93,
+     "belop": 85581.3
+    },
+    "104": {
+     "linjer": 73,
+     "belop": 108415.1
+    },
+    "105": {
+     "linjer": 60,
+     "belop": 62953.9
+    },
+    "106": {
+     "linjer": 72,
+     "belop": 45423.9
+    }
+   },
+   "2026-10-31": {
+    "101": {
+     "linjer": 144,
+     "belop": 98650.7
+    },
+    "102": {
+     "linjer": 105,
+     "belop": 95374.65
+    },
+    "103": {
+     "linjer": 90,
+     "belop": 103100.8
+    },
+    "104": {
+     "linjer": 98,
+     "belop": 115980.9
+    },
+    "105": {
+     "linjer": 72,
+     "belop": 78848.9
+    },
+    "106": {
+     "linjer": 82,
+     "belop": 56626.25
+    }
+   }
+  }
+ },
+ "modul5_gull_salg": {
+  "gld__f__salg_rader_kasse": 38612,
+  "gld__d__produkt_rader_uten_minus": 150,
+  "gld__d__butikk_rader_uten_minus": 7,
+  "fk__gld__d__produkt": {
+   "-1": 6,
+   "-2": 0
+  },
+  "belop_totalt_kasse": 33903607.4,
+  "belop_per_butikk_kasse": {
+   "101": 8514732.4,
+   "102": 6789954.1,
+   "103": 5861131.75,
+   "104": 5773993.6,
+   "105": 4196621.7,
+   "106": 2767173.85
+  },
+  "belop_per_varegruppe_kasse_scd1": {
+   "-1": 2094.0,
+   "FRI01": 3652280.75,
+   "FRI02": 2067491.1,
+   "FRI03": 3197974.9,
+   "LOP01": 3556285.8,
+   "LOP02": 2188521.1,
+   "LOP03": 1487750.75,
+   "SKI01": 2734652.2,
+   "SKI02": 2535856.0,
+   "SKI03": 1584091.9,
+   "SYK01": 7232114.9,
+   "SYK02": 2174617.7,
+   "SYK03": 1489876.3
+  },
+  "retur": {
+   "linjer": 746,
+   "andel_av_kasselinjer": 0.0193,
+   "antall_sum": -798,
+   "belop_sum": -597483.1,
+   "per_butikk": {
+    "101": {
+     "linjer": 172,
+     "antall": -186,
+     "belop": -136088.05
+    },
+    "102": {
+     "linjer": 144,
+     "antall": -151,
+     "belop": -108887.6
+    },
+    "103": {
+     "linjer": 138,
+     "antall": -148,
+     "belop": -141193.65
+    },
+    "104": {
+     "linjer": 136,
+     "antall": -143,
+     "belop": -85461.5
+    },
+    "105": {
+     "linjer": 87,
+     "antall": -95,
+     "belop": -53281.6
+    },
+    "106": {
+     "linjer": 69,
+     "antall": -75,
+     "belop": -72570.7
+    }
+   }
+  },
+  "h3_004711": {
+   "pris_til_og_med_2026_09_30": 1299.0,
+   "pris_fra_2026_10_01": 1399.0,
+   "gld__d__produkt_utpris_scd1": 1399.0,
+   "salgslinjer_kasse_foer_okt": 178,
+   "salgslinjer_kasse_fra_okt": 74
+  },
+  "h4_gruppebytte": {
+   "varenummer": "3178",
+   "fra": "LOP03",
+   "til": "FRI03",
+   "fra_uttrekk": "2026-09-01T05:00:00",
+   "linjer_foer_bytte_alle_kanaler": 68,
+   "belop_foer_bytte_alle_kanaler": 86987.45,
+   "merknad": "SCD1: gammelt salg telles i den nye gruppen i omsetningen per varegruppe"
+  },
+  "h6_utgatt": {
+   "varenummer": "6652",
+   "er_aktiv": false,
+   "linjer_alle_kanaler": 94,
+   "siste_salgsdato": "2026-09-30"
+  },
+  "omsetning_uke_butikk_varegruppe_kasse": {
+   "2026-W31": {
+    "101": {
+     "FRI01": 10880.75,
+     "FRI02": 11074.45,
+     "FRI03": 10966.2,
+     "LOP01": 13901.7,
+     "LOP02": 9134.05,
+     "LOP03": 3282.7,
+     "SKI01": 7735.2,
+     "SKI02": 3799.05,
+     "SKI03": 3141.45,
+     "SYK01": 92244.25,
+     "SYK02": 8940.75,
+     "SYK03": 8336.35
+    },
+    "102": {
+     "FRI01": 11324.2,
+     "FRI02": 6437.15,
+     "FRI03": 6332.1,
+     "LOP01": 23301.8,
+     "LOP02": 10300.9,
+     "LOP03": 2199.2,
+     "SKI01": 1234.05,
+     "SKI03": 365.65,
+     "SYK01": 34597.2,
+     "SYK02": 5233.15,
+     "SYK03": 4859.05
+    },
+    "103": {
+     "FRI01": 9636.2,
+     "FRI02": 2949.1,
+     "FRI03": 5832.3,
+     "LOP01": 14456.2,
+     "LOP02": 6489.5,
+     "LOP03": 7463.1,
+     "SKI01": 3134.05,
+     "SKI03": 1811.45,
+     "SYK01": 3599.1,
+     "SYK02": 4199.0,
+     "SYK03": 7204.65
+    },
+    "104": {
+     "FRI01": 4233.9,
+     "FRI02": 4129.5,
+     "FRI03": 12280.65,
+     "LOP01": 14643.6,
+     "LOP02": 4482.0,
+     "LOP03": 2551.95,
+     "SKI01": 5263.05,
+     "SKI02": 1599.0,
+     "SKI03": 699.0,
+     "SYK01": 3799.05,
+     "SYK02": 4280.15,
+     "SYK03": 5813.6
+    },
+    "105": {
+     "FRI01": 5277.3,
+     "FRI02": 10536.15,
+     "FRI03": 3454.15,
+     "LOP01": 799.0,
+     "LOP02": 2483.05,
+     "LOP03": 1727.45,
+     "SKI01": 5833.15,
+     "SKI02": 1499.0,
+     "SKI03": 414.3,
+     "SYK02": 9122.3,
+     "SYK03": 3415.85
+    }
+   },
+   "2026-W32": {
+    "101": {
+     "FRI01": 91246.55,
+     "FRI02": 58468.7,
+     "FRI03": 80147.0,
+     "LOP01": 108841.95,
+     "LOP02": 39957.6,
+     "LOP03": 31797.0,
+     "SKI01": 24556.75,
+     "SKI02": 30611.65,
+     "SKI03": 8853.5,
+     "SYK01": 194229.05,
+     "SYK02": 53014.3,
+     "SYK03": 30955.8
+    },
+    "102": {
+     "FRI01": 77921.8,
+     "FRI02": 42906.85,
+     "FRI03": 51411.3,
+     "LOP01": 79322.7,
+     "LOP02": 41949.85,
+     "LOP03": 23788.2,
+     "SKI01": 4285.2,
+     "SKI02": 23948.75,
+     "SKI03": 9977.8,
+     "SYK01": 225004.4,
+     "SYK02": 48743.8,
+     "SYK03": 32392.3
+    },
+    "103": {
+     "FRI01": 51647.2,
+     "FRI02": 39576.65,
+     "FRI03": 48900.45,
+     "LOP01": 46146.9,
+     "LOP02": 33155.4,
+     "LOP03": 20105.9,
+     "SKI01": 14241.25,
+     "SKI02": 11542.7,
+     "SKI03": 12882.0,
+     "SYK01": 134943.4,
+     "SYK02": 44672.4,
+     "SYK03": 31185.8
+    },
+    "104": {
+     "FRI01": 47862.95,
+     "FRI02": 31533.95,
+     "FRI03": 59025.9,
+     "LOP01": 74405.85,
+     "LOP02": 39858.6,
+     "LOP03": 27849.9,
+     "SKI01": 10254.3,
+     "SKI02": 13214.1,
+     "SKI03": 12325.45,
+     "SYK01": 87840.25,
+     "SYK02": 51364.65,
+     "SYK03": 29094.8
+    },
+    "105": {
+     "FRI01": 32258.3,
+     "FRI02": 24381.75,
+     "FRI03": 41707.1,
+     "LOP01": 48697.2,
+     "LOP02": 24327.95,
+     "LOP03": 15041.3,
+     "SKI01": 8851.2,
+     "SKI02": 14105.7,
+     "SKI03": 6069.95,
+     "SYK01": 100196.3,
+     "SYK02": 29343.85,
+     "SYK03": 24905.2
+    }
+   },
+   "2026-W33": {
+    "101": {
+     "-1": 698.0,
+     "FRI01": 67630.2,
+     "FRI02": 51525.95,
+     "FRI03": 65374.85,
+     "LOP01": 84913.1,
+     "LOP02": 55064.95,
+     "LOP03": 32376.05,
+     "SKI01": 15224.85,
+     "SKI02": 28028.95,
+     "SKI03": 15555.0,
+     "SYK01": 173649.2,
+     "SYK02": 56758.1,
+     "SYK03": 43426.15
+    },
+    "102": {
+     "-1": 349.0,
+     "FRI01": 67910.6,
+     "FRI02": 50571.6,
+     "FRI03": 58463.2,
+     "LOP01": 75132.3,
+     "LOP02": 31631.05,
+     "LOP03": 31719.2,
+     "SKI01": 21546.5,
+     "SKI02": 19937.9,
+     "SKI03": 19984.45,
+     "SYK01": 200105.95,
+     "SYK02": 54109.65,
+     "SYK03": 26345.05
+    },
+    "103": {
+     "-1": 349.0,
+     "FRI01": 55300.6,
+     "FRI02": 28588.65,
+     "FRI03": 46216.7,
+     "LOP01": 71584.65,
+     "LOP02": 28799.05,
+     "LOP03": 26234.7,
+     "SKI01": 9690.2,
+     "SKI02": 17552.8,
+     "SKI03": 14604.25,
+     "SYK01": 194658.6,
+     "SYK02": 34110.7,
+     "SYK03": 25275.75
+    },
+    "104": {
+     "-1": 349.0,
+     "FRI01": 60429.8,
+     "FRI02": 37465.05,
+     "FRI03": 51016.25,
+     "LOP01": 50003.6,
+     "LOP02": 39737.75,
+     "LOP03": 38872.25,
+     "SKI01": 19807.45,
+     "SKI02": 20523.45,
+     "SKI03": 8721.5,
+     "SYK01": 87085.55,
+     "SYK02": 44376.2,
+     "SYK03": 21047.15
+    },
+    "105": {
+     "-1": 349.0,
+     "FRI01": 46001.55,
+     "FRI02": 27587.75,
+     "FRI03": 33107.85,
+     "LOP01": 45597.55,
+     "LOP02": 32901.65,
+     "LOP03": 10423.5,
+     "SKI01": 13855.75,
+     "SKI02": 10993.85,
+     "SKI03": 11963.2,
+     "SYK01": 164588.25,
+     "SYK02": 32175.65,
+     "SYK03": 23010.8
+    }
+   },
+   "2026-W34": {
+    "101": {
+     "FRI01": 136304.85,
+     "FRI02": 37030.95,
+     "FRI03": 75409.2,
+     "LOP01": 70389.45,
+     "LOP02": 47184.3,
+     "LOP03": 29599.05,
+     "SKI01": 29751.7,
+     "SKI02": 33363.5,
+     "SKI03": 20828.05,
+     "SYK01": 209229.05,
+     "SYK02": 56433.1,
+     "SYK03": 44733.65
+    },
+    "102": {
+     "FRI01": 61091.75,
+     "FRI02": 30649.45,
+     "FRI03": 70997.55,
+     "LOP01": 33572.45,
+     "LOP02": 36078.7,
+     "LOP03": 22954.75,
+     "SKI01": 35463.5,
+     "SKI02": 27167.85,
+     "SKI03": 9300.4,
+     "SYK01": 137265.45,
+     "SYK02": 39116.2,
+     "SYK03": 23839.2
+    },
+    "103": {
+     "FRI01": 68952.05,
+     "FRI02": 28797.65,
+     "FRI03": 53157.35,
+     "LOP01": 53740.55,
+     "LOP02": 29977.5,
+     "LOP03": 18712.45,
+     "SKI01": 13228.25,
+     "SKI02": 12552.8,
+     "SKI03": 18793.25,
+     "SYK01": 144411.5,
+     "SYK02": 37142.9,
+     "SYK03": 34636.8
+    },
+    "104": {
+     "FRI01": 49742.65,
+     "FRI02": 30479.5,
+     "FRI03": 47555.3,
+     "LOP01": 68893.9,
+     "LOP02": 31151.4,
+     "LOP03": 18302.05,
+     "SKI01": 21540.55,
+     "SKI02": 19323.5,
+     "SKI03": 14848.3,
+     "SYK01": 123460.8,
+     "SYK02": 37336.75,
+     "SYK03": 26625.35
+    },
+    "105": {
+     "FRI01": 26698.4,
+     "FRI02": 25297.65,
+     "FRI03": 35665.1,
+     "LOP01": 49160.8,
+     "LOP02": 18022.15,
+     "LOP03": 15330.55,
+     "SKI01": 9457.05,
+     "SKI02": 14019.7,
+     "SKI03": 13271.1,
+     "SYK01": 41419.15,
+     "SYK02": 21192.5,
+     "SYK03": 17322.75
+    }
+   },
+   "2026-W35": {
+    "101": {
+     "FRI01": 122947.0,
+     "FRI02": 42426.7,
+     "FRI03": 100334.45,
+     "LOP01": 75768.25,
+     "LOP02": 40128.5,
+     "LOP03": 36720.6,
+     "SKI01": 46383.7,
+     "SKI02": 40583.2,
+     "SKI03": 19586.7,
+     "SYK01": 160232.7,
+     "SYK02": 67774.55,
+     "SYK03": 42090.1
+    },
+    "102": {
+     "FRI01": 75084.0,
+     "FRI02": 34553.15,
+     "FRI03": 56112.5,
+     "LOP01": 52129.7,
+     "LOP02": 34232.3,
+     "LOP03": 26222.5,
+     "SKI01": 31753.6,
+     "SKI02": 23798.3,
+     "SKI03": 16244.6,
+     "SYK01": 224206.6,
+     "SYK02": 43426.7,
+     "SYK03": 31876.2
+    },
+    "103": {
+     "FRI01": 58738.7,
+     "FRI02": 24892.5,
+     "FRI03": 60531.4,
+     "LOP01": 63149.55,
+     "LOP02": 36437.75,
+     "LOP03": 20555.55,
+     "SKI01": 29302.35,
+     "SKI02": 19854.65,
+     "SKI03": 13896.35,
+     "SYK01": 154261.75,
+     "SYK02": 39080.15,
+     "SYK03": 24037.25
+    },
+    "104": {
+     "FRI01": 76718.8,
+     "FRI02": 29634.1,
+     "FRI03": 38011.75,
+     "LOP01": 41200.6,
+     "LOP02": 37576.55,
+     "LOP03": 25298.5,
+     "SKI01": 16744.35,
+     "SKI02": 23237.7,
+     "SKI03": 12791.9,
+     "SYK01": 112240.65,
+     "SYK02": 42591.5,
+     "SYK03": 16755.5
+    },
+    "105": {
+     "FRI01": 27630.25,
+     "FRI02": 16506.75,
+     "FRI03": 25740.05,
+     "LOP01": 45213.65,
+     "LOP02": 20248.95,
+     "LOP03": 14026.6,
+     "SKI01": 20029.3,
+     "SKI02": 28364.75,
+     "SKI03": 10431.85,
+     "SYK01": 35395.35,
+     "SYK02": 24607.9,
+     "SYK03": 20556.3
+    }
+   },
+   "2026-W36": {
+    "101": {
+     "FRI01": 65935.15,
+     "FRI02": 47652.1,
+     "FRI03": 75307.05,
+     "LOP01": 64405.15,
+     "LOP02": 40268.75,
+     "LOP03": 34764.95,
+     "SKI01": 23324.65,
+     "SKI02": 55735.05,
+     "SKI03": 25260.2,
+     "SYK01": 159256.85,
+     "SYK02": 45376.8,
+     "SYK03": 29209.65
+    },
+    "102": {
+     "FRI01": 69800.95,
+     "FRI02": 30164.25,
+     "FRI03": 58893.7,
+     "LOP01": 72450.9,
+     "LOP02": 39214.65,
+     "LOP03": 14897.85,
+     "SKI01": 27386.8,
+     "SKI02": 27779.1,
+     "SKI03": 23701.45,
+     "SYK01": 173183.8,
+     "SYK02": 38880.05,
+     "SYK03": 27038.15
+    },
+    "103": {
+     "FRI01": 60493.6,
+     "FRI02": 22142.3,
+     "FRI03": 57598.95,
+     "LOP01": 47887.4,
+     "LOP02": 25985.45,
+     "LOP03": 18951.6,
+     "SKI01": 22746.8,
+     "SKI02": 48485.85,
+     "SKI03": 21809.1,
+     "SYK01": 106786.3,
+     "SYK02": 30275.65,
+     "SYK03": 16851.75
+    },
+    "104": {
+     "FRI01": 77832.15,
+     "FRI02": 39425.85,
+     "FRI03": 31185.0,
+     "LOP01": 44450.75,
+     "LOP02": 31729.55,
+     "LOP03": 22402.45,
+     "SKI01": 52858.15,
+     "SKI02": 19915.8,
+     "SKI03": 15446.65,
+     "SYK01": 125715.7,
+     "SYK02": 36594.1,
+     "SYK03": 25324.15
+    },
+    "105": {
+     "FRI01": 35203.15,
+     "FRI02": 20748.0,
+     "FRI03": 33555.25,
+     "LOP01": 43555.35,
+     "LOP02": 18273.05,
+     "LOP03": 15045.95,
+     "SKI01": 15690.95,
+     "SKI02": 19607.3,
+     "SKI03": 9587.95,
+     "SYK01": 117916.45,
+     "SYK02": 24823.0,
+     "SYK03": 22441.6
+    },
+    "106": {
+     "FRI01": 24844.6,
+     "FRI02": 8224.9,
+     "FRI03": 20443.95,
+     "LOP01": 16208.65,
+     "LOP02": 10980.2,
+     "LOP03": 10400.9,
+     "SKI01": 4948.2,
+     "SKI02": 6056.0,
+     "SKI03": 2041.7,
+     "SYK01": 32571.2,
+     "SYK02": 9821.65,
+     "SYK03": 7307.25
+    }
+   },
+   "2026-W37": {
+    "101": {
+     "FRI01": 48738.6,
+     "FRI02": 42305.7,
+     "FRI03": 55033.85,
+     "LOP01": 62952.0,
+     "LOP02": 44856.35,
+     "LOP03": 26887.55,
+     "SKI01": 31397.05,
+     "SKI02": 40016.45,
+     "SKI03": 25336.15,
+     "SYK01": 195958.1,
+     "SYK02": 34137.0,
+     "SYK03": 32397.45
+    },
+    "102": {
+     "FRI01": 46927.95,
+     "FRI02": 28936.15,
+     "FRI03": 55152.15,
+     "LOP01": 52356.3,
+     "LOP02": 26361.2,
+     "LOP03": 19438.75,
+     "SKI01": 21405.0,
+     "SKI02": 28805.0,
+     "SKI03": 17985.8,
+     "SYK01": 38944.3,
+     "SYK02": 38412.95,
+     "SYK03": 36958.55
+    },
+    "103": {
+     "FRI01": 59124.9,
+     "FRI02": 22765.65,
+     "FRI03": 48904.35,
+     "LOP01": 36254.75,
+     "LOP02": 30809.45,
+     "LOP03": 21369.1,
+     "SKI01": 42618.1,
+     "SKI02": 13764.6,
+     "SKI03": 17329.35,
+     "SYK01": 57864.7,
+     "SYK02": 26882.1,
+     "SYK03": 20345.55
+    },
+    "104": {
+     "FRI01": 58472.25,
+     "FRI02": 21128.0,
+     "FRI03": 41374.45,
+     "LOP01": 47429.65,
+     "LOP02": 23342.8,
+     "LOP03": 15808.0,
+     "SKI01": 17695.55,
+     "SKI02": 27978.45,
+     "SKI03": 21927.5,
+     "SYK01": 5348.1,
+     "SYK02": 35242.35,
+     "SYK03": 17225.5
+    },
+    "105": {
+     "FRI01": 34184.9,
+     "FRI02": 21242.5,
+     "FRI03": 33825.1,
+     "LOP01": 25444.35,
+     "LOP02": 21620.3,
+     "LOP03": 8211.15,
+     "SKI01": 20981.4,
+     "SKI02": 19001.5,
+     "SKI03": 22058.4,
+     "SYK01": 66042.7,
+     "SYK02": 20536.65,
+     "SYK03": 17575.1
+    },
+    "106": {
+     "FRI01": 46717.25,
+     "FRI02": 20868.25,
+     "FRI03": 29511.6,
+     "LOP01": 41693.35,
+     "LOP02": 21135.45,
+     "LOP03": 13370.1,
+     "SKI01": 28390.95,
+     "SKI02": 30019.75,
+     "SKI03": 20243.6,
+     "SYK01": 104389.6,
+     "SYK02": 19691.15,
+     "SYK03": 20706.3
+    }
+   },
+   "2026-W38": {
+    "101": {
+     "FRI01": 34537.9,
+     "FRI02": 37549.45,
+     "FRI03": 68059.25,
+     "LOP01": 59258.0,
+     "LOP02": 36865.5,
+     "LOP03": 29659.7,
+     "SKI01": 46503.5,
+     "SKI02": 48128.7,
+     "SKI03": 27628.85,
+     "SYK01": 30069.55,
+     "SYK02": 31724.35,
+     "SYK03": 26973.85
+    },
+    "102": {
+     "FRI01": 37551.05,
+     "FRI02": 39041.35,
+     "FRI03": 29808.05,
+     "LOP01": 22285.0,
+     "LOP02": 29790.75,
+     "LOP03": 17459.55,
+     "SKI01": 48625.05,
+     "SKI02": 37224.7,
+     "SKI03": 25751.25,
+     "SYK01": 15095.3,
+     "SYK02": 20921.5,
+     "SYK03": 25285.45
+    },
+    "103": {
+     "FRI01": 93013.45,
+     "FRI02": 29824.4,
+     "FRI03": 28562.55,
+     "LOP01": 45831.45,
+     "LOP02": 28848.05,
+     "LOP03": 13472.6,
+     "SKI01": 24893.85,
+     "SKI02": 33746.15,
+     "SKI03": 20997.95,
+     "SYK01": 84640.85,
+     "SYK02": 28589.05,
+     "SYK03": 17230.7
+    },
+    "104": {
+     "FRI01": 31324.25,
+     "FRI02": 32657.2,
+     "FRI03": 49927.9,
+     "LOP01": 32972.1,
+     "LOP02": 29087.85,
+     "LOP03": 17099.35,
+     "SKI01": 26681.05,
+     "SKI02": 30776.1,
+     "SKI03": 23106.0,
+     "SYK01": 96844.3,
+     "SYK02": 19626.95,
+     "SYK03": 17913.95
+    },
+    "105": {
+     "FRI01": 34192.3,
+     "FRI02": 16331.0,
+     "FRI03": 18626.45,
+     "LOP01": 22654.7,
+     "LOP02": 19366.35,
+     "LOP03": 13594.15,
+     "SKI01": 29857.45,
+     "SKI02": 17913.4,
+     "SKI03": 17396.1,
+     "SYK01": 87792.35,
+     "SYK02": 20791.2,
+     "SYK03": 12857.55
+    },
+    "106": {
+     "FRI01": 56827.05,
+     "FRI02": 16786.3,
+     "FRI03": 31309.75,
+     "LOP01": 25663.1,
+     "LOP02": 18046.3,
+     "LOP03": 17376.5,
+     "SKI01": 26498.5,
+     "SKI02": 24797.6,
+     "SKI03": 20434.1,
+     "SYK01": 13620.2,
+     "SYK02": 22551.3,
+     "SYK03": 15149.45
+    }
+   },
+   "2026-W39": {
+    "101": {
+     "FRI01": 65976.25,
+     "FRI02": 27331.85,
+     "FRI03": 72718.3,
+     "LOP01": 54256.9,
+     "LOP02": 31862.1,
+     "LOP03": 19668.4,
+     "SKI01": 59338.15,
+     "SKI02": 50455.45,
+     "SKI03": 25635.75,
+     "SYK01": 118514.5,
+     "SYK02": 34820.9,
+     "SYK03": 23690.45
+    },
+    "102": {
+     "FRI01": 39151.85,
+     "FRI02": 21359.9,
+     "FRI03": 42213.4,
+     "LOP01": 39814.65,
+     "LOP02": 41653.75,
+     "LOP03": 24738.1,
+     "SKI01": 36279.85,
+     "SKI02": 38132.9,
+     "SKI03": 30375.05,
+     "SYK01": 16797.15,
+     "SYK02": 41666.95,
+     "SYK03": 14601.85
+    },
+    "103": {
+     "FRI01": 33732.65,
+     "FRI02": 27143.85,
+     "FRI03": 29412.0,
+     "LOP01": 40189.75,
+     "LOP02": 27149.6,
+     "LOP03": 15911.85,
+     "SKI01": 33346.8,
+     "SKI02": 25708.15,
+     "SKI03": 33264.0,
+     "SYK01": 61319.3,
+     "SYK02": 27822.55,
+     "SYK03": 19472.75
+    },
+    "104": {
+     "FRI01": 28652.55,
+     "FRI02": 19918.45,
+     "FRI03": 48267.2,
+     "LOP01": 22067.25,
+     "LOP02": 28416.7,
+     "LOP03": 14154.2,
+     "SKI01": 38083.75,
+     "SKI02": 35516.85,
+     "SKI03": 23094.2,
+     "SYK01": 12498.0,
+     "SYK02": 19495.7,
+     "SYK03": 18333.6
+    },
+    "105": {
+     "FRI01": 39980.4,
+     "FRI02": 20505.15,
+     "FRI03": 25448.15,
+     "LOP01": 27506.6,
+     "LOP02": 24272.2,
+     "LOP03": 17341.15,
+     "SKI01": 29664.05,
+     "SKI02": 32395.0,
+     "SKI03": 11615.7,
+     "SYK01": 43642.75,
+     "SYK02": 22548.2,
+     "SYK03": 12068.9
+    },
+    "106": {
+     "FRI01": 28334.1,
+     "FRI02": 25259.0,
+     "FRI03": 35070.1,
+     "LOP01": 28317.85,
+     "LOP02": 21791.3,
+     "LOP03": 13320.1,
+     "SKI01": 52303.25,
+     "SKI02": 34591.1,
+     "SKI03": 16064.35,
+     "SYK01": 31869.5,
+     "SYK02": 25275.35,
+     "SYK03": 11696.25
+    }
+   },
+   "2026-W40": {
+    "101": {
+     "FRI01": 53318.05,
+     "FRI02": 31239.15,
+     "FRI03": 65820.55,
+     "LOP01": 62627.2,
+     "LOP02": 35326.75,
+     "LOP03": 24651.1,
+     "SKI01": 48213.6,
+     "SKI02": 53390.1,
+     "SKI03": 32130.65,
+     "SYK01": 120062.7,
+     "SYK02": 28960.65,
+     "SYK03": 23394.6
+    },
+    "102": {
+     "FRI01": 36075.6,
+     "FRI02": 20242.7,
+     "FRI03": 24248.5,
+     "LOP01": 55009.2,
+     "LOP02": 23916.85,
+     "LOP03": 19422.75,
+     "SKI01": 49999.9,
+     "SKI02": 34546.2,
+     "SKI03": 29078.0,
+     "SYK01": 159639.55,
+     "SYK02": 29311.25,
+     "SYK03": 20497.1
+    },
+    "103": {
+     "FRI01": 32748.5,
+     "FRI02": 18484.65,
+     "FRI03": 37957.1,
+     "LOP01": 30894.25,
+     "LOP02": 22858.75,
+     "LOP03": 14988.75,
+     "SKI01": 47300.05,
+     "SKI02": 38783.4,
+     "SKI03": 19947.35,
+     "SYK01": 105793.45,
+     "SYK02": 33571.1,
+     "SYK03": 12433.65
+    },
+    "104": {
+     "FRI01": 41624.7,
+     "FRI02": 29236.8,
+     "FRI03": 45818.85,
+     "LOP01": 48530.65,
+     "LOP02": 32024.25,
+     "LOP03": 19167.25,
+     "SKI01": 44691.0,
+     "SKI02": 36005.85,
+     "SKI03": 20551.05,
+     "SYK01": 104915.8,
+     "SYK02": 28427.25,
+     "SYK03": 12775.15
+    },
+    "105": {
+     "FRI01": 29287.75,
+     "FRI02": 18592.65,
+     "FRI03": 20615.85,
+     "LOP01": 40050.8,
+     "LOP02": 20525.85,
+     "LOP03": 22156.75,
+     "SKI01": 34653.85,
+     "SKI02": 22144.4,
+     "SKI03": 13894.6,
+     "SYK01": 55146.3,
+     "SYK02": 20216.7,
+     "SYK03": 7134.35
+    },
+    "106": {
+     "FRI01": 28321.75,
+     "FRI02": 19725.6,
+     "FRI03": 51204.6,
+     "LOP01": 36716.95,
+     "LOP02": 22370.0,
+     "LOP03": 10610.4,
+     "SKI01": 31355.2,
+     "SKI02": 34923.15,
+     "SKI03": 24040.2,
+     "SYK01": 69596.2,
+     "SYK02": 23100.9,
+     "SYK03": 9046.05
+    }
+   },
+   "2026-W41": {
+    "101": {
+     "FRI01": 52160.0,
+     "FRI02": 32415.15,
+     "FRI03": 36945.6,
+     "LOP01": 54482.4,
+     "LOP02": 37908.05,
+     "LOP03": 26891.1,
+     "SKI01": 59948.1,
+     "SKI02": 46947.0,
+     "SKI03": 32314.65,
+     "SYK01": 172810.75,
+     "SYK02": 29836.6,
+     "SYK03": 24509.75
+    },
+    "102": {
+     "FRI01": 41174.4,
+     "FRI02": 31805.75,
+     "FRI03": 36269.6,
+     "LOP01": 45813.85,
+     "LOP02": 34843.35,
+     "LOP03": 29396.1,
+     "SKI01": 55384.0,
+     "SKI02": 48572.9,
+     "SKI03": 29325.8,
+     "SYK01": 117941.25,
+     "SYK02": 27463.95,
+     "SYK03": 14017.35
+    },
+    "103": {
+     "FRI01": 18534.4,
+     "FRI02": 19123.85,
+     "FRI03": 27565.6,
+     "LOP01": 43301.05,
+     "LOP02": 26255.55,
+     "LOP03": 15619.9,
+     "SKI01": 60154.65,
+     "SKI02": 35927.4,
+     "SKI03": 24127.9,
+     "SYK01": 93845.3,
+     "SYK02": 11723.45,
+     "SYK03": 16706.85
+    },
+    "104": {
+     "FRI01": 21539.2,
+     "FRI02": 33882.7,
+     "FRI03": 28564.0,
+     "LOP01": 35082.55,
+     "LOP02": 25640.65,
+     "LOP03": 17749.3,
+     "SKI01": 49033.75,
+     "SKI02": 40613.3,
+     "SKI03": 19885.0,
+     "SYK01": 44993.35,
+     "SYK02": 24582.35,
+     "SYK03": 9532.6
+    },
+    "105": {
+     "FRI01": 10621.6,
+     "FRI02": 11949.55,
+     "FRI03": 22884.0,
+     "LOP01": 29450.6,
+     "LOP02": 21948.15,
+     "LOP03": 17215.45,
+     "SKI01": 33204.9,
+     "SKI02": 21754.85,
+     "SKI03": 20017.85,
+     "SYK01": 21072.35,
+     "SYK02": 12688.85,
+     "SYK03": 9541.75
+    },
+    "106": {
+     "FRI01": 30535.2,
+     "FRI02": 14183.7,
+     "FRI03": 18050.4,
+     "LOP01": 34620.15,
+     "LOP02": 25666.95,
+     "LOP03": 10423.15,
+     "SKI01": 31874.1,
+     "SKI02": 37619.05,
+     "SKI03": 22585.6,
+     "SYK01": 48595.15,
+     "SYK02": 14504.65,
+     "SYK03": 10361.85
+    }
+   },
+   "2026-W42": {
+    "101": {
+     "FRI01": 53600.0,
+     "FRI02": 32330.65,
+     "FRI03": 36593.6,
+     "LOP01": 64978.25,
+     "LOP02": 35772.3,
+     "LOP03": 17447.05,
+     "SKI01": 76746.95,
+     "SKI02": 57369.0,
+     "SKI03": 42012.45,
+     "SYK01": 103216.55,
+     "SYK02": 36212.1,
+     "SYK03": 14437.9
+    },
+    "102": {
+     "FRI01": 54165.6,
+     "FRI02": 28907.55,
+     "FRI03": 20326.4,
+     "LOP01": 47831.55,
+     "LOP02": 29537.8,
+     "LOP03": 17989.15,
+     "SKI01": 56532.4,
+     "SKI02": 62589.5,
+     "SKI03": 25139.65,
+     "SYK01": 113791.5,
+     "SYK02": 22423.75,
+     "SYK03": 23347.85
+    },
+    "103": {
+     "FRI01": 42449.6,
+     "FRI02": 22784.65,
+     "FRI03": 17776.0,
+     "LOP01": 37721.1,
+     "LOP02": 21202.65,
+     "LOP03": 17515.4,
+     "SKI01": 48821.25,
+     "SKI02": 43392.95,
+     "SKI03": 26865.7,
+     "SYK01": 40697.25,
+     "SYK02": 18810.05,
+     "SYK03": 14071.35
+    },
+    "104": {
+     "FRI01": 40168.0,
+     "FRI02": 19963.8,
+     "FRI03": 37798.4,
+     "LOP01": 51491.25,
+     "LOP02": 26234.7,
+     "LOP03": 10183.05,
+     "SKI01": 60618.75,
+     "SKI02": 34706.45,
+     "SKI03": 30710.85,
+     "SYK01": 75692.55,
+     "SYK02": 15843.35,
+     "SYK03": 15212.4
+    },
+    "105": {
+     "FRI01": 33370.4,
+     "FRI02": 17307.65,
+     "FRI03": 22093.6,
+     "LOP01": 26591.95,
+     "LOP02": 13712.4,
+     "LOP03": 15439.0,
+     "SKI01": 56134.9,
+     "SKI02": 36367.55,
+     "SKI03": 17848.95,
+     "SYK01": 33998.0,
+     "SYK02": 21409.9,
+     "SYK03": 10414.55
+    },
+    "106": {
+     "FRI01": 18893.6,
+     "FRI02": 17053.0,
+     "FRI03": 37000.0,
+     "LOP01": 42951.95,
+     "LOP02": 22691.55,
+     "LOP03": 14817.85,
+     "SKI01": 34782.8,
+     "SKI02": 38733.9,
+     "SKI03": 24380.3,
+     "SYK01": 11797.05,
+     "SYK02": 8256.3,
+     "SYK03": 9093.2
+    }
+   },
+   "2026-W43": {
+    "101": {
+     "FRI01": 62560.7,
+     "FRI02": 39743.0,
+     "FRI03": 42140.85,
+     "LOP01": 59766.8,
+     "LOP02": 28549.3,
+     "LOP03": 30214.4,
+     "SKI01": 70972.8,
+     "SKI02": 89965.25,
+     "SKI03": 36162.2,
+     "SYK01": 79520.3,
+     "SYK02": 28768.25,
+     "SYK03": 22888.2
+    },
+    "102": {
+     "FRI01": 53830.5,
+     "FRI02": 27035.55,
+     "FRI03": 29507.5,
+     "LOP01": 38961.8,
+     "LOP02": 23967.15,
+     "LOP03": 24332.3,
+     "SKI01": 60226.65,
+     "SKI02": 31406.95,
+     "SKI03": 24562.9,
+     "SYK01": 73143.5,
+     "SYK02": 17411.9,
+     "SYK03": 17297.75
+    },
+    "103": {
+     "FRI01": 39853.25,
+     "FRI02": 27692.05,
+     "FRI03": 41286.0,
+     "LOP01": 42866.35,
+     "LOP02": 25917.85,
+     "LOP03": 15041.8,
+     "SKI01": 49934.15,
+     "SKI02": 29258.65,
+     "SKI03": 31438.55,
+     "SYK01": 79045.35,
+     "SYK02": 18351.05,
+     "SYK03": 11846.5
+    },
+    "104": {
+     "FRI01": 35018.3,
+     "FRI02": 21392.9,
+     "FRI03": 48604.15,
+     "LOP01": 43097.8,
+     "LOP02": 32658.9,
+     "LOP03": 14394.1,
+     "SKI01": 75318.45,
+     "SKI02": 41109.95,
+     "SKI03": 23359.7,
+     "SYK01": 178015.6,
+     "SYK02": 16190.4,
+     "SYK03": 9648.95
+    },
+    "105": {
+     "FRI01": 35547.6,
+     "FRI02": 15631.5,
+     "FRI03": 27454.55,
+     "LOP01": 34869.25,
+     "LOP02": 25590.55,
+     "LOP03": 16405.75,
+     "SKI01": 47739.3,
+     "SKI02": 33277.7,
+     "SKI03": 21653.1,
+     "SYK01": 11098.15,
+     "SYK02": 17320.8,
+     "SYK03": 13115.4
+    },
+    "106": {
+     "FRI01": 24405.15,
+     "FRI02": 24012.45,
+     "FRI03": 32727.2,
+     "LOP01": 23929.65,
+     "LOP02": 22791.2,
+     "LOP03": 16166.0,
+     "SKI01": 55220.35,
+     "SKI02": 39470.5,
+     "SKI03": 25943.1,
+     "SYK01": 71045.4,
+     "SYK02": 11769.0,
+     "SYK03": 7989.85
+    }
+   },
+   "2026-W44": {
+    "101": {
+     "FRI01": 59336.3,
+     "FRI02": 25016.05,
+     "FRI03": 55836.1,
+     "LOP01": 75164.05,
+     "LOP02": 33678.5,
+     "LOP03": 24495.8,
+     "SKI01": 69706.75,
+     "SKI02": 79844.85,
+     "SKI03": 35247.9,
+     "SYK01": 92219.3,
+     "SYK02": 22298.0,
+     "SYK03": 14300.1
+    },
+    "102": {
+     "FRI01": 46390.55,
+     "FRI02": 22838.5,
+     "FRI03": 45480.15,
+     "LOP01": 39546.95,
+     "LOP02": 26006.65,
+     "LOP03": 21663.55,
+     "SKI01": 66630.0,
+     "SKI02": 63968.15,
+     "SKI03": 37895.6,
+     "SYK01": 100266.4,
+     "SYK02": 17578.05,
+     "SYK03": 9945.1
+    },
+    "103": {
+     "FRI01": 18940.65,
+     "FRI02": 21134.45,
+     "FRI03": 27286.05,
+     "LOP01": 44909.05,
+     "LOP02": 21995.4,
+     "LOP03": 16573.25,
+     "SKI01": 55568.9,
+     "SKI02": 62328.35,
+     "SKI03": 30801.15,
+     "SYK01": 98046.15,
+     "SYK02": 11196.9,
+     "SYK03": 9312.05
+    },
+    "104": {
+     "FRI01": 64711.8,
+     "FRI02": 17666.1,
+     "FRI03": 29594.55,
+     "LOP01": 40470.2,
+     "LOP02": 21957.55,
+     "LOP03": 14552.25,
+     "SKI01": 55145.5,
+     "SKI02": 51560.55,
+     "SKI03": 39927.4,
+     "SYK01": 86969.35,
+     "SYK02": 12413.2,
+     "SYK03": 4453.6
+    },
+    "105": {
+     "FRI01": 43601.25,
+     "FRI02": 19116.1,
+     "FRI03": 31004.9,
+     "LOP01": 15203.55,
+     "LOP02": 21231.25,
+     "LOP03": 17686.0,
+     "SKI01": 43037.1,
+     "SKI02": 41228.8,
+     "SKI03": 24932.3,
+     "SYK01": 24297.15,
+     "SYK02": 14374.15,
+     "SYK03": 11601.15
+    },
+    "106": {
+     "FRI01": 34476.75,
+     "FRI02": 19669.7,
+     "FRI03": 41561.1,
+     "LOP01": 28481.7,
+     "LOP02": 22701.15,
+     "LOP03": 16043.05,
+     "SKI01": 25015.95,
+     "SKI02": 61875.55,
+     "SKI03": 21858.85,
+     "SYK01": 9498.1,
+     "SYK02": 13948.5,
+     "SYK03": 12552.2
+    }
+   }
+  },
+  "varegruppenavn": {
+   "SKI01": "Langrennsski",
+   "SKI02": "Skisko og bindinger",
+   "SKI03": "Skismøring og tilbehør",
+   "LOP01": "Løpesko",
+   "LOP02": "Løpeklær",
+   "LOP03": "Løpetilbehør",
+   "FRI01": "Telt og soveposer",
+   "FRI02": "Staver og stavtilbehør",
+   "FRI03": "Sekker",
+   "SYK01": "Sykler",
+   "SYK02": "Sykkelklær",
+   "SYK03": "Sykkeltilbehør",
+   "-1": "Ukjent"
+  }
+ },
+ "modul6_nett": {
+  "slv__salgslinje_rader_kasse_og_nett": 44245,
+  "gld__f__salg_rader": 44245,
+  "nett_linjer": 5633,
+  "nett_ordrer": 3740,
+  "belop_totalt": 38178930.35,
+  "belop_nett": 4275322.95,
+  "andel_nett_totalt": 0.112,
+  "andel_nett_per_maned": {
+   "2026-08": {
+    "kasse": 11775566.65,
+    "nett": 1567039.25,
+    "andel_nett": 0.1174
+   },
+   "2026-09": {
+    "kasse": 10581538.55,
+    "nett": 1320105.65,
+    "andel_nett": 0.1109
+   },
+   "2026-10": {
+    "kasse": 11546502.2,
+    "nett": 1388178.05,
+    "andel_nett": 0.1073
+   }
+  },
+  "andel_nett_per_uke": {
+   "2026-W31": {
+    "kasse": 464733.15,
+    "nett": 119496.85,
+    "andel_nett": 0.2045
+   },
+   "2026-W32": {
+    "kasse": 2757849.35,
+    "nett": 300721.8,
+    "andel_nett": 0.0983
+   },
+   "2026-W33": {
+    "kasse": 2832988.8,
+    "nett": 391657.85,
+    "andel_nett": 0.1215
+   },
+   "2026-W34": {
+    "kasse": 2607974.1,
+    "nett": 384641.4,
+    "andel_nett": 0.1285
+   },
+   "2026-W35": {
+    "kasse": 2750908.15,
+    "nett": 297841.55,
+    "andel_nett": 0.0977
+   },
+   "2026-W36": {
+    "kasse": 2803080.25,
+    "nett": 373253.95,
+    "andel_nett": 0.1175
+   },
+   "2026-W37": {
+    "kasse": 2490166.95,
+    "nett": 322200.1,
+    "andel_nett": 0.1146
+   },
+   "2026-W38": {
+    "kasse": 2283898.8,
+    "nett": 271868.3,
+    "andel_nett": 0.1064
+   },
+   "2026-W39": {
+    "kasse": 2284906.6,
+    "nett": 310385.35,
+    "andel_nett": 0.1196
+   },
+   "2026-W40": {
+    "kasse": 2626083.15,
+    "nett": 285629.9,
+    "andel_nett": 0.0981
+   },
+   "2026-W41": {
+    "kasse": 2394531.95,
+    "nett": 308529.65,
+    "andel_nett": 0.1141
+   },
+   "2026-W42": {
+    "kasse": 2429171.35,
+    "nett": 306065.15,
+    "andel_nett": 0.1119
+   },
+   "2026-W43": {
+    "kasse": 2619450.75,
+    "nett": 284056.05,
+    "andel_nett": 0.0978
+   },
+   "2026-W44": {
+    "kasse": 2557864.05,
+    "nett": 318975.05,
+    "andel_nett": 0.1109
+   }
+  },
+  "h13_nett": {
+   "linjer_utc_dato_ulik_salgsdato": 224,
+   "ordrer": 150
+  },
+  "omsetning_uke_butikk_varegruppe_alle": {
+   "2026-W31": {
+    "101": {
+     "FRI01": 10880.75,
+     "FRI02": 11074.45,
+     "FRI03": 10966.2,
+     "LOP01": 13901.7,
+     "LOP02": 9134.05,
+     "LOP03": 3282.7,
+     "SKI01": 7735.2,
+     "SKI02": 3799.05,
+     "SKI03": 3141.45,
+     "SYK01": 92244.25,
+     "SYK02": 8940.75,
+     "SYK03": 8336.35
+    },
+    "102": {
+     "FRI01": 11324.2,
+     "FRI02": 6437.15,
+     "FRI03": 6332.1,
+     "LOP01": 23301.8,
+     "LOP02": 10300.9,
+     "LOP03": 2199.2,
+     "SKI01": 1234.05,
+     "SKI03": 365.65,
+     "SYK01": 34597.2,
+     "SYK02": 5233.15,
+     "SYK03": 4859.05
+    },
+    "103": {
+     "FRI01": 9636.2,
+     "FRI02": 2949.1,
+     "FRI03": 5832.3,
+     "LOP01": 14456.2,
+     "LOP02": 6489.5,
+     "LOP03": 7463.1,
+     "SKI01": 3134.05,
+     "SKI03": 1811.45,
+     "SYK01": 3599.1,
+     "SYK02": 4199.0,
+     "SYK03": 7204.65
+    },
+    "104": {
+     "FRI01": 4233.9,
+     "FRI02": 4129.5,
+     "FRI03": 12280.65,
+     "LOP01": 14643.6,
+     "LOP02": 4482.0,
+     "LOP03": 2551.95,
+     "SKI01": 5263.05,
+     "SKI02": 1599.0,
+     "SKI03": 699.0,
+     "SYK01": 3799.05,
+     "SYK02": 4280.15,
+     "SYK03": 5813.6
+    },
+    "105": {
+     "FRI01": 5277.3,
+     "FRI02": 10536.15,
+     "FRI03": 3454.15,
+     "LOP01": 799.0,
+     "LOP02": 2483.05,
+     "LOP03": 1727.45,
+     "SKI01": 5833.15,
+     "SKI02": 1499.0,
+     "SKI03": 414.3,
+     "SYK02": 9122.3,
+     "SYK03": 3415.85
+    },
+    "107": {
+     "FRI01": 11244.6,
+     "FRI02": 8717.1,
+     "FRI03": 10720.45,
+     "LOP01": 4461.5,
+     "LOP02": 12468.15,
+     "LOP03": 3836.55,
+     "SKI02": 426.55,
+     "SKI03": 1813.2,
+     "SYK01": 43222.4,
+     "SYK02": 13582.65,
+     "SYK03": 9003.7
+    }
+   },
+   "2026-W32": {
+    "101": {
+     "FRI01": 91246.55,
+     "FRI02": 58468.7,
+     "FRI03": 80147.0,
+     "LOP01": 108841.95,
+     "LOP02": 39957.6,
+     "LOP03": 31797.0,
+     "SKI01": 24556.75,
+     "SKI02": 30611.65,
+     "SKI03": 8853.5,
+     "SYK01": 194229.05,
+     "SYK02": 53014.3,
+     "SYK03": 30955.8
+    },
+    "102": {
+     "FRI01": 77921.8,
+     "FRI02": 42906.85,
+     "FRI03": 51411.3,
+     "LOP01": 79322.7,
+     "LOP02": 41949.85,
+     "LOP03": 23788.2,
+     "SKI01": 4285.2,
+     "SKI02": 23948.75,
+     "SKI03": 9977.8,
+     "SYK01": 225004.4,
+     "SYK02": 48743.8,
+     "SYK03": 32392.3
+    },
+    "103": {
+     "FRI01": 51647.2,
+     "FRI02": 39576.65,
+     "FRI03": 48900.45,
+     "LOP01": 46146.9,
+     "LOP02": 33155.4,
+     "LOP03": 20105.9,
+     "SKI01": 14241.25,
+     "SKI02": 11542.7,
+     "SKI03": 12882.0,
+     "SYK01": 134943.4,
+     "SYK02": 44672.4,
+     "SYK03": 31185.8
+    },
+    "104": {
+     "FRI01": 47862.95,
+     "FRI02": 31533.95,
+     "FRI03": 59025.9,
+     "LOP01": 74405.85,
+     "LOP02": 39858.6,
+     "LOP03": 27849.9,
+     "SKI01": 10254.3,
+     "SKI02": 13214.1,
+     "SKI03": 12325.45,
+     "SYK01": 87840.25,
+     "SYK02": 51364.65,
+     "SYK03": 29094.8
+    },
+    "105": {
+     "FRI01": 32258.3,
+     "FRI02": 24381.75,
+     "FRI03": 41707.1,
+     "LOP01": 48697.2,
+     "LOP02": 24327.95,
+     "LOP03": 15041.3,
+     "SKI01": 8851.2,
+     "SKI02": 14105.7,
+     "SKI03": 6069.95,
+     "SYK01": 100196.3,
+     "SYK02": 29343.85,
+     "SYK03": 24905.2
+    },
+    "107": {
+     "FRI01": 37348.35,
+     "FRI02": 28063.45,
+     "FRI03": 34242.1,
+     "LOP01": 40043.6,
+     "LOP02": 27039.25,
+     "LOP03": 13243.75,
+     "SKI01": 3868.2,
+     "SKI02": 14345.95,
+     "SKI03": 2487.0,
+     "SYK01": 57440.75,
+     "SYK02": 21640.3,
+     "SYK03": 20959.1
+    }
+   },
+   "2026-W33": {
+    "101": {
+     "-1": 698.0,
+     "FRI01": 67630.2,
+     "FRI02": 51525.95,
+     "FRI03": 65374.85,
+     "LOP01": 84913.1,
+     "LOP02": 55064.95,
+     "LOP03": 32376.05,
+     "SKI01": 15224.85,
+     "SKI02": 28028.95,
+     "SKI03": 15555.0,
+     "SYK01": 173649.2,
+     "SYK02": 56758.1,
+     "SYK03": 43426.15
+    },
+    "102": {
+     "-1": 349.0,
+     "FRI01": 67910.6,
+     "FRI02": 50571.6,
+     "FRI03": 58463.2,
+     "LOP01": 75132.3,
+     "LOP02": 31631.05,
+     "LOP03": 31719.2,
+     "SKI01": 21546.5,
+     "SKI02": 19937.9,
+     "SKI03": 19984.45,
+     "SYK01": 200105.95,
+     "SYK02": 54109.65,
+     "SYK03": 26345.05
+    },
+    "103": {
+     "-1": 349.0,
+     "FRI01": 55300.6,
+     "FRI02": 28588.65,
+     "FRI03": 46216.7,
+     "LOP01": 71584.65,
+     "LOP02": 28799.05,
+     "LOP03": 26234.7,
+     "SKI01": 9690.2,
+     "SKI02": 17552.8,
+     "SKI03": 14604.25,
+     "SYK01": 194658.6,
+     "SYK02": 34110.7,
+     "SYK03": 25275.75
+    },
+    "104": {
+     "-1": 349.0,
+     "FRI01": 60429.8,
+     "FRI02": 37465.05,
+     "FRI03": 51016.25,
+     "LOP01": 50003.6,
+     "LOP02": 39737.75,
+     "LOP03": 38872.25,
+     "SKI01": 19807.45,
+     "SKI02": 20523.45,
+     "SKI03": 8721.5,
+     "SYK01": 87085.55,
+     "SYK02": 44376.2,
+     "SYK03": 21047.15
+    },
+    "105": {
+     "-1": 349.0,
+     "FRI01": 46001.55,
+     "FRI02": 27587.75,
+     "FRI03": 33107.85,
+     "LOP01": 45597.55,
+     "LOP02": 32901.65,
+     "LOP03": 10423.5,
+     "SKI01": 13855.75,
+     "SKI02": 10993.85,
+     "SKI03": 11963.2,
+     "SYK01": 164588.25,
+     "SYK02": 32175.65,
+     "SYK03": 23010.8
+    },
+    "107": {
+     "FRI01": 57413.5,
+     "FRI02": 24184.6,
+     "FRI03": 41227.55,
+     "LOP01": 32042.15,
+     "LOP02": 29254.7,
+     "LOP03": 14374.5,
+     "SKI01": 8395.35,
+     "SKI02": 14597.5,
+     "SKI03": 6123.7,
+     "SYK01": 110865.05,
+     "SYK02": 34902.4,
+     "SYK03": 18276.85
+    }
+   },
+   "2026-W34": {
+    "101": {
+     "FRI01": 136304.85,
+     "FRI02": 37030.95,
+     "FRI03": 75409.2,
+     "LOP01": 70389.45,
+     "LOP02": 47184.3,
+     "LOP03": 29599.05,
+     "SKI01": 29751.7,
+     "SKI02": 33363.5,
+     "SKI03": 20828.05,
+     "SYK01": 209229.05,
+     "SYK02": 56433.1,
+     "SYK03": 44733.65
+    },
+    "102": {
+     "FRI01": 61091.75,
+     "FRI02": 30649.45,
+     "FRI03": 70997.55,
+     "LOP01": 33572.45,
+     "LOP02": 36078.7,
+     "LOP03": 22954.75,
+     "SKI01": 35463.5,
+     "SKI02": 27167.85,
+     "SKI03": 9300.4,
+     "SYK01": 137265.45,
+     "SYK02": 39116.2,
+     "SYK03": 23839.2
+    },
+    "103": {
+     "FRI01": 68952.05,
+     "FRI02": 28797.65,
+     "FRI03": 53157.35,
+     "LOP01": 53740.55,
+     "LOP02": 29977.5,
+     "LOP03": 18712.45,
+     "SKI01": 13228.25,
+     "SKI02": 12552.8,
+     "SKI03": 18793.25,
+     "SYK01": 144411.5,
+     "SYK02": 37142.9,
+     "SYK03": 34636.8
+    },
+    "104": {
+     "FRI01": 49742.65,
+     "FRI02": 30479.5,
+     "FRI03": 47555.3,
+     "LOP01": 68893.9,
+     "LOP02": 31151.4,
+     "LOP03": 18302.05,
+     "SKI01": 21540.55,
+     "SKI02": 19323.5,
+     "SKI03": 14848.3,
+     "SYK01": 123460.8,
+     "SYK02": 37336.75,
+     "SYK03": 26625.35
+    },
+    "105": {
+     "FRI01": 26698.4,
+     "FRI02": 25297.65,
+     "FRI03": 35665.1,
+     "LOP01": 49160.8,
+     "LOP02": 18022.15,
+     "LOP03": 15330.55,
+     "SKI01": 9457.05,
+     "SKI02": 14019.7,
+     "SKI03": 13271.1,
+     "SYK01": 41419.15,
+     "SYK02": 21192.5,
+     "SYK03": 17322.75
+    },
+    "107": {
+     "FRI01": 33591.75,
+     "FRI02": 20520.2,
+     "FRI03": 35268.45,
+     "LOP01": 40050.05,
+     "LOP02": 17830.6,
+     "LOP03": 19105.6,
+     "SKI01": 7691.2,
+     "SKI02": 21816.9,
+     "SKI03": 4400.3,
+     "SYK01": 144989.9,
+     "SYK02": 21979.2,
+     "SYK03": 17397.25
+    }
+   },
+   "2026-W35": {
+    "101": {
+     "FRI01": 122947.0,
+     "FRI02": 42426.7,
+     "FRI03": 100334.45,
+     "LOP01": 75768.25,
+     "LOP02": 40128.5,
+     "LOP03": 36720.6,
+     "SKI01": 46383.7,
+     "SKI02": 40583.2,
+     "SKI03": 19586.7,
+     "SYK01": 160232.7,
+     "SYK02": 67774.55,
+     "SYK03": 42090.1
+    },
+    "102": {
+     "FRI01": 75084.0,
+     "FRI02": 34553.15,
+     "FRI03": 56112.5,
+     "LOP01": 52129.7,
+     "LOP02": 34232.3,
+     "LOP03": 26222.5,
+     "SKI01": 31753.6,
+     "SKI02": 23798.3,
+     "SKI03": 16244.6,
+     "SYK01": 224206.6,
+     "SYK02": 43426.7,
+     "SYK03": 31876.2
+    },
+    "103": {
+     "FRI01": 58738.7,
+     "FRI02": 24892.5,
+     "FRI03": 60531.4,
+     "LOP01": 63149.55,
+     "LOP02": 36437.75,
+     "LOP03": 20555.55,
+     "SKI01": 29302.35,
+     "SKI02": 19854.65,
+     "SKI03": 13896.35,
+     "SYK01": 154261.75,
+     "SYK02": 39080.15,
+     "SYK03": 24037.25
+    },
+    "104": {
+     "FRI01": 76718.8,
+     "FRI02": 29634.1,
+     "FRI03": 38011.75,
+     "LOP01": 41200.6,
+     "LOP02": 37576.55,
+     "LOP03": 25298.5,
+     "SKI01": 16744.35,
+     "SKI02": 23237.7,
+     "SKI03": 12791.9,
+     "SYK01": 112240.65,
+     "SYK02": 42591.5,
+     "SYK03": 16755.5
+    },
+    "105": {
+     "FRI01": 27630.25,
+     "FRI02": 16506.75,
+     "FRI03": 25740.05,
+     "LOP01": 45213.65,
+     "LOP02": 20248.95,
+     "LOP03": 14026.6,
+     "SKI01": 20029.3,
+     "SKI02": 28364.75,
+     "SKI03": 10431.85,
+     "SYK01": 35395.35,
+     "SYK02": 24607.9,
+     "SYK03": 20556.3
+    },
+    "107": {
+     "FRI01": 42788.7,
+     "FRI02": 20128.75,
+     "FRI03": 37126.5,
+     "LOP01": 33662.8,
+     "LOP02": 19281.6,
+     "LOP03": 16503.0,
+     "SKI01": 17870.9,
+     "SKI02": 14694.85,
+     "SKI03": 7672.5,
+     "SYK01": 48496.35,
+     "SYK02": 22908.0,
+     "SYK03": 16707.6
+    }
+   },
+   "2026-W36": {
+    "101": {
+     "FRI01": 65935.15,
+     "FRI02": 47652.1,
+     "FRI03": 75307.05,
+     "LOP01": 64405.15,
+     "LOP02": 40268.75,
+     "LOP03": 34764.95,
+     "SKI01": 23324.65,
+     "SKI02": 55735.05,
+     "SKI03": 25260.2,
+     "SYK01": 159256.85,
+     "SYK02": 45376.8,
+     "SYK03": 29209.65
+    },
+    "102": {
+     "FRI01": 69800.95,
+     "FRI02": 30164.25,
+     "FRI03": 58893.7,
+     "LOP01": 72450.9,
+     "LOP02": 39214.65,
+     "LOP03": 14897.85,
+     "SKI01": 27386.8,
+     "SKI02": 27779.1,
+     "SKI03": 23701.45,
+     "SYK01": 173183.8,
+     "SYK02": 38880.05,
+     "SYK03": 27038.15
+    },
+    "103": {
+     "FRI01": 60493.6,
+     "FRI02": 22142.3,
+     "FRI03": 57598.95,
+     "LOP01": 47887.4,
+     "LOP02": 25985.45,
+     "LOP03": 18951.6,
+     "SKI01": 22746.8,
+     "SKI02": 48485.85,
+     "SKI03": 21809.1,
+     "SYK01": 106786.3,
+     "SYK02": 30275.65,
+     "SYK03": 16851.75
+    },
+    "104": {
+     "FRI01": 77832.15,
+     "FRI02": 39425.85,
+     "FRI03": 31185.0,
+     "LOP01": 44450.75,
+     "LOP02": 31729.55,
+     "LOP03": 22402.45,
+     "SKI01": 52858.15,
+     "SKI02": 19915.8,
+     "SKI03": 15446.65,
+     "SYK01": 125715.7,
+     "SYK02": 36594.1,
+     "SYK03": 25324.15
+    },
+    "105": {
+     "FRI01": 35203.15,
+     "FRI02": 20748.0,
+     "FRI03": 33555.25,
+     "LOP01": 43555.35,
+     "LOP02": 18273.05,
+     "LOP03": 15045.95,
+     "SKI01": 15690.95,
+     "SKI02": 19607.3,
+     "SKI03": 9587.95,
+     "SYK01": 117916.45,
+     "SYK02": 24823.0,
+     "SYK03": 22441.6
+    },
+    "106": {
+     "FRI01": 24844.6,
+     "FRI02": 8224.9,
+     "FRI03": 20443.95,
+     "LOP01": 16208.65,
+     "LOP02": 10980.2,
+     "LOP03": 10400.9,
+     "SKI01": 4948.2,
+     "SKI02": 6056.0,
+     "SKI03": 2041.7,
+     "SYK01": 32571.2,
+     "SYK02": 9821.65,
+     "SYK03": 7307.25
+    },
+    "107": {
+     "FRI01": 38721.2,
+     "FRI02": 19875.05,
+     "FRI03": 21336.3,
+     "LOP01": 37177.8,
+     "LOP02": 25942.95,
+     "LOP03": 14257.2,
+     "SKI01": 14882.8,
+     "SKI02": 17246.95,
+     "SKI03": 10472.15,
+     "SYK01": 128068.45,
+     "SYK02": 25601.15,
+     "SYK03": 19671.95
+    }
+   },
+   "2026-W37": {
+    "101": {
+     "FRI01": 48738.6,
+     "FRI02": 42305.7,
+     "FRI03": 55033.85,
+     "LOP01": 62952.0,
+     "LOP02": 44856.35,
+     "LOP03": 26887.55,
+     "SKI01": 31397.05,
+     "SKI02": 40016.45,
+     "SKI03": 25336.15,
+     "SYK01": 195958.1,
+     "SYK02": 34137.0,
+     "SYK03": 32397.45
+    },
+    "102": {
+     "FRI01": 46927.95,
+     "FRI02": 28936.15,
+     "FRI03": 55152.15,
+     "LOP01": 52356.3,
+     "LOP02": 26361.2,
+     "LOP03": 19438.75,
+     "SKI01": 21405.0,
+     "SKI02": 28805.0,
+     "SKI03": 17985.8,
+     "SYK01": 38944.3,
+     "SYK02": 38412.95,
+     "SYK03": 36958.55
+    },
+    "103": {
+     "FRI01": 59124.9,
+     "FRI02": 22765.65,
+     "FRI03": 48904.35,
+     "LOP01": 36254.75,
+     "LOP02": 30809.45,
+     "LOP03": 21369.1,
+     "SKI01": 42618.1,
+     "SKI02": 13764.6,
+     "SKI03": 17329.35,
+     "SYK01": 57864.7,
+     "SYK02": 26882.1,
+     "SYK03": 20345.55
+    },
+    "104": {
+     "FRI01": 58472.25,
+     "FRI02": 21128.0,
+     "FRI03": 41374.45,
+     "LOP01": 47429.65,
+     "LOP02": 23342.8,
+     "LOP03": 15808.0,
+     "SKI01": 17695.55,
+     "SKI02": 27978.45,
+     "SKI03": 21927.5,
+     "SYK01": 5348.1,
+     "SYK02": 35242.35,
+     "SYK03": 17225.5
+    },
+    "105": {
+     "FRI01": 34184.9,
+     "FRI02": 21242.5,
+     "FRI03": 33825.1,
+     "LOP01": 25444.35,
+     "LOP02": 21620.3,
+     "LOP03": 8211.15,
+     "SKI01": 20981.4,
+     "SKI02": 19001.5,
+     "SKI03": 22058.4,
+     "SYK01": 66042.7,
+     "SYK02": 20536.65,
+     "SYK03": 17575.1
+    },
+    "106": {
+     "FRI01": 46717.25,
+     "FRI02": 20868.25,
+     "FRI03": 29511.6,
+     "LOP01": 41693.35,
+     "LOP02": 21135.45,
+     "LOP03": 13370.1,
+     "SKI01": 28390.95,
+     "SKI02": 30019.75,
+     "SKI03": 20243.6,
+     "SYK01": 104389.6,
+     "SYK02": 19691.15,
+     "SYK03": 20706.3
+    },
+    "107": {
+     "FRI01": 50836.75,
+     "FRI02": 16329.5,
+     "FRI03": 25195.25,
+     "LOP01": 34075.0,
+     "LOP02": 28794.8,
+     "LOP03": 11392.2,
+     "SKI01": 15421.8,
+     "SKI02": 29556.2,
+     "SKI03": 13877.35,
+     "SYK01": 62368.55,
+     "SYK02": 19908.4,
+     "SYK03": 14444.3
+    }
+   },
+   "2026-W38": {
+    "101": {
+     "FRI01": 34537.9,
+     "FRI02": 37549.45,
+     "FRI03": 68059.25,
+     "LOP01": 59258.0,
+     "LOP02": 36865.5,
+     "LOP03": 29659.7,
+     "SKI01": 46503.5,
+     "SKI02": 48128.7,
+     "SKI03": 27628.85,
+     "SYK01": 30069.55,
+     "SYK02": 31724.35,
+     "SYK03": 26973.85
+    },
+    "102": {
+     "FRI01": 37551.05,
+     "FRI02": 39041.35,
+     "FRI03": 29808.05,
+     "LOP01": 22285.0,
+     "LOP02": 29790.75,
+     "LOP03": 17459.55,
+     "SKI01": 48625.05,
+     "SKI02": 37224.7,
+     "SKI03": 25751.25,
+     "SYK01": 15095.3,
+     "SYK02": 20921.5,
+     "SYK03": 25285.45
+    },
+    "103": {
+     "FRI01": 93013.45,
+     "FRI02": 29824.4,
+     "FRI03": 28562.55,
+     "LOP01": 45831.45,
+     "LOP02": 28848.05,
+     "LOP03": 13472.6,
+     "SKI01": 24893.85,
+     "SKI02": 33746.15,
+     "SKI03": 20997.95,
+     "SYK01": 84640.85,
+     "SYK02": 28589.05,
+     "SYK03": 17230.7
+    },
+    "104": {
+     "FRI01": 31324.25,
+     "FRI02": 32657.2,
+     "FRI03": 49927.9,
+     "LOP01": 32972.1,
+     "LOP02": 29087.85,
+     "LOP03": 17099.35,
+     "SKI01": 26681.05,
+     "SKI02": 30776.1,
+     "SKI03": 23106.0,
+     "SYK01": 96844.3,
+     "SYK02": 19626.95,
+     "SYK03": 17913.95
+    },
+    "105": {
+     "FRI01": 34192.3,
+     "FRI02": 16331.0,
+     "FRI03": 18626.45,
+     "LOP01": 22654.7,
+     "LOP02": 19366.35,
+     "LOP03": 13594.15,
+     "SKI01": 29857.45,
+     "SKI02": 17913.4,
+     "SKI03": 17396.1,
+     "SYK01": 87792.35,
+     "SYK02": 20791.2,
+     "SYK03": 12857.55
+    },
+    "106": {
+     "FRI01": 56827.05,
+     "FRI02": 16786.3,
+     "FRI03": 31309.75,
+     "LOP01": 25663.1,
+     "LOP02": 18046.3,
+     "LOP03": 17376.5,
+     "SKI01": 26498.5,
+     "SKI02": 24797.6,
+     "SKI03": 20434.1,
+     "SYK01": 13620.2,
+     "SYK02": 22551.3,
+     "SYK03": 15149.45
+    },
+    "107": {
+     "FRI01": 19626.25,
+     "FRI02": 21202.2,
+     "FRI03": 24227.65,
+     "LOP01": 35766.3,
+     "LOP02": 21529.8,
+     "LOP03": 12413.0,
+     "SKI01": 27598.25,
+     "SKI02": 28083.05,
+     "SKI03": 20536.65,
+     "SYK01": 28520.6,
+     "SYK02": 19526.8,
+     "SYK03": 12837.75
+    }
+   },
+   "2026-W39": {
+    "101": {
+     "FRI01": 65976.25,
+     "FRI02": 27331.85,
+     "FRI03": 72718.3,
+     "LOP01": 54256.9,
+     "LOP02": 31862.1,
+     "LOP03": 19668.4,
+     "SKI01": 59338.15,
+     "SKI02": 50455.45,
+     "SKI03": 25635.75,
+     "SYK01": 118514.5,
+     "SYK02": 34820.9,
+     "SYK03": 23690.45
+    },
+    "102": {
+     "FRI01": 39151.85,
+     "FRI02": 21359.9,
+     "FRI03": 42213.4,
+     "LOP01": 39814.65,
+     "LOP02": 41653.75,
+     "LOP03": 24738.1,
+     "SKI01": 36279.85,
+     "SKI02": 38132.9,
+     "SKI03": 30375.05,
+     "SYK01": 16797.15,
+     "SYK02": 41666.95,
+     "SYK03": 14601.85
+    },
+    "103": {
+     "FRI01": 33732.65,
+     "FRI02": 27143.85,
+     "FRI03": 29412.0,
+     "LOP01": 40189.75,
+     "LOP02": 27149.6,
+     "LOP03": 15911.85,
+     "SKI01": 33346.8,
+     "SKI02": 25708.15,
+     "SKI03": 33264.0,
+     "SYK01": 61319.3,
+     "SYK02": 27822.55,
+     "SYK03": 19472.75
+    },
+    "104": {
+     "FRI01": 28652.55,
+     "FRI02": 19918.45,
+     "FRI03": 48267.2,
+     "LOP01": 22067.25,
+     "LOP02": 28416.7,
+     "LOP03": 14154.2,
+     "SKI01": 38083.75,
+     "SKI02": 35516.85,
+     "SKI03": 23094.2,
+     "SYK01": 12498.0,
+     "SYK02": 19495.7,
+     "SYK03": 18333.6
+    },
+    "105": {
+     "FRI01": 39980.4,
+     "FRI02": 20505.15,
+     "FRI03": 25448.15,
+     "LOP01": 27506.6,
+     "LOP02": 24272.2,
+     "LOP03": 17341.15,
+     "SKI01": 29664.05,
+     "SKI02": 32395.0,
+     "SKI03": 11615.7,
+     "SYK01": 43642.75,
+     "SYK02": 22548.2,
+     "SYK03": 12068.9
+    },
+    "106": {
+     "FRI01": 28334.1,
+     "FRI02": 25259.0,
+     "FRI03": 35070.1,
+     "LOP01": 28317.85,
+     "LOP02": 21791.3,
+     "LOP03": 13320.1,
+     "SKI01": 52303.25,
+     "SKI02": 34591.1,
+     "SKI03": 16064.35,
+     "SYK01": 31869.5,
+     "SYK02": 25275.35,
+     "SYK03": 11696.25
+    },
+    "107": {
+     "FRI01": 42785.55,
+     "FRI02": 22084.4,
+     "FRI03": 36910.55,
+     "LOP01": 46836.55,
+     "LOP02": 22582.2,
+     "LOP03": 23098.65,
+     "SKI01": 21423.35,
+     "SKI02": 20103.2,
+     "SKI03": 16398.5,
+     "SYK01": 32847.3,
+     "SYK02": 14562.5,
+     "SYK03": 10752.6
+    }
+   },
+   "2026-W40": {
+    "101": {
+     "FRI01": 53318.05,
+     "FRI02": 31239.15,
+     "FRI03": 65820.55,
+     "LOP01": 62627.2,
+     "LOP02": 35326.75,
+     "LOP03": 24651.1,
+     "SKI01": 48213.6,
+     "SKI02": 53390.1,
+     "SKI03": 32130.65,
+     "SYK01": 120062.7,
+     "SYK02": 28960.65,
+     "SYK03": 23394.6
+    },
+    "102": {
+     "FRI01": 36075.6,
+     "FRI02": 20242.7,
+     "FRI03": 24248.5,
+     "LOP01": 55009.2,
+     "LOP02": 23916.85,
+     "LOP03": 19422.75,
+     "SKI01": 49999.9,
+     "SKI02": 34546.2,
+     "SKI03": 29078.0,
+     "SYK01": 159639.55,
+     "SYK02": 29311.25,
+     "SYK03": 20497.1
+    },
+    "103": {
+     "FRI01": 32748.5,
+     "FRI02": 18484.65,
+     "FRI03": 37957.1,
+     "LOP01": 30894.25,
+     "LOP02": 22858.75,
+     "LOP03": 14988.75,
+     "SKI01": 47300.05,
+     "SKI02": 38783.4,
+     "SKI03": 19947.35,
+     "SYK01": 105793.45,
+     "SYK02": 33571.1,
+     "SYK03": 12433.65
+    },
+    "104": {
+     "FRI01": 41624.7,
+     "FRI02": 29236.8,
+     "FRI03": 45818.85,
+     "LOP01": 48530.65,
+     "LOP02": 32024.25,
+     "LOP03": 19167.25,
+     "SKI01": 44691.0,
+     "SKI02": 36005.85,
+     "SKI03": 20551.05,
+     "SYK01": 104915.8,
+     "SYK02": 28427.25,
+     "SYK03": 12775.15
+    },
+    "105": {
+     "FRI01": 29287.75,
+     "FRI02": 18592.65,
+     "FRI03": 20615.85,
+     "LOP01": 40050.8,
+     "LOP02": 20525.85,
+     "LOP03": 22156.75,
+     "SKI01": 34653.85,
+     "SKI02": 22144.4,
+     "SKI03": 13894.6,
+     "SYK01": 55146.3,
+     "SYK02": 20216.7,
+     "SYK03": 7134.35
+    },
+    "106": {
+     "FRI01": 28321.75,
+     "FRI02": 19725.6,
+     "FRI03": 51204.6,
+     "LOP01": 36716.95,
+     "LOP02": 22370.0,
+     "LOP03": 10610.4,
+     "SKI01": 31355.2,
+     "SKI02": 34923.15,
+     "SKI03": 24040.2,
+     "SYK01": 69596.2,
+     "SYK02": 23100.9,
+     "SYK03": 9046.05
+    },
+    "107": {
+     "FRI01": 29923.05,
+     "FRI02": 24053.7,
+     "FRI03": 29883.8,
+     "LOP01": 43310.15,
+     "LOP02": 30156.55,
+     "LOP03": 12842.1,
+     "SKI01": 23252.35,
+     "SKI02": 24838.3,
+     "SKI03": 15073.5,
+     "SYK01": 26543.7,
+     "SYK02": 15210.75,
+     "SYK03": 10541.95
+    }
+   },
+   "2026-W41": {
+    "101": {
+     "FRI01": 52160.0,
+     "FRI02": 32415.15,
+     "FRI03": 36945.6,
+     "LOP01": 54482.4,
+     "LOP02": 37908.05,
+     "LOP03": 26891.1,
+     "SKI01": 59948.1,
+     "SKI02": 46947.0,
+     "SKI03": 32314.65,
+     "SYK01": 172810.75,
+     "SYK02": 29836.6,
+     "SYK03": 24509.75
+    },
+    "102": {
+     "FRI01": 41174.4,
+     "FRI02": 31805.75,
+     "FRI03": 36269.6,
+     "LOP01": 45813.85,
+     "LOP02": 34843.35,
+     "LOP03": 29396.1,
+     "SKI01": 55384.0,
+     "SKI02": 48572.9,
+     "SKI03": 29325.8,
+     "SYK01": 117941.25,
+     "SYK02": 27463.95,
+     "SYK03": 14017.35
+    },
+    "103": {
+     "FRI01": 18534.4,
+     "FRI02": 19123.85,
+     "FRI03": 27565.6,
+     "LOP01": 43301.05,
+     "LOP02": 26255.55,
+     "LOP03": 15619.9,
+     "SKI01": 60154.65,
+     "SKI02": 35927.4,
+     "SKI03": 24127.9,
+     "SYK01": 93845.3,
+     "SYK02": 11723.45,
+     "SYK03": 16706.85
+    },
+    "104": {
+     "FRI01": 21539.2,
+     "FRI02": 33882.7,
+     "FRI03": 28564.0,
+     "LOP01": 35082.55,
+     "LOP02": 25640.65,
+     "LOP03": 17749.3,
+     "SKI01": 49033.75,
+     "SKI02": 40613.3,
+     "SKI03": 19885.0,
+     "SYK01": 44993.35,
+     "SYK02": 24582.35,
+     "SYK03": 9532.6
+    },
+    "105": {
+     "FRI01": 10621.6,
+     "FRI02": 11949.55,
+     "FRI03": 22884.0,
+     "LOP01": 29450.6,
+     "LOP02": 21948.15,
+     "LOP03": 17215.45,
+     "SKI01": 33204.9,
+     "SKI02": 21754.85,
+     "SKI03": 20017.85,
+     "SYK01": 21072.35,
+     "SYK02": 12688.85,
+     "SYK03": 9541.75
+    },
+    "106": {
+     "FRI01": 30535.2,
+     "FRI02": 14183.7,
+     "FRI03": 18050.4,
+     "LOP01": 34620.15,
+     "LOP02": 25666.95,
+     "LOP03": 10423.15,
+     "SKI01": 31874.1,
+     "SKI02": 37619.05,
+     "SKI03": 22585.6,
+     "SYK01": 48595.15,
+     "SYK02": 14504.65,
+     "SYK03": 10361.85
+    },
+    "107": {
+     "FRI01": 31942.55,
+     "FRI02": 16782.85,
+     "FRI03": 38875.15,
+     "LOP01": 23221.35,
+     "LOP02": 23269.35,
+     "LOP03": 12593.8,
+     "SKI01": 22614.9,
+     "SKI02": 27655.2,
+     "SKI03": 27184.5,
+     "SYK01": 49445.55,
+     "SYK02": 19410.55,
+     "SYK03": 15533.9
+    }
+   },
+   "2026-W42": {
+    "101": {
+     "FRI01": 53600.0,
+     "FRI02": 32330.65,
+     "FRI03": 36593.6,
+     "LOP01": 64978.25,
+     "LOP02": 35772.3,
+     "LOP03": 17447.05,
+     "SKI01": 76746.95,
+     "SKI02": 57369.0,
+     "SKI03": 42012.45,
+     "SYK01": 103216.55,
+     "SYK02": 36212.1,
+     "SYK03": 14437.9
+    },
+    "102": {
+     "FRI01": 54165.6,
+     "FRI02": 28907.55,
+     "FRI03": 20326.4,
+     "LOP01": 47831.55,
+     "LOP02": 29537.8,
+     "LOP03": 17989.15,
+     "SKI01": 56532.4,
+     "SKI02": 62589.5,
+     "SKI03": 25139.65,
+     "SYK01": 113791.5,
+     "SYK02": 22423.75,
+     "SYK03": 23347.85
+    },
+    "103": {
+     "FRI01": 42449.6,
+     "FRI02": 22784.65,
+     "FRI03": 17776.0,
+     "LOP01": 37721.1,
+     "LOP02": 21202.65,
+     "LOP03": 17515.4,
+     "SKI01": 48821.25,
+     "SKI02": 43392.95,
+     "SKI03": 26865.7,
+     "SYK01": 40697.25,
+     "SYK02": 18810.05,
+     "SYK03": 14071.35
+    },
+    "104": {
+     "FRI01": 40168.0,
+     "FRI02": 19963.8,
+     "FRI03": 37798.4,
+     "LOP01": 51491.25,
+     "LOP02": 26234.7,
+     "LOP03": 10183.05,
+     "SKI01": 60618.75,
+     "SKI02": 34706.45,
+     "SKI03": 30710.85,
+     "SYK01": 75692.55,
+     "SYK02": 15843.35,
+     "SYK03": 15212.4
+    },
+    "105": {
+     "FRI01": 33370.4,
+     "FRI02": 17307.65,
+     "FRI03": 22093.6,
+     "LOP01": 26591.95,
+     "LOP02": 13712.4,
+     "LOP03": 15439.0,
+     "SKI01": 56134.9,
+     "SKI02": 36367.55,
+     "SKI03": 17848.95,
+     "SYK01": 33998.0,
+     "SYK02": 21409.9,
+     "SYK03": 10414.55
+    },
+    "106": {
+     "FRI01": 18893.6,
+     "FRI02": 17053.0,
+     "FRI03": 37000.0,
+     "LOP01": 42951.95,
+     "LOP02": 22691.55,
+     "LOP03": 14817.85,
+     "SKI01": 34782.8,
+     "SKI02": 38733.9,
+     "SKI03": 24380.3,
+     "SYK01": 11797.05,
+     "SYK02": 8256.3,
+     "SYK03": 9093.2
+    },
+    "107": {
+     "FRI01": 39328.5,
+     "FRI02": 18341.55,
+     "FRI03": 22409.7,
+     "LOP01": 33029.2,
+     "LOP02": 20150.85,
+     "LOP03": 17020.15,
+     "SKI01": 46503.95,
+     "SKI02": 37921.8,
+     "SKI03": 23345.8,
+     "SYK01": 28647.4,
+     "SYK02": 9095.9,
+     "SYK03": 10270.35
+    }
+   },
+   "2026-W43": {
+    "101": {
+     "FRI01": 62560.7,
+     "FRI02": 39743.0,
+     "FRI03": 42140.85,
+     "LOP01": 59766.8,
+     "LOP02": 28549.3,
+     "LOP03": 30214.4,
+     "SKI01": 70972.8,
+     "SKI02": 89965.25,
+     "SKI03": 36162.2,
+     "SYK01": 79520.3,
+     "SYK02": 28768.25,
+     "SYK03": 22888.2
+    },
+    "102": {
+     "FRI01": 53830.5,
+     "FRI02": 27035.55,
+     "FRI03": 29507.5,
+     "LOP01": 38961.8,
+     "LOP02": 23967.15,
+     "LOP03": 24332.3,
+     "SKI01": 60226.65,
+     "SKI02": 31406.95,
+     "SKI03": 24562.9,
+     "SYK01": 73143.5,
+     "SYK02": 17411.9,
+     "SYK03": 17297.75
+    },
+    "103": {
+     "FRI01": 39853.25,
+     "FRI02": 27692.05,
+     "FRI03": 41286.0,
+     "LOP01": 42866.35,
+     "LOP02": 25917.85,
+     "LOP03": 15041.8,
+     "SKI01": 49934.15,
+     "SKI02": 29258.65,
+     "SKI03": 31438.55,
+     "SYK01": 79045.35,
+     "SYK02": 18351.05,
+     "SYK03": 11846.5
+    },
+    "104": {
+     "FRI01": 35018.3,
+     "FRI02": 21392.9,
+     "FRI03": 48604.15,
+     "LOP01": 43097.8,
+     "LOP02": 32658.9,
+     "LOP03": 14394.1,
+     "SKI01": 75318.45,
+     "SKI02": 41109.95,
+     "SKI03": 23359.7,
+     "SYK01": 178015.6,
+     "SYK02": 16190.4,
+     "SYK03": 9648.95
+    },
+    "105": {
+     "FRI01": 35547.6,
+     "FRI02": 15631.5,
+     "FRI03": 27454.55,
+     "LOP01": 34869.25,
+     "LOP02": 25590.55,
+     "LOP03": 16405.75,
+     "SKI01": 47739.3,
+     "SKI02": 33277.7,
+     "SKI03": 21653.1,
+     "SYK01": 11098.15,
+     "SYK02": 17320.8,
+     "SYK03": 13115.4
+    },
+    "106": {
+     "FRI01": 24405.15,
+     "FRI02": 24012.45,
+     "FRI03": 32727.2,
+     "LOP01": 23929.65,
+     "LOP02": 22791.2,
+     "LOP03": 16166.0,
+     "SKI01": 55220.35,
+     "SKI02": 39470.5,
+     "SKI03": 25943.1,
+     "SYK01": 71045.4,
+     "SYK02": 11769.0,
+     "SYK03": 7989.85
+    },
+    "107": {
+     "FRI01": 29479.25,
+     "FRI02": 15655.45,
+     "FRI03": 22192.0,
+     "LOP01": 30651.9,
+     "LOP02": 18644.35,
+     "LOP03": 10315.85,
+     "SKI01": 28923.1,
+     "SKI02": 39927.15,
+     "SKI03": 22133.75,
+     "SYK01": 30598.2,
+     "SYK02": 22123.1,
+     "SYK03": 13411.95
+    }
+   },
+   "2026-W44": {
+    "101": {
+     "FRI01": 59336.3,
+     "FRI02": 25016.05,
+     "FRI03": 55836.1,
+     "LOP01": 75164.05,
+     "LOP02": 33678.5,
+     "LOP03": 24495.8,
+     "SKI01": 69706.75,
+     "SKI02": 79844.85,
+     "SKI03": 35247.9,
+     "SYK01": 92219.3,
+     "SYK02": 22298.0,
+     "SYK03": 14300.1
+    },
+    "102": {
+     "FRI01": 46390.55,
+     "FRI02": 22838.5,
+     "FRI03": 45480.15,
+     "LOP01": 39546.95,
+     "LOP02": 26006.65,
+     "LOP03": 21663.55,
+     "SKI01": 66630.0,
+     "SKI02": 63968.15,
+     "SKI03": 37895.6,
+     "SYK01": 100266.4,
+     "SYK02": 17578.05,
+     "SYK03": 9945.1
+    },
+    "103": {
+     "FRI01": 18940.65,
+     "FRI02": 21134.45,
+     "FRI03": 27286.05,
+     "LOP01": 44909.05,
+     "LOP02": 21995.4,
+     "LOP03": 16573.25,
+     "SKI01": 55568.9,
+     "SKI02": 62328.35,
+     "SKI03": 30801.15,
+     "SYK01": 98046.15,
+     "SYK02": 11196.9,
+     "SYK03": 9312.05
+    },
+    "104": {
+     "FRI01": 64711.8,
+     "FRI02": 17666.1,
+     "FRI03": 29594.55,
+     "LOP01": 40470.2,
+     "LOP02": 21957.55,
+     "LOP03": 14552.25,
+     "SKI01": 55145.5,
+     "SKI02": 51560.55,
+     "SKI03": 39927.4,
+     "SYK01": 86969.35,
+     "SYK02": 12413.2,
+     "SYK03": 4453.6
+    },
+    "105": {
+     "FRI01": 43601.25,
+     "FRI02": 19116.1,
+     "FRI03": 31004.9,
+     "LOP01": 15203.55,
+     "LOP02": 21231.25,
+     "LOP03": 17686.0,
+     "SKI01": 43037.1,
+     "SKI02": 41228.8,
+     "SKI03": 24932.3,
+     "SYK01": 24297.15,
+     "SYK02": 14374.15,
+     "SYK03": 11601.15
+    },
+    "106": {
+     "FRI01": 34476.75,
+     "FRI02": 19669.7,
+     "FRI03": 41561.1,
+     "LOP01": 28481.7,
+     "LOP02": 22701.15,
+     "LOP03": 16043.05,
+     "SKI01": 25015.95,
+     "SKI02": 61875.55,
+     "SKI03": 21858.85,
+     "SYK01": 9498.1,
+     "SYK02": 13948.5,
+     "SYK03": 12552.2
+    },
+    "107": {
+     "FRI01": 53141.65,
+     "FRI02": 12628.1,
+     "FRI03": 19868.8,
+     "LOP01": 16384.8,
+     "LOP02": 13026.8,
+     "LOP03": 11184.8,
+     "SKI01": 33725.65,
+     "SKI02": 46283.5,
+     "SKI03": 18691.2,
+     "SYK01": 73766.8,
+     "SYK02": 15421.0,
+     "SYK03": 4851.95
+    }
+   }
+  }
+ },
+ "modul7_kunde": {
+  "gld__d__kunde_rader_uten_minus": 808,
+  "medlemmer_i_siste_uttrekk": 806,
+  "medlem_300042_versjoner": [
+   {
+    "tier": "SILVER",
+    "postalCode": "0367",
+    "fra_uttrekk": "2026-08-01T04:00:00",
+    "til_uttrekk": "2026-09-20T04:00:00"
+   },
+   {
+    "tier": "GOLD",
+    "postalCode": "0367",
+    "fra_uttrekk": "2026-09-20T04:00:00",
+    "til_uttrekk": "2026-10-10T04:00:00"
+   },
+   {
+    "tier": "GOLD",
+    "postalCode": "7014",
+    "fra_uttrekk": "2026-10-10T04:00:00",
+    "til_uttrekk": null
+   }
+  ],
+  "medlem_300042_salg": [
+   {
+    "salgsdato": "2026-08-15",
+    "kanal": "Butikk",
+    "salgsnummer": "20260815-101-0024",
+    "linje": 1,
+    "niva_paa_salgsdato": "SILVER",
+    "belop": 1529.1
+   },
+   {
+    "salgsdato": "2026-08-23",
+    "kanal": "Nett",
+    "salgsnummer": "N-2026-006146",
+    "linje": 1,
+    "niva_paa_salgsdato": "SILVER",
+    "belop": 809.1
+   },
+   {
+    "salgsdato": "2026-09-06",
+    "kanal": "Nett",
+    "salgsnummer": "N-2026-006698",
+    "linje": 1,
+    "niva_paa_salgsdato": "SILVER",
+    "belop": 539.1
+   },
+   {
+    "salgsdato": "2026-09-10",
+    "kanal": "Butikk",
+    "salgsnummer": "20260910-101-0019",
+    "linje": 1,
+    "niva_paa_salgsdato": "SILVER",
+    "belop": 71.1
+   },
+   {
+    "salgsdato": "2026-09-10",
+    "kanal": "Butikk",
+    "salgsnummer": "20260910-101-0019",
+    "linje": 2,
+    "niva_paa_salgsdato": "SILVER",
+    "belop": 116.1
+   },
+   {
+    "salgsdato": "2026-09-10",
+    "kanal": "Butikk",
+    "salgsnummer": "20260910-101-0019",
+    "linje": 3,
+    "niva_paa_salgsdato": "SILVER",
+    "belop": 89.1
+   },
+   {
+    "salgsdato": "2026-09-26",
+    "kanal": "Butikk",
+    "salgsnummer": "20260926-101-0018",
+    "linje": 1,
+    "niva_paa_salgsdato": "GOLD",
+    "belop": 254.15
+   },
+   {
+    "salgsdato": "2026-09-26",
+    "kanal": "Butikk",
+    "salgsnummer": "20260926-101-0018",
+    "linje": 2,
+    "niva_paa_salgsdato": "GOLD",
+    "belop": 338.3
+   },
+   {
+    "salgsdato": "2026-09-26",
+    "kanal": "Butikk",
+    "salgsnummer": "20260926-101-0018",
+    "linje": 3,
+    "niva_paa_salgsdato": "GOLD",
+    "belop": 679.15
+   },
+   {
+    "salgsdato": "2026-10-04",
+    "kanal": "Nett",
+    "salgsnummer": "N-2026-007815",
+    "linje": 1,
+    "niva_paa_salgsdato": "GOLD",
+    "belop": 1529.15
+   },
+   {
+    "salgsdato": "2026-10-17",
+    "kanal": "Butikk",
+    "salgsnummer": "20261017-101-0017",
+    "linje": 1,
+    "niva_paa_salgsdato": "GOLD",
+    "belop": 67.15
+   },
+   {
+    "salgsdato": "2026-10-24",
+    "kanal": "Nett",
+    "salgsnummer": "N-2026-008657",
+    "linje": 1,
+    "niva_paa_salgsdato": "GOLD",
+    "belop": 254.15
+   }
+  ],
+  "fk__gld__d__kunde": {
+   "-2_linjer": 15141,
+   "-1_linjer": 2,
+   "-1_medlemsnummer": "300999",
+   "-1_salgsdato": "2026-10-03"
+  },
+  "salg_per_niva_paa_salgsdato": {
+   "-1": {
+    "linjer": 2,
+    "belop": 558.0
+   },
+   "-2": {
+    "linjer": 15141,
+    "belop": 14027692.4
+   },
+   "BRONZE": {
+    "linjer": 11116,
+    "belop": 9678714.1
+   },
+   "GOLD": {
+    "linjer": 7067,
+    "belop": 5312761.85
+   },
+   "SILVER": {
+    "linjer": 10919,
+    "belop": 9159204.0
+   }
+  },
+  "salg_fra_dagens_gull_medlemmer": {
+   "linjer": 7073,
+   "belop": 5315915.45,
+   "merknad": "medlemmer som er GOLD i siste uttrekk, uansett nivå da de handlet"
+  },
+  "kvitteringer_uten_medlemskort": {
+   "antall": 7792,
+   "av": 19845,
+   "andel": 0.3926
+  },
+  "regel_niva_paa_salgsdato": "nivået i uttrekket kl. 04 samme dag (før butikkene åpner)"
+ },
+ "modul11_lager": {
+  "gld__f__lagerbeholdning_rader": 77550,
+  "regel": "én rad per vare, butikk og dag fra butikkens første telling; søndag = lørdagens telling (H16)",
+  "tellingsdager": 79,
+  "varer_tomme": [
+   {
+    "dato": "2026-09-29",
+    "butikk": 102,
+    "varenummer": "4492",
+    "uke": "2026-W40"
+   },
+   {
+    "dato": "2026-09-30",
+    "butikk": 102,
+    "varenummer": "4492",
+    "uke": "2026-W40"
+   },
+   {
+    "dato": "2026-10-01",
+    "butikk": 102,
+    "varenummer": "4492",
+    "uke": "2026-W40"
+   },
+   {
+    "dato": "2026-10-02",
+    "butikk": 102,
+    "varenummer": "4492",
+    "uke": "2026-W40"
+   },
+   {
+    "dato": "2026-10-03",
+    "butikk": 102,
+    "varenummer": "4492",
+    "uke": "2026-W40"
+   },
+   {
+    "dato": "2026-10-04",
+    "butikk": 102,
+    "varenummer": "4492",
+    "uke": "2026-W40"
+   }
+  ],
+  "h17": {
+   "butikk": 102,
+   "varenummer": "4492",
+   "serie": {
+    "2026-09-26": {
+     "antall_pa_lager": 3,
+     "antall_i_bestilling": 0
+    },
+    "2026-09-27": {
+     "antall_pa_lager": 3,
+     "antall_i_bestilling": 0
+    },
+    "2026-09-28": {
+     "antall_pa_lager": 3,
+     "antall_i_bestilling": 0
+    },
+    "2026-09-29": {
+     "antall_pa_lager": 0,
+     "antall_i_bestilling": 12
+    },
+    "2026-09-30": {
+     "antall_pa_lager": 0,
+     "antall_i_bestilling": 12
+    },
+    "2026-10-01": {
+     "antall_pa_lager": 0,
+     "antall_i_bestilling": 12
+    },
+    "2026-10-02": {
+     "antall_pa_lager": 0,
+     "antall_i_bestilling": 12
+    },
+    "2026-10-03": {
+     "antall_pa_lager": 0,
+     "antall_i_bestilling": 12
+    },
+    "2026-10-04": {
+     "antall_pa_lager": 0,
+     "antall_i_bestilling": 12
+    },
+    "2026-10-05": {
+     "antall_pa_lager": 12,
+     "antall_i_bestilling": 0
+    },
+    "2026-10-06": {
+     "antall_pa_lager": 12,
+     "antall_i_bestilling": 0
+    }
+   }
+  },
+  "sum_per_dag_og_butikk": {
+   "2026-08-01": {
+    "101": {
+     "antall_pa_lager": 1144,
+     "antall_i_bestilling": 73
+    },
+    "102": {
+     "antall_pa_lager": 1257,
+     "antall_i_bestilling": 23
+    },
+    "103": {
+     "antall_pa_lager": 1252,
+     "antall_i_bestilling": 53
+    },
+    "104": {
+     "antall_pa_lager": 1242,
+     "antall_i_bestilling": 21
+    },
+    "105": {
+     "antall_pa_lager": 1195,
+     "antall_i_bestilling": 35
+    }
+   },
+   "2026-08-02": {
+    "101": {
+     "antall_pa_lager": 1144,
+     "antall_i_bestilling": 73
+    },
+    "102": {
+     "antall_pa_lager": 1257,
+     "antall_i_bestilling": 23
+    },
+    "103": {
+     "antall_pa_lager": 1252,
+     "antall_i_bestilling": 53
+    },
+    "104": {
+     "antall_pa_lager": 1242,
+     "antall_i_bestilling": 21
+    },
+    "105": {
+     "antall_pa_lager": 1195,
+     "antall_i_bestilling": 35
+    }
+   },
+   "2026-08-03": {
+    "101": {
+     "antall_pa_lager": 996,
+     "antall_i_bestilling": 188
+    },
+    "102": {
+     "antall_pa_lager": 1166,
+     "antall_i_bestilling": 72
+    },
+    "103": {
+     "antall_pa_lager": 1164,
+     "antall_i_bestilling": 135
+    },
+    "104": {
+     "antall_pa_lager": 1139,
+     "antall_i_bestilling": 88
+    },
+    "105": {
+     "antall_pa_lager": 1120,
+     "antall_i_bestilling": 121
+    }
+   },
+   "2026-08-04": {
+    "101": {
+     "antall_pa_lager": 936,
+     "antall_i_bestilling": 360
+    },
+    "102": {
+     "antall_pa_lager": 1077,
+     "antall_i_bestilling": 128
+    },
+    "103": {
+     "antall_pa_lager": 1123,
+     "antall_i_bestilling": 176
+    },
+    "104": {
+     "antall_pa_lager": 1062,
+     "antall_i_bestilling": 122
+    },
+    "105": {
+     "antall_pa_lager": 1087,
+     "antall_i_bestilling": 131
+    }
+   },
+   "2026-08-05": {
+    "101": {
+     "antall_pa_lager": 794,
+     "antall_i_bestilling": 514
+    },
+    "102": {
+     "antall_pa_lager": 941,
+     "antall_i_bestilling": 329
+    },
+    "103": {
+     "antall_pa_lager": 1025,
+     "antall_i_bestilling": 269
+    },
+    "104": {
+     "antall_pa_lager": 962,
+     "antall_i_bestilling": 245
+    },
+    "105": {
+     "antall_pa_lager": 1000,
+     "antall_i_bestilling": 231
+    }
+   },
+   "2026-08-06": {
+    "101": {
+     "antall_pa_lager": 783,
+     "antall_i_bestilling": 563
+    },
+    "102": {
+     "antall_pa_lager": 894,
+     "antall_i_bestilling": 415
+    },
+    "103": {
+     "antall_pa_lager": 1008,
+     "antall_i_bestilling": 277
+    },
+    "104": {
+     "antall_pa_lager": 909,
+     "antall_i_bestilling": 310
+    },
+    "105": {
+     "antall_pa_lager": 1001,
+     "antall_i_bestilling": 188
+    }
+   },
+   "2026-08-07": {
+    "101": {
+     "antall_pa_lager": 877,
+     "antall_i_bestilling": 424
+    },
+    "102": {
+     "antall_pa_lager": 851,
+     "antall_i_bestilling": 498
+    },
+    "103": {
+     "antall_pa_lager": 989,
+     "antall_i_bestilling": 286
+    },
+    "104": {
+     "antall_pa_lager": 840,
+     "antall_i_bestilling": 398
+    },
+    "105": {
+     "antall_pa_lager": 964,
+     "antall_i_bestilling": 251
+    }
+   },
+   "2026-08-08": {
+    "101": {
+     "antall_pa_lager": 904,
+     "antall_i_bestilling": 395
+    },
+    "102": {
+     "antall_pa_lager": 916,
+     "antall_i_bestilling": 373
+    },
+    "103": {
+     "antall_pa_lager": 973,
+     "antall_i_bestilling": 325
+    },
+    "104": {
+     "antall_pa_lager": 867,
+     "antall_i_bestilling": 371
+    },
+    "105": {
+     "antall_pa_lager": 1002,
+     "antall_i_bestilling": 176
+    }
+   },
+   "2026-08-09": {
+    "101": {
+     "antall_pa_lager": 904,
+     "antall_i_bestilling": 395
+    },
+    "102": {
+     "antall_pa_lager": 916,
+     "antall_i_bestilling": 373
+    },
+    "103": {
+     "antall_pa_lager": 973,
+     "antall_i_bestilling": 325
+    },
+    "104": {
+     "antall_pa_lager": 867,
+     "antall_i_bestilling": 371
+    },
+    "105": {
+     "antall_pa_lager": 1002,
+     "antall_i_bestilling": 176
+    }
+   },
+   "2026-08-10": {
+    "101": {
+     "antall_pa_lager": 1046,
+     "antall_i_bestilling": 195
+    },
+    "102": {
+     "antall_pa_lager": 1090,
+     "antall_i_bestilling": 158
+    },
+    "103": {
+     "antall_pa_lager": 1074,
+     "antall_i_bestilling": 245
+    },
+    "104": {
+     "antall_pa_lager": 1033,
+     "antall_i_bestilling": 235
+    },
+    "105": {
+     "antall_pa_lager": 1075,
+     "antall_i_bestilling": 104
+    }
+   },
+   "2026-08-11": {
+    "101": {
+     "antall_pa_lager": 1038,
+     "antall_i_bestilling": 199
+    },
+    "102": {
+     "antall_pa_lager": 1072,
+     "antall_i_bestilling": 185
+    },
+    "103": {
+     "antall_pa_lager": 1123,
+     "antall_i_bestilling": 216
+    },
+    "104": {
+     "antall_pa_lager": 1036,
+     "antall_i_bestilling": 207
+    },
+    "105": {
+     "antall_pa_lager": 1037,
+     "antall_i_bestilling": 154
+    }
+   },
+   "2026-08-12": {
+    "101": {
+     "antall_pa_lager": 904,
+     "antall_i_bestilling": 405
+    },
+    "102": {
+     "antall_pa_lager": 956,
+     "antall_i_bestilling": 284
+    },
+    "103": {
+     "antall_pa_lager": 1018,
+     "antall_i_bestilling": 355
+    },
+    "104": {
+     "antall_pa_lager": 934,
+     "antall_i_bestilling": 317
+    },
+    "105": {
+     "antall_pa_lager": 952,
+     "antall_i_bestilling": 217
+    }
+   },
+   "2026-08-13": {
+    "101": {
+     "antall_pa_lager": 800,
+     "antall_i_bestilling": 497
+    },
+    "102": {
+     "antall_pa_lager": 898,
+     "antall_i_bestilling": 316
+    },
+    "103": {
+     "antall_pa_lager": 1017,
+     "antall_i_bestilling": 350
+    },
+    "104": {
+     "antall_pa_lager": 965,
+     "antall_i_bestilling": 263
+    },
+    "105": {
+     "antall_pa_lager": 958,
+     "antall_i_bestilling": 190
+    }
+   },
+   "2026-08-14": {
+    "101": {
+     "antall_pa_lager": 793,
+     "antall_i_bestilling": 480
+    },
+    "102": {
+     "antall_pa_lager": 866,
+     "antall_i_bestilling": 439
+    },
+    "103": {
+     "antall_pa_lager": 1005,
+     "antall_i_bestilling": 414
+    },
+    "104": {
+     "antall_pa_lager": 930,
+     "antall_i_bestilling": 312
+    },
+    "105": {
+     "antall_pa_lager": 939,
+     "antall_i_bestilling": 259
+    }
+   },
+   "2026-08-15": {
+    "101": {
+     "antall_pa_lager": 846,
+     "antall_i_bestilling": 510
+    },
+    "102": {
+     "antall_pa_lager": 814,
+     "antall_i_bestilling": 458
+    },
+    "103": {
+     "antall_pa_lager": 1042,
+     "antall_i_bestilling": 314
+    },
+    "104": {
+     "antall_pa_lager": 938,
+     "antall_i_bestilling": 327
+    },
+    "105": {
+     "antall_pa_lager": 932,
+     "antall_i_bestilling": 281
+    }
+   },
+   "2026-08-16": {
+    "101": {
+     "antall_pa_lager": 846,
+     "antall_i_bestilling": 510
+    },
+    "102": {
+     "antall_pa_lager": 814,
+     "antall_i_bestilling": 458
+    },
+    "103": {
+     "antall_pa_lager": 1042,
+     "antall_i_bestilling": 314
+    },
+    "104": {
+     "antall_pa_lager": 938,
+     "antall_i_bestilling": 327
+    },
+    "105": {
+     "antall_pa_lager": 932,
+     "antall_i_bestilling": 281
+    }
+   },
+   "2026-08-17": {
+    "101": {
+     "antall_pa_lager": 991,
+     "antall_i_bestilling": 328
+    },
+    "102": {
+     "antall_pa_lager": 1057,
+     "antall_i_bestilling": 275
+    },
+    "103": {
+     "antall_pa_lager": 1238,
+     "antall_i_bestilling": 81
+    },
+    "104": {
+     "antall_pa_lager": 1029,
+     "antall_i_bestilling": 226
+    },
+    "105": {
+     "antall_pa_lager": 1068,
+     "antall_i_bestilling": 162
+    }
+   },
+   "2026-08-18": {
+    "101": {
+     "antall_pa_lager": 1112,
+     "antall_i_bestilling": 206
+    },
+    "102": {
+     "antall_pa_lager": 1084,
+     "antall_i_bestilling": 271
+    },
+    "103": {
+     "antall_pa_lager": 1184,
+     "antall_i_bestilling": 131
+    },
+    "104": {
+     "antall_pa_lager": 1074,
+     "antall_i_bestilling": 195
+    },
+    "105": {
+     "antall_pa_lager": 1095,
+     "antall_i_bestilling": 203
+    }
+   },
+   "2026-08-19": {
+    "101": {
+     "antall_pa_lager": 998,
+     "antall_i_bestilling": 301
+    },
+    "102": {
+     "antall_pa_lager": 994,
+     "antall_i_bestilling": 378
+    },
+    "103": {
+     "antall_pa_lager": 1071,
+     "antall_i_bestilling": 249
+    },
+    "104": {
+     "antall_pa_lager": 970,
+     "antall_i_bestilling": 291
+    },
+    "105": {
+     "antall_pa_lager": 1041,
+     "antall_i_bestilling": 267
+    }
+   },
+   "2026-08-20": {
+    "101": {
+     "antall_pa_lager": 917,
+     "antall_i_bestilling": 348
+    },
+    "102": {
+     "antall_pa_lager": 1026,
+     "antall_i_bestilling": 359
+    },
+    "103": {
+     "antall_pa_lager": 994,
+     "antall_i_bestilling": 359
+    },
+    "104": {
+     "antall_pa_lager": 990,
+     "antall_i_bestilling": 296
+    },
+    "105": {
+     "antall_pa_lager": 1037,
+     "antall_i_bestilling": 296
+    }
+   },
+   "2026-08-21": {
+    "101": {
+     "antall_pa_lager": 879,
+     "antall_i_bestilling": 409
+    },
+    "102": {
+     "antall_pa_lager": 1019,
+     "antall_i_bestilling": 361
+    },
+    "103": {
+     "antall_pa_lager": 992,
+     "antall_i_bestilling": 386
+    },
+    "104": {
+     "antall_pa_lager": 990,
+     "antall_i_bestilling": 282
+    },
+    "105": {
+     "antall_pa_lager": 1067,
+     "antall_i_bestilling": 287
+    }
+   },
+   "2026-08-22": {
+    "101": {
+     "antall_pa_lager": 820,
+     "antall_i_bestilling": 450
+    },
+    "102": {
+     "antall_pa_lager": 1013,
+     "antall_i_bestilling": 320
+    },
+    "103": {
+     "antall_pa_lager": 1000,
+     "antall_i_bestilling": 341
+    },
+    "104": {
+     "antall_pa_lager": 971,
+     "antall_i_bestilling": 287
+    },
+    "105": {
+     "antall_pa_lager": 1061,
+     "antall_i_bestilling": 259
+    }
+   },
+   "2026-08-23": {
+    "101": {
+     "antall_pa_lager": 820,
+     "antall_i_bestilling": 450
+    },
+    "102": {
+     "antall_pa_lager": 1013,
+     "antall_i_bestilling": 320
+    },
+    "103": {
+     "antall_pa_lager": 1000,
+     "antall_i_bestilling": 341
+    },
+    "104": {
+     "antall_pa_lager": 971,
+     "antall_i_bestilling": 287
+    },
+    "105": {
+     "antall_pa_lager": 1061,
+     "antall_i_bestilling": 259
+    }
+   },
+   "2026-08-24": {
+    "101": {
+     "antall_pa_lager": 1003,
+     "antall_i_bestilling": 218
+    },
+    "102": {
+     "antall_pa_lager": 1172,
+     "antall_i_bestilling": 92
+    },
+    "103": {
+     "antall_pa_lager": 1170,
+     "antall_i_bestilling": 148
+    },
+    "104": {
+     "antall_pa_lager": 1083,
+     "antall_i_bestilling": 190
+    },
+    "105": {
+     "antall_pa_lager": 1211,
+     "antall_i_bestilling": 144
+    }
+   },
+   "2026-08-25": {
+    "101": {
+     "antall_pa_lager": 1030,
+     "antall_i_bestilling": 175
+    },
+    "102": {
+     "antall_pa_lager": 1139,
+     "antall_i_bestilling": 126
+    },
+    "103": {
+     "antall_pa_lager": 1146,
+     "antall_i_bestilling": 143
+    },
+    "104": {
+     "antall_pa_lager": 1112,
+     "antall_i_bestilling": 138
+    },
+    "105": {
+     "antall_pa_lager": 1171,
+     "antall_i_bestilling": 178
+    }
+   },
+   "2026-08-26": {
+    "101": {
+     "antall_pa_lager": 885,
+     "antall_i_bestilling": 312
+    },
+    "102": {
+     "antall_pa_lager": 1021,
+     "antall_i_bestilling": 248
+    },
+    "103": {
+     "antall_pa_lager": 1052,
+     "antall_i_bestilling": 246
+    },
+    "104": {
+     "antall_pa_lager": 993,
+     "antall_i_bestilling": 272
+    },
+    "105": {
+     "antall_pa_lager": 1109,
+     "antall_i_bestilling": 214
+    }
+   },
+   "2026-08-27": {
+    "101": {
+     "antall_pa_lager": 797,
+     "antall_i_bestilling": 421
+    },
+    "102": {
+     "antall_pa_lager": 940,
+     "antall_i_bestilling": 349
+    },
+    "103": {
+     "antall_pa_lager": 1018,
+     "antall_i_bestilling": 308
+    },
+    "104": {
+     "antall_pa_lager": 966,
+     "antall_i_bestilling": 258
+    },
+    "105": {
+     "antall_pa_lager": 1157,
+     "antall_i_bestilling": 131
+    }
+   },
+   "2026-08-28": {
+    "101": {
+     "antall_pa_lager": 732,
+     "antall_i_bestilling": 632
+    },
+    "102": {
+     "antall_pa_lager": 915,
+     "antall_i_bestilling": 386
+    },
+    "103": {
+     "antall_pa_lager": 962,
+     "antall_i_bestilling": 374
+    },
+    "104": {
+     "antall_pa_lager": 913,
+     "antall_i_bestilling": 317
+    },
+    "105": {
+     "antall_pa_lager": 1143,
+     "antall_i_bestilling": 147
+    }
+   },
+   "2026-08-29": {
+    "101": {
+     "antall_pa_lager": 671,
+     "antall_i_bestilling": 733
+    },
+    "102": {
+     "antall_pa_lager": 927,
+     "antall_i_bestilling": 371
+    },
+    "103": {
+     "antall_pa_lager": 968,
+     "antall_i_bestilling": 369
+    },
+    "104": {
+     "antall_pa_lager": 944,
+     "antall_i_bestilling": 264
+    },
+    "105": {
+     "antall_pa_lager": 1096,
+     "antall_i_bestilling": 207
+    }
+   },
+   "2026-08-30": {
+    "101": {
+     "antall_pa_lager": 671,
+     "antall_i_bestilling": 733
+    },
+    "102": {
+     "antall_pa_lager": 927,
+     "antall_i_bestilling": 371
+    },
+    "103": {
+     "antall_pa_lager": 968,
+     "antall_i_bestilling": 369
+    },
+    "104": {
+     "antall_pa_lager": 944,
+     "antall_i_bestilling": 264
+    },
+    "105": {
+     "antall_pa_lager": 1096,
+     "antall_i_bestilling": 207
+    }
+   },
+   "2026-08-31": {
+    "101": {
+     "antall_pa_lager": 1043,
+     "antall_i_bestilling": 338
+    },
+    "102": {
+     "antall_pa_lager": 1085,
+     "antall_i_bestilling": 212
+    },
+    "103": {
+     "antall_pa_lager": 1155,
+     "antall_i_bestilling": 203
+    },
+    "104": {
+     "antall_pa_lager": 1039,
+     "antall_i_bestilling": 234
+    },
+    "105": {
+     "antall_pa_lager": 1135,
+     "antall_i_bestilling": 145
+    }
+   },
+   "2026-09-01": {
+    "101": {
+     "antall_pa_lager": 1139,
+     "antall_i_bestilling": 183
+    },
+    "102": {
+     "antall_pa_lager": 1099,
+     "antall_i_bestilling": 212
+    },
+    "103": {
+     "antall_pa_lager": 1177,
+     "antall_i_bestilling": 166
+    },
+    "104": {
+     "antall_pa_lager": 1020,
+     "antall_i_bestilling": 289
+    },
+    "105": {
+     "antall_pa_lager": 1161,
+     "antall_i_bestilling": 168
+    }
+   },
+   "2026-09-02": {
+    "101": {
+     "antall_pa_lager": 1010,
+     "antall_i_bestilling": 382
+    },
+    "102": {
+     "antall_pa_lager": 985,
+     "antall_i_bestilling": 293
+    },
+    "103": {
+     "antall_pa_lager": 1071,
+     "antall_i_bestilling": 246
+    },
+    "104": {
+     "antall_pa_lager": 912,
+     "antall_i_bestilling": 419
+    },
+    "105": {
+     "antall_pa_lager": 1104,
+     "antall_i_bestilling": 232
+    }
+   },
+   "2026-09-03": {
+    "101": {
+     "antall_pa_lager": 979,
+     "antall_i_bestilling": 442
+    },
+    "102": {
+     "antall_pa_lager": 956,
+     "antall_i_bestilling": 366
+    },
+    "103": {
+     "antall_pa_lager": 1059,
+     "antall_i_bestilling": 331
+    },
+    "104": {
+     "antall_pa_lager": 951,
+     "antall_i_bestilling": 374
+    },
+    "105": {
+     "antall_pa_lager": 1060,
+     "antall_i_bestilling": 309
+    }
+   },
+   "2026-09-04": {
+    "101": {
+     "antall_pa_lager": 921,
+     "antall_i_bestilling": 504
+    },
+    "102": {
+     "antall_pa_lager": 939,
+     "antall_i_bestilling": 419
+    },
+    "103": {
+     "antall_pa_lager": 1011,
+     "antall_i_bestilling": 374
+    },
+    "104": {
+     "antall_pa_lager": 976,
+     "antall_i_bestilling": 390
+    },
+    "105": {
+     "antall_pa_lager": 1099,
+     "antall_i_bestilling": 282
+    }
+   },
+   "2026-09-05": {
+    "101": {
+     "antall_pa_lager": 981,
+     "antall_i_bestilling": 393
+    },
+    "102": {
+     "antall_pa_lager": 883,
+     "antall_i_bestilling": 481
+    },
+    "103": {
+     "antall_pa_lager": 995,
+     "antall_i_bestilling": 444
+    },
+    "104": {
+     "antall_pa_lager": 1013,
+     "antall_i_bestilling": 330
+    },
+    "105": {
+     "antall_pa_lager": 1100,
+     "antall_i_bestilling": 258
+    },
+    "106": {
+     "antall_pa_lager": 1118,
+     "antall_i_bestilling": 76
+    }
+   },
+   "2026-09-06": {
+    "101": {
+     "antall_pa_lager": 981,
+     "antall_i_bestilling": 393
+    },
+    "102": {
+     "antall_pa_lager": 883,
+     "antall_i_bestilling": 481
+    },
+    "103": {
+     "antall_pa_lager": 995,
+     "antall_i_bestilling": 444
+    },
+    "104": {
+     "antall_pa_lager": 1013,
+     "antall_i_bestilling": 330
+    },
+    "105": {
+     "antall_pa_lager": 1100,
+     "antall_i_bestilling": 258
+    },
+    "106": {
+     "antall_pa_lager": 1118,
+     "antall_i_bestilling": 76
+    }
+   },
+   "2026-09-07": {
+    "101": {
+     "antall_pa_lager": 1168,
+     "antall_i_bestilling": 204
+    },
+    "102": {
+     "antall_pa_lager": 1123,
+     "antall_i_bestilling": 225
+    },
+    "103": {
+     "antall_pa_lager": 1197,
+     "antall_i_bestilling": 196
+    },
+    "104": {
+     "antall_pa_lager": 1192,
+     "antall_i_bestilling": 135
+    },
+    "105": {
+     "antall_pa_lager": 1259,
+     "antall_i_bestilling": 75
+    },
+    "106": {
+     "antall_pa_lager": 1040,
+     "antall_i_bestilling": 126
+    }
+   },
+   "2026-09-08": {
+    "101": {
+     "antall_pa_lager": 1168,
+     "antall_i_bestilling": 192
+    },
+    "102": {
+     "antall_pa_lager": 1167,
+     "antall_i_bestilling": 140
+    },
+    "103": {
+     "antall_pa_lager": 1269,
+     "antall_i_bestilling": 73
+    },
+    "104": {
+     "antall_pa_lager": 1185,
+     "antall_i_bestilling": 100
+    },
+    "105": {
+     "antall_pa_lager": 1237,
+     "antall_i_bestilling": 89
+    },
+    "106": {
+     "antall_pa_lager": 1037,
+     "antall_i_bestilling": 141
+    }
+   },
+   "2026-09-09": {
+    "101": {
+     "antall_pa_lager": 1062,
+     "antall_i_bestilling": 270
+    },
+    "102": {
+     "antall_pa_lager": 1069,
+     "antall_i_bestilling": 273
+    },
+    "103": {
+     "antall_pa_lager": 1167,
+     "antall_i_bestilling": 143
+    },
+    "104": {
+     "antall_pa_lager": 1108,
+     "antall_i_bestilling": 180
+    },
+    "105": {
+     "antall_pa_lager": 1177,
+     "antall_i_bestilling": 120
+    },
+    "106": {
+     "antall_pa_lager": 963,
+     "antall_i_bestilling": 213
+    }
+   },
+   "2026-09-10": {
+    "101": {
+     "antall_pa_lager": 1056,
+     "antall_i_bestilling": 329
+    },
+    "102": {
+     "antall_pa_lager": 1061,
+     "antall_i_bestilling": 324
+    },
+    "103": {
+     "antall_pa_lager": 1111,
+     "antall_i_bestilling": 175
+    },
+    "104": {
+     "antall_pa_lager": 1086,
+     "antall_i_bestilling": 250
+    },
+    "105": {
+     "antall_pa_lager": 1148,
+     "antall_i_bestilling": 133
+    },
+    "106": {
+     "antall_pa_lager": 918,
+     "antall_i_bestilling": 285
+    }
+   },
+   "2026-09-11": {
+    "101": {
+     "antall_pa_lager": 979,
+     "antall_i_bestilling": 379
+    },
+    "102": {
+     "antall_pa_lager": 995,
+     "antall_i_bestilling": 399
+    },
+    "103": {
+     "antall_pa_lager": 1033,
+     "antall_i_bestilling": 271
+    },
+    "104": {
+     "antall_pa_lager": 1032,
+     "antall_i_bestilling": 336
+    },
+    "105": {
+     "antall_pa_lager": 1130,
+     "antall_i_bestilling": 158
+    },
+    "106": {
+     "antall_pa_lager": 924,
+     "antall_i_bestilling": 258
+    }
+   },
+   "2026-09-12": {
+    "101": {
+     "antall_pa_lager": 912,
+     "antall_i_bestilling": 494
+    },
+    "102": {
+     "antall_pa_lager": 1028,
+     "antall_i_bestilling": 328
+    },
+    "103": {
+     "antall_pa_lager": 1025,
+     "antall_i_bestilling": 304
+    },
+    "104": {
+     "antall_pa_lager": 1034,
+     "antall_i_bestilling": 320
+    },
+    "105": {
+     "antall_pa_lager": 1075,
+     "antall_i_bestilling": 221
+    },
+    "106": {
+     "antall_pa_lager": 918,
+     "antall_i_bestilling": 269
+    }
+   },
+   "2026-09-13": {
+    "101": {
+     "antall_pa_lager": 912,
+     "antall_i_bestilling": 494
+    },
+    "102": {
+     "antall_pa_lager": 1028,
+     "antall_i_bestilling": 328
+    },
+    "103": {
+     "antall_pa_lager": 1025,
+     "antall_i_bestilling": 304
+    },
+    "104": {
+     "antall_pa_lager": 1034,
+     "antall_i_bestilling": 320
+    },
+    "105": {
+     "antall_pa_lager": 1075,
+     "antall_i_bestilling": 221
+    },
+    "106": {
+     "antall_pa_lager": 918,
+     "antall_i_bestilling": 269
+    }
+   },
+   "2026-09-14": {
+    "101": {
+     "antall_pa_lager": 1109,
+     "antall_i_bestilling": 245
+    },
+    "102": {
+     "antall_pa_lager": 1208,
+     "antall_i_bestilling": 139
+    },
+    "103": {
+     "antall_pa_lager": 1142,
+     "antall_i_bestilling": 234
+    },
+    "104": {
+     "antall_pa_lager": 1210,
+     "antall_i_bestilling": 126
+    },
+    "105": {
+     "antall_pa_lager": 1141,
+     "antall_i_bestilling": 152
+    },
+    "106": {
+     "antall_pa_lager": 1048,
+     "antall_i_bestilling": 176
+    }
+   },
+   "2026-09-15": {
+    "101": {
+     "antall_pa_lager": 1203,
+     "antall_i_bestilling": 121
+    },
+    "102": {
+     "antall_pa_lager": 1179,
+     "antall_i_bestilling": 102
+    },
+    "103": {
+     "antall_pa_lager": 1174,
+     "antall_i_bestilling": 258
+    },
+    "104": {
+     "antall_pa_lager": 1197,
+     "antall_i_bestilling": 104
+    },
+    "105": {
+     "antall_pa_lager": 1173,
+     "antall_i_bestilling": 90
+    },
+    "106": {
+     "antall_pa_lager": 1058,
+     "antall_i_bestilling": 186
+    }
+   },
+   "2026-09-16": {
+    "101": {
+     "antall_pa_lager": 1095,
+     "antall_i_bestilling": 202
+    },
+    "102": {
+     "antall_pa_lager": 1110,
+     "antall_i_bestilling": 188
+    },
+    "103": {
+     "antall_pa_lager": 1089,
+     "antall_i_bestilling": 376
+    },
+    "104": {
+     "antall_pa_lager": 1099,
+     "antall_i_bestilling": 159
+    },
+    "105": {
+     "antall_pa_lager": 1125,
+     "antall_i_bestilling": 158
+    },
+    "106": {
+     "antall_pa_lager": 991,
+     "antall_i_bestilling": 215
+    }
+   },
+   "2026-09-17": {
+    "101": {
+     "antall_pa_lager": 1020,
+     "antall_i_bestilling": 276
+    },
+    "102": {
+     "antall_pa_lager": 1067,
+     "antall_i_bestilling": 213
+    },
+    "103": {
+     "antall_pa_lager": 1109,
+     "antall_i_bestilling": 343
+    },
+    "104": {
+     "antall_pa_lager": 1061,
+     "antall_i_bestilling": 209
+    },
+    "105": {
+     "antall_pa_lager": 1120,
+     "antall_i_bestilling": 121
+    },
+    "106": {
+     "antall_pa_lager": 1013,
+     "antall_i_bestilling": 197
+    }
+   },
+   "2026-09-18": {
+    "101": {
+     "antall_pa_lager": 970,
+     "antall_i_bestilling": 318
+    },
+    "102": {
+     "antall_pa_lager": 994,
+     "antall_i_bestilling": 335
+    },
+    "103": {
+     "antall_pa_lager": 1150,
+     "antall_i_bestilling": 269
+    },
+    "104": {
+     "antall_pa_lager": 1007,
+     "antall_i_bestilling": 316
+    },
+    "105": {
+     "antall_pa_lager": 1073,
+     "antall_i_bestilling": 173
+    },
+    "106": {
+     "antall_pa_lager": 1019,
+     "antall_i_bestilling": 177
+    }
+   },
+   "2026-09-19": {
+    "101": {
+     "antall_pa_lager": 911,
+     "antall_i_bestilling": 439
+    },
+    "102": {
+     "antall_pa_lager": 972,
+     "antall_i_bestilling": 407
+    },
+    "103": {
+     "antall_pa_lager": 1177,
+     "antall_i_bestilling": 185
+    },
+    "104": {
+     "antall_pa_lager": 967,
+     "antall_i_bestilling": 429
+    },
+    "105": {
+     "antall_pa_lager": 1070,
+     "antall_i_bestilling": 162
+    },
+    "106": {
+     "antall_pa_lager": 960,
+     "antall_i_bestilling": 263
+    }
+   },
+   "2026-09-20": {
+    "101": {
+     "antall_pa_lager": 911,
+     "antall_i_bestilling": 439
+    },
+    "102": {
+     "antall_pa_lager": 972,
+     "antall_i_bestilling": 407
+    },
+    "103": {
+     "antall_pa_lager": 1177,
+     "antall_i_bestilling": 185
+    },
+    "104": {
+     "antall_pa_lager": 967,
+     "antall_i_bestilling": 429
+    },
+    "105": {
+     "antall_pa_lager": 1070,
+     "antall_i_bestilling": 162
+    },
+    "106": {
+     "antall_pa_lager": 960,
+     "antall_i_bestilling": 263
+    }
+   },
+   "2026-09-21": {
+    "101": {
+     "antall_pa_lager": 1050,
+     "antall_i_bestilling": 330
+    },
+    "102": {
+     "antall_pa_lager": 1133,
+     "antall_i_bestilling": 223
+    },
+    "103": {
+     "antall_pa_lager": 1247,
+     "antall_i_bestilling": 121
+    },
+    "104": {
+     "antall_pa_lager": 1138,
+     "antall_i_bestilling": 235
+    },
+    "105": {
+     "antall_pa_lager": 1110,
+     "antall_i_bestilling": 139
+    },
+    "106": {
+     "antall_pa_lager": 1051,
+     "antall_i_bestilling": 202
+    }
+   },
+   "2026-09-22": {
+    "101": {
+     "antall_pa_lager": 1122,
+     "antall_i_bestilling": 251
+    },
+    "102": {
+     "antall_pa_lager": 1171,
+     "antall_i_bestilling": 107
+    },
+    "103": {
+     "antall_pa_lager": 1193,
+     "antall_i_bestilling": 157
+    },
+    "104": {
+     "antall_pa_lager": 1245,
+     "antall_i_bestilling": 125
+    },
+    "105": {
+     "antall_pa_lager": 1114,
+     "antall_i_bestilling": 123
+    },
+    "106": {
+     "antall_pa_lager": 1108,
+     "antall_i_bestilling": 151
+    }
+   },
+   "2026-09-23": {
+    "101": {
+     "antall_pa_lager": 1004,
+     "antall_i_bestilling": 348
+    },
+    "102": {
+     "antall_pa_lager": 1081,
+     "antall_i_bestilling": 236
+    },
+    "103": {
+     "antall_pa_lager": 1108,
+     "antall_i_bestilling": 220
+    },
+    "104": {
+     "antall_pa_lager": 1169,
+     "antall_i_bestilling": 134
+    },
+    "105": {
+     "antall_pa_lager": 1039,
+     "antall_i_bestilling": 281
+    },
+    "106": {
+     "antall_pa_lager": 1027,
+     "antall_i_bestilling": 205
+    }
+   },
+   "2026-09-24": {
+    "101": {
+     "antall_pa_lager": 1008,
+     "antall_i_bestilling": 333
+    },
+    "102": {
+     "antall_pa_lager": 1035,
+     "antall_i_bestilling": 293
+    },
+    "103": {
+     "antall_pa_lager": 1101,
+     "antall_i_bestilling": 248
+    },
+    "104": {
+     "antall_pa_lager": 1160,
+     "antall_i_bestilling": 118
+    },
+    "105": {
+     "antall_pa_lager": 1055,
+     "antall_i_bestilling": 234
+    },
+    "106": {
+     "antall_pa_lager": 1032,
+     "antall_i_bestilling": 172
+    }
+   },
+   "2026-09-25": {
+    "101": {
+     "antall_pa_lager": 996,
+     "antall_i_bestilling": 389
+    },
+    "102": {
+     "antall_pa_lager": 972,
+     "antall_i_bestilling": 384
+    },
+    "103": {
+     "antall_pa_lager": 1064,
+     "antall_i_bestilling": 255
+    },
+    "104": {
+     "antall_pa_lager": 1139,
+     "antall_i_bestilling": 104
+    },
+    "105": {
+     "antall_pa_lager": 1021,
+     "antall_i_bestilling": 286
+    },
+    "106": {
+     "antall_pa_lager": 1025,
+     "antall_i_bestilling": 166
+    }
+   },
+   "2026-09-26": {
+    "101": {
+     "antall_pa_lager": 961,
+     "antall_i_bestilling": 477
+    },
+    "102": {
+     "antall_pa_lager": 1002,
+     "antall_i_bestilling": 316
+    },
+    "103": {
+     "antall_pa_lager": 1050,
+     "antall_i_bestilling": 277
+    },
+    "104": {
+     "antall_pa_lager": 1063,
+     "antall_i_bestilling": 214
+    },
+    "105": {
+     "antall_pa_lager": 1093,
+     "antall_i_bestilling": 173
+    },
+    "106": {
+     "antall_pa_lager": 983,
+     "antall_i_bestilling": 228
+    }
+   },
+   "2026-09-27": {
+    "101": {
+     "antall_pa_lager": 961,
+     "antall_i_bestilling": 477
+    },
+    "102": {
+     "antall_pa_lager": 1002,
+     "antall_i_bestilling": 316
+    },
+    "103": {
+     "antall_pa_lager": 1050,
+     "antall_i_bestilling": 277
+    },
+    "104": {
+     "antall_pa_lager": 1063,
+     "antall_i_bestilling": 214
+    },
+    "105": {
+     "antall_pa_lager": 1093,
+     "antall_i_bestilling": 173
+    },
+    "106": {
+     "antall_pa_lager": 983,
+     "antall_i_bestilling": 228
+    }
+   },
+   "2026-09-28": {
+    "101": {
+     "antall_pa_lager": 1172,
+     "antall_i_bestilling": 254
+    },
+    "102": {
+     "antall_pa_lager": 1181,
+     "antall_i_bestilling": 131
+    },
+    "103": {
+     "antall_pa_lager": 1154,
+     "antall_i_bestilling": 174
+    },
+    "104": {
+     "antall_pa_lager": 1068,
+     "antall_i_bestilling": 215
+    },
+    "105": {
+     "antall_pa_lager": 1166,
+     "antall_i_bestilling": 103
+    },
+    "106": {
+     "antall_pa_lager": 1018,
+     "antall_i_bestilling": 200
+    }
+   },
+   "2026-09-29": {
+    "101": {
+     "antall_pa_lager": 1221,
+     "antall_i_bestilling": 180
+    },
+    "102": {
+     "antall_pa_lager": 1154,
+     "antall_i_bestilling": 153
+    },
+    "103": {
+     "antall_pa_lager": 1166,
+     "antall_i_bestilling": 179
+    },
+    "104": {
+     "antall_pa_lager": 1103,
+     "antall_i_bestilling": 227
+    },
+    "105": {
+     "antall_pa_lager": 1154,
+     "antall_i_bestilling": 84
+    },
+    "106": {
+     "antall_pa_lager": 1081,
+     "antall_i_bestilling": 171
+    }
+   },
+   "2026-09-30": {
+    "101": {
+     "antall_pa_lager": 1106,
+     "antall_i_bestilling": 259
+    },
+    "102": {
+     "antall_pa_lager": 1058,
+     "antall_i_bestilling": 256
+    },
+    "103": {
+     "antall_pa_lager": 1076,
+     "antall_i_bestilling": 250
+    },
+    "104": {
+     "antall_pa_lager": 1014,
+     "antall_i_bestilling": 275
+    },
+    "105": {
+     "antall_pa_lager": 1090,
+     "antall_i_bestilling": 168
+    },
+    "106": {
+     "antall_pa_lager": 1002,
+     "antall_i_bestilling": 207
+    }
+   },
+   "2026-10-01": {
+    "101": {
+     "antall_pa_lager": 1055,
+     "antall_i_bestilling": 305
+    },
+    "102": {
+     "antall_pa_lager": 1041,
+     "antall_i_bestilling": 248
+    },
+    "103": {
+     "antall_pa_lager": 1073,
+     "antall_i_bestilling": 230
+    },
+    "104": {
+     "antall_pa_lager": 1007,
+     "antall_i_bestilling": 260
+    },
+    "105": {
+     "antall_pa_lager": 1074,
+     "antall_i_bestilling": 206
+    },
+    "106": {
+     "antall_pa_lager": 1020,
+     "antall_i_bestilling": 213
+    }
+   },
+   "2026-10-02": {
+    "101": {
+     "antall_pa_lager": 1052,
+     "antall_i_bestilling": 337
+    },
+    "102": {
+     "antall_pa_lager": 1002,
+     "antall_i_bestilling": 351
+    },
+    "103": {
+     "antall_pa_lager": 1075,
+     "antall_i_bestilling": 237
+    },
+    "104": {
+     "antall_pa_lager": 1025,
+     "antall_i_bestilling": 237
+    },
+    "105": {
+     "antall_pa_lager": 1030,
+     "antall_i_bestilling": 232
+    },
+    "106": {
+     "antall_pa_lager": 1017,
+     "antall_i_bestilling": 282
+    }
+   },
+   "2026-10-03": {
+    "101": {
+     "antall_pa_lager": 993,
+     "antall_i_bestilling": 407
+    },
+    "102": {
+     "antall_pa_lager": 1006,
+     "antall_i_bestilling": 401
+    },
+    "103": {
+     "antall_pa_lager": 1055,
+     "antall_i_bestilling": 301
+    },
+    "104": {
+     "antall_pa_lager": 955,
+     "antall_i_bestilling": 345
+    },
+    "105": {
+     "antall_pa_lager": 1046,
+     "antall_i_bestilling": 210
+    },
+    "106": {
+     "antall_pa_lager": 963,
+     "antall_i_bestilling": 362
+    }
+   },
+   "2026-10-04": {
+    "101": {
+     "antall_pa_lager": 993,
+     "antall_i_bestilling": 407
+    },
+    "102": {
+     "antall_pa_lager": 1006,
+     "antall_i_bestilling": 401
+    },
+    "103": {
+     "antall_pa_lager": 1055,
+     "antall_i_bestilling": 301
+    },
+    "104": {
+     "antall_pa_lager": 955,
+     "antall_i_bestilling": 345
+    },
+    "105": {
+     "antall_pa_lager": 1046,
+     "antall_i_bestilling": 210
+    },
+    "106": {
+     "antall_pa_lager": 963,
+     "antall_i_bestilling": 362
+    }
+   },
+   "2026-10-05": {
+    "101": {
+     "antall_pa_lager": 1145,
+     "antall_i_bestilling": 254
+    },
+    "102": {
+     "antall_pa_lager": 1159,
+     "antall_i_bestilling": 256
+    },
+    "103": {
+     "antall_pa_lager": 1141,
+     "antall_i_bestilling": 159
+    },
+    "104": {
+     "antall_pa_lager": 1049,
+     "antall_i_bestilling": 308
+    },
+    "105": {
+     "antall_pa_lager": 1134,
+     "antall_i_bestilling": 198
+    },
+    "106": {
+     "antall_pa_lager": 1140,
+     "antall_i_bestilling": 175
+    }
+   },
+   "2026-10-06": {
+    "101": {
+     "antall_pa_lager": 1191,
+     "antall_i_bestilling": 151
+    },
+    "102": {
+     "antall_pa_lager": 1212,
+     "antall_i_bestilling": 159
+    },
+    "103": {
+     "antall_pa_lager": 1205,
+     "antall_i_bestilling": 69
+    },
+    "104": {
+     "antall_pa_lager": 1141,
+     "antall_i_bestilling": 221
+    },
+    "105": {
+     "antall_pa_lager": 1132,
+     "antall_i_bestilling": 175
+    },
+    "106": {
+     "antall_pa_lager": 1199,
+     "antall_i_bestilling": 92
+    }
+   },
+   "2026-10-07": {
+    "101": {
+     "antall_pa_lager": 1077,
+     "antall_i_bestilling": 222
+    },
+    "102": {
+     "antall_pa_lager": 1104,
+     "antall_i_bestilling": 246
+    },
+    "103": {
+     "antall_pa_lager": 1122,
+     "antall_i_bestilling": 168
+    },
+    "104": {
+     "antall_pa_lager": 1061,
+     "antall_i_bestilling": 291
+    },
+    "105": {
+     "antall_pa_lager": 1073,
+     "antall_i_bestilling": 212
+    },
+    "106": {
+     "antall_pa_lager": 1129,
+     "antall_i_bestilling": 158
+    }
+   },
+   "2026-10-08": {
+    "101": {
+     "antall_pa_lager": 1072,
+     "antall_i_bestilling": 222
+    },
+    "102": {
+     "antall_pa_lager": 1092,
+     "antall_i_bestilling": 276
+    },
+    "103": {
+     "antall_pa_lager": 1061,
+     "antall_i_bestilling": 201
+    },
+    "104": {
+     "antall_pa_lager": 1116,
+     "antall_i_bestilling": 248
+    },
+    "105": {
+     "antall_pa_lager": 1142,
+     "antall_i_bestilling": 110
+    },
+    "106": {
+     "antall_pa_lager": 1114,
+     "antall_i_bestilling": 166
+    }
+   },
+   "2026-10-09": {
+    "101": {
+     "antall_pa_lager": 977,
+     "antall_i_bestilling": 307
+    },
+    "102": {
+     "antall_pa_lager": 1058,
+     "antall_i_bestilling": 290
+    },
+    "103": {
+     "antall_pa_lager": 1000,
+     "antall_i_bestilling": 297
+    },
+    "104": {
+     "antall_pa_lager": 1096,
+     "antall_i_bestilling": 263
+    },
+    "105": {
+     "antall_pa_lager": 1119,
+     "antall_i_bestilling": 109
+    },
+    "106": {
+     "antall_pa_lager": 1066,
+     "antall_i_bestilling": 221
+    }
+   },
+   "2026-10-10": {
+    "101": {
+     "antall_pa_lager": 939,
+     "antall_i_bestilling": 373
+    },
+    "102": {
+     "antall_pa_lager": 1029,
+     "antall_i_bestilling": 330
+    },
+    "103": {
+     "antall_pa_lager": 1022,
+     "antall_i_bestilling": 297
+    },
+    "104": {
+     "antall_pa_lager": 1052,
+     "antall_i_bestilling": 316
+    },
+    "105": {
+     "antall_pa_lager": 1083,
+     "antall_i_bestilling": 138
+    },
+    "106": {
+     "antall_pa_lager": 1046,
+     "antall_i_bestilling": 315
+    }
+   },
+   "2026-10-11": {
+    "101": {
+     "antall_pa_lager": 939,
+     "antall_i_bestilling": 373
+    },
+    "102": {
+     "antall_pa_lager": 1029,
+     "antall_i_bestilling": 330
+    },
+    "103": {
+     "antall_pa_lager": 1022,
+     "antall_i_bestilling": 297
+    },
+    "104": {
+     "antall_pa_lager": 1052,
+     "antall_i_bestilling": 316
+    },
+    "105": {
+     "antall_pa_lager": 1083,
+     "antall_i_bestilling": 138
+    },
+    "106": {
+     "antall_pa_lager": 1046,
+     "antall_i_bestilling": 315
+    }
+   },
+   "2026-10-12": {
+    "101": {
+     "antall_pa_lager": 1072,
+     "antall_i_bestilling": 277
+    },
+    "102": {
+     "antall_pa_lager": 1135,
+     "antall_i_bestilling": 215
+    },
+    "103": {
+     "antall_pa_lager": 1148,
+     "antall_i_bestilling": 128
+    },
+    "104": {
+     "antall_pa_lager": 1178,
+     "antall_i_bestilling": 212
+    },
+    "105": {
+     "antall_pa_lager": 1111,
+     "antall_i_bestilling": 107
+    },
+    "106": {
+     "antall_pa_lager": 1120,
+     "antall_i_bestilling": 234
+    }
+   },
+   "2026-10-13": {
+    "101": {
+     "antall_pa_lager": 1101,
+     "antall_i_bestilling": 205
+    },
+    "102": {
+     "antall_pa_lager": 1180,
+     "antall_i_bestilling": 190
+    },
+    "103": {
+     "antall_pa_lager": 1184,
+     "antall_i_bestilling": 110
+    },
+    "104": {
+     "antall_pa_lager": 1206,
+     "antall_i_bestilling": 164
+    },
+    "105": {
+     "antall_pa_lager": 1119,
+     "antall_i_bestilling": 141
+    },
+    "106": {
+     "antall_pa_lager": 1205,
+     "antall_i_bestilling": 100
+    }
+   },
+   "2026-10-14": {
+    "101": {
+     "antall_pa_lager": 984,
+     "antall_i_bestilling": 315
+    },
+    "102": {
+     "antall_pa_lager": 1079,
+     "antall_i_bestilling": 308
+    },
+    "103": {
+     "antall_pa_lager": 1112,
+     "antall_i_bestilling": 156
+    },
+    "104": {
+     "antall_pa_lager": 1115,
+     "antall_i_bestilling": 207
+    },
+    "105": {
+     "antall_pa_lager": 1067,
+     "antall_i_bestilling": 238
+    },
+    "106": {
+     "antall_pa_lager": 1141,
+     "antall_i_bestilling": 152
+    }
+   },
+   "2026-10-15": {
+    "101": {
+     "antall_pa_lager": 1012,
+     "antall_i_bestilling": 288
+    },
+    "102": {
+     "antall_pa_lager": 1061,
+     "antall_i_bestilling": 331
+    },
+    "103": {
+     "antall_pa_lager": 1067,
+     "antall_i_bestilling": 245
+    },
+    "104": {
+     "antall_pa_lager": 1118,
+     "antall_i_bestilling": 194
+    },
+    "105": {
+     "antall_pa_lager": 1044,
+     "antall_i_bestilling": 278
+    },
+    "106": {
+     "antall_pa_lager": 1140,
+     "antall_i_bestilling": 182
+    }
+   },
+   "2026-10-16": {
+    "101": {
+     "antall_pa_lager": 948,
+     "antall_i_bestilling": 371
+    },
+    "102": {
+     "antall_pa_lager": 1060,
+     "antall_i_bestilling": 362
+    },
+    "103": {
+     "antall_pa_lager": 1051,
+     "antall_i_bestilling": 233
+    },
+    "104": {
+     "antall_pa_lager": 1100,
+     "antall_i_bestilling": 186
+    },
+    "105": {
+     "antall_pa_lager": 1055,
+     "antall_i_bestilling": 295
+    },
+    "106": {
+     "antall_pa_lager": 1094,
+     "antall_i_bestilling": 234
+    }
+   },
+   "2026-10-17": {
+    "101": {
+     "antall_pa_lager": 944,
+     "antall_i_bestilling": 381
+    },
+    "102": {
+     "antall_pa_lager": 1087,
+     "antall_i_bestilling": 349
+    },
+    "103": {
+     "antall_pa_lager": 987,
+     "antall_i_bestilling": 311
+    },
+    "104": {
+     "antall_pa_lager": 1049,
+     "antall_i_bestilling": 213
+    },
+    "105": {
+     "antall_pa_lager": 1068,
+     "antall_i_bestilling": 294
+    },
+    "106": {
+     "antall_pa_lager": 1063,
+     "antall_i_bestilling": 293
+    }
+   },
+   "2026-10-18": {
+    "101": {
+     "antall_pa_lager": 944,
+     "antall_i_bestilling": 381
+    },
+    "102": {
+     "antall_pa_lager": 1087,
+     "antall_i_bestilling": 349
+    },
+    "103": {
+     "antall_pa_lager": 987,
+     "antall_i_bestilling": 311
+    },
+    "104": {
+     "antall_pa_lager": 1049,
+     "antall_i_bestilling": 213
+    },
+    "105": {
+     "antall_pa_lager": 1068,
+     "antall_i_bestilling": 294
+    },
+    "106": {
+     "antall_pa_lager": 1063,
+     "antall_i_bestilling": 293
+    }
+   },
+   "2026-10-19": {
+    "101": {
+     "antall_pa_lager": 1098,
+     "antall_i_bestilling": 252
+    },
+    "102": {
+     "antall_pa_lager": 1250,
+     "antall_i_bestilling": 188
+    },
+    "103": {
+     "antall_pa_lager": 1094,
+     "antall_i_bestilling": 200
+    },
+    "104": {
+     "antall_pa_lager": 1114,
+     "antall_i_bestilling": 139
+    },
+    "105": {
+     "antall_pa_lager": 1215,
+     "antall_i_bestilling": 119
+    },
+    "106": {
+     "antall_pa_lager": 1179,
+     "antall_i_bestilling": 144
+    }
+   },
+   "2026-10-20": {
+    "101": {
+     "antall_pa_lager": 1107,
+     "antall_i_bestilling": 220
+    },
+    "102": {
+     "antall_pa_lager": 1271,
+     "antall_i_bestilling": 134
+    },
+    "103": {
+     "antall_pa_lager": 1155,
+     "antall_i_bestilling": 127
+    },
+    "104": {
+     "antall_pa_lager": 1091,
+     "antall_i_bestilling": 154
+    },
+    "105": {
+     "antall_pa_lager": 1246,
+     "antall_i_bestilling": 58
+    },
+    "106": {
+     "antall_pa_lager": 1225,
+     "antall_i_bestilling": 131
+    }
+   },
+   "2026-10-21": {
+    "101": {
+     "antall_pa_lager": 999,
+     "antall_i_bestilling": 332
+    },
+    "102": {
+     "antall_pa_lager": 1195,
+     "antall_i_bestilling": 210
+    },
+    "103": {
+     "antall_pa_lager": 1080,
+     "antall_i_bestilling": 205
+    },
+    "104": {
+     "antall_pa_lager": 1014,
+     "antall_i_bestilling": 260
+    },
+    "105": {
+     "antall_pa_lager": 1188,
+     "antall_i_bestilling": 126
+    },
+    "106": {
+     "antall_pa_lager": 1154,
+     "antall_i_bestilling": 171
+    }
+   },
+   "2026-10-22": {
+    "101": {
+     "antall_pa_lager": 1000,
+     "antall_i_bestilling": 273
+    },
+    "102": {
+     "antall_pa_lager": 1187,
+     "antall_i_bestilling": 183
+    },
+    "103": {
+     "antall_pa_lager": 1063,
+     "antall_i_bestilling": 318
+    },
+    "104": {
+     "antall_pa_lager": 979,
+     "antall_i_bestilling": 332
+    },
+    "105": {
+     "antall_pa_lager": 1132,
+     "antall_i_bestilling": 136
+    },
+    "106": {
+     "antall_pa_lager": 1116,
+     "antall_i_bestilling": 208
+    }
+   },
+   "2026-10-23": {
+    "101": {
+     "antall_pa_lager": 968,
+     "antall_i_bestilling": 307
+    },
+    "102": {
+     "antall_pa_lager": 1113,
+     "antall_i_bestilling": 253
+    },
+    "103": {
+     "antall_pa_lager": 1025,
+     "antall_i_bestilling": 315
+    },
+    "104": {
+     "antall_pa_lager": 968,
+     "antall_i_bestilling": 322
+    },
+    "105": {
+     "antall_pa_lager": 1079,
+     "antall_i_bestilling": 234
+    },
+    "106": {
+     "antall_pa_lager": 1116,
+     "antall_i_bestilling": 183
+    }
+   },
+   "2026-10-24": {
+    "101": {
+     "antall_pa_lager": 950,
+     "antall_i_bestilling": 361
+    },
+    "102": {
+     "antall_pa_lager": 1093,
+     "antall_i_bestilling": 295
+    },
+    "103": {
+     "antall_pa_lager": 1003,
+     "antall_i_bestilling": 386
+    },
+    "104": {
+     "antall_pa_lager": 1000,
+     "antall_i_bestilling": 295
+    },
+    "105": {
+     "antall_pa_lager": 1063,
+     "antall_i_bestilling": 221
+    },
+    "106": {
+     "antall_pa_lager": 1070,
+     "antall_i_bestilling": 244
+    }
+   },
+   "2026-10-25": {
+    "101": {
+     "antall_pa_lager": 950,
+     "antall_i_bestilling": 361
+    },
+    "102": {
+     "antall_pa_lager": 1093,
+     "antall_i_bestilling": 295
+    },
+    "103": {
+     "antall_pa_lager": 1003,
+     "antall_i_bestilling": 386
+    },
+    "104": {
+     "antall_pa_lager": 1000,
+     "antall_i_bestilling": 295
+    },
+    "105": {
+     "antall_pa_lager": 1063,
+     "antall_i_bestilling": 221
+    },
+    "106": {
+     "antall_pa_lager": 1070,
+     "antall_i_bestilling": 244
+    }
+   },
+   "2026-10-26": {
+    "101": {
+     "antall_pa_lager": 1058,
+     "antall_i_bestilling": 227
+    },
+    "102": {
+     "antall_pa_lager": 1186,
+     "antall_i_bestilling": 205
+    },
+    "103": {
+     "antall_pa_lager": 1154,
+     "antall_i_bestilling": 179
+    },
+    "104": {
+     "antall_pa_lager": 1134,
+     "antall_i_bestilling": 166
+    },
+    "105": {
+     "antall_pa_lager": 1151,
+     "antall_i_bestilling": 127
+    },
+    "106": {
+     "antall_pa_lager": 1132,
+     "antall_i_bestilling": 201
+    }
+   },
+   "2026-10-27": {
+    "101": {
+     "antall_pa_lager": 1120,
+     "antall_i_bestilling": 130
+    },
+    "102": {
+     "antall_pa_lager": 1219,
+     "antall_i_bestilling": 110
+    },
+    "103": {
+     "antall_pa_lager": 1228,
+     "antall_i_bestilling": 82
+    },
+    "104": {
+     "antall_pa_lager": 1136,
+     "antall_i_bestilling": 139
+    },
+    "105": {
+     "antall_pa_lager": 1147,
+     "antall_i_bestilling": 128
+    },
+    "106": {
+     "antall_pa_lager": 1163,
+     "antall_i_bestilling": 145
+    }
+   },
+   "2026-10-28": {
+    "101": {
+     "antall_pa_lager": 1011,
+     "antall_i_bestilling": 260
+    },
+    "102": {
+     "antall_pa_lager": 1130,
+     "antall_i_bestilling": 291
+    },
+    "103": {
+     "antall_pa_lager": 1145,
+     "antall_i_bestilling": 145
+    },
+    "104": {
+     "antall_pa_lager": 1049,
+     "antall_i_bestilling": 208
+    },
+    "105": {
+     "antall_pa_lager": 1080,
+     "antall_i_bestilling": 214
+    },
+    "106": {
+     "antall_pa_lager": 1104,
+     "antall_i_bestilling": 217
+    }
+   },
+   "2026-10-29": {
+    "101": {
+     "antall_pa_lager": 935,
+     "antall_i_bestilling": 439
+    },
+    "102": {
+     "antall_pa_lager": 1105,
+     "antall_i_bestilling": 228
+    },
+    "103": {
+     "antall_pa_lager": 1104,
+     "antall_i_bestilling": 196
+    },
+    "104": {
+     "antall_pa_lager": 1028,
+     "antall_i_bestilling": 314
+    },
+    "105": {
+     "antall_pa_lager": 1082,
+     "antall_i_bestilling": 222
+    },
+    "106": {
+     "antall_pa_lager": 1123,
+     "antall_i_bestilling": 186
+    }
+   },
+   "2026-10-30": {
+    "101": {
+     "antall_pa_lager": 894,
+     "antall_i_bestilling": 471
+    },
+    "102": {
+     "antall_pa_lager": 1025,
+     "antall_i_bestilling": 290
+    },
+    "103": {
+     "antall_pa_lager": 1057,
+     "antall_i_bestilling": 188
+    },
+    "104": {
+     "antall_pa_lager": 996,
+     "antall_i_bestilling": 310
+    },
+    "105": {
+     "antall_pa_lager": 1068,
+     "antall_i_bestilling": 292
+    },
+    "106": {
+     "antall_pa_lager": 1093,
+     "antall_i_bestilling": 216
+    }
+   },
+   "2026-10-31": {
+    "101": {
+     "antall_pa_lager": 872,
+     "antall_i_bestilling": 457
+    },
+    "102": {
+     "antall_pa_lager": 1090,
+     "antall_i_bestilling": 181
+    },
+    "103": {
+     "antall_pa_lager": 1032,
+     "antall_i_bestilling": 248
+    },
+    "104": {
+     "antall_pa_lager": 962,
+     "antall_i_bestilling": 340
+    },
+    "105": {
+     "antall_pa_lager": 1078,
+     "antall_i_bestilling": 279
+    },
+    "106": {
+     "antall_pa_lager": 1073,
+     "antall_i_bestilling": 227
+    }
+   }
+  },
+  "vare_4711_antall_pa_lager": {
+   "2026-08-01": {
+    "101": 10,
+    "102": 4,
+    "103": 11,
+    "104": 5,
+    "105": 2
+   },
+   "2026-08-02": {
+    "101": 10,
+    "102": 4,
+    "103": 11,
+    "104": 5,
+    "105": 2
+   },
+   "2026-08-03": {
+    "101": 7,
+    "102": 5,
+    "103": 11,
+    "104": 5,
+    "105": 2
+   },
+   "2026-08-04": {
+    "101": 5,
+    "102": 1,
+    "103": 11,
+    "104": 4,
+    "105": 14
+   },
+   "2026-08-05": {
+    "101": 4,
+    "102": 1,
+    "103": 9,
+    "104": 3,
+    "105": 14
+   },
+   "2026-08-06": {
+    "101": 1,
+    "102": 1,
+    "103": 8,
+    "104": 2,
+    "105": 14
+   },
+   "2026-08-07": {
+    "101": 1,
+    "102": 10,
+    "103": 7,
+    "104": 2,
+    "105": 14
+   },
+   "2026-08-08": {
+    "101": 1,
+    "102": 10,
+    "103": 4,
+    "104": 2,
+    "105": 12
+   },
+   "2026-08-09": {
+    "101": 1,
+    "102": 10,
+    "103": 4,
+    "104": 2,
+    "105": 12
+   },
+   "2026-08-10": {
+    "101": 14,
+    "102": 9,
+    "103": 3,
+    "104": 12,
+    "105": 12
+   },
+   "2026-08-11": {
+    "101": 14,
+    "102": 8,
+    "103": 2,
+    "104": 11,
+    "105": 11
+   },
+   "2026-08-12": {
+    "101": 14,
+    "102": 7,
+    "103": 1,
+    "104": 11,
+    "105": 11
+   },
+   "2026-08-13": {
+    "101": 10,
+    "102": 7,
+    "103": 1,
+    "104": 10,
+    "105": 7
+   },
+   "2026-08-14": {
+    "101": 6,
+    "102": 4,
+    "103": 15,
+    "104": 10,
+    "105": 5
+   },
+   "2026-08-15": {
+    "101": 5,
+    "102": 3,
+    "103": 15,
+    "104": 8,
+    "105": 5
+   },
+   "2026-08-16": {
+    "101": 5,
+    "102": 3,
+    "103": 15,
+    "104": 8,
+    "105": 5
+   },
+   "2026-08-17": {
+    "101": 5,
+    "102": 3,
+    "103": 14,
+    "104": 7,
+    "105": 5
+   },
+   "2026-08-18": {
+    "101": 3,
+    "102": 2,
+    "103": 14,
+    "104": 7,
+    "105": 5
+   },
+   "2026-08-19": {
+    "101": 2,
+    "102": 1,
+    "103": 14,
+    "104": 7,
+    "105": 5
+   },
+   "2026-08-20": {
+    "101": 2,
+    "102": 1,
+    "103": 13,
+    "104": 6,
+    "105": 5
+   },
+   "2026-08-21": {
+    "101": 1,
+    "102": 11,
+    "103": 12,
+    "104": 6,
+    "105": 5
+   },
+   "2026-08-22": {
+    "101": 15,
+    "102": 9,
+    "103": 12,
+    "104": 6,
+    "105": 5
+   },
+   "2026-08-23": {
+    "101": 15,
+    "102": 9,
+    "103": 12,
+    "104": 6,
+    "105": 5
+   },
+   "2026-08-24": {
+    "101": 15,
+    "102": 9,
+    "103": 12,
+    "104": 6,
+    "105": 5
+   },
+   "2026-08-25": {
+    "101": 15,
+    "102": 9,
+    "103": 11,
+    "104": 6,
+    "105": 5
+   },
+   "2026-08-26": {
+    "101": 14,
+    "102": 9,
+    "103": 11,
+    "104": 5,
+    "105": 5
+   },
+   "2026-08-27": {
+    "101": 14,
+    "102": 7,
+    "103": 8,
+    "104": 5,
+    "105": 5
+   },
+   "2026-08-28": {
+    "101": 13,
+    "102": 7,
+    "103": 8,
+    "104": 5,
+    "105": 5
+   },
+   "2026-08-29": {
+    "101": 11,
+    "102": 6,
+    "103": 8,
+    "104": 4,
+    "105": 3
+   },
+   "2026-08-30": {
+    "101": 11,
+    "102": 6,
+    "103": 8,
+    "104": 4,
+    "105": 3
+   },
+   "2026-08-31": {
+    "101": 11,
+    "102": 6,
+    "103": 7,
+    "104": 1,
+    "105": 3
+   },
+   "2026-09-01": {
+    "101": 7,
+    "102": 5,
+    "103": 7,
+    "104": 1,
+    "105": 3
+   },
+   "2026-09-02": {
+    "101": 4,
+    "102": 5,
+    "103": 7,
+    "104": 1,
+    "105": 3
+   },
+   "2026-09-03": {
+    "101": 2,
+    "102": 5,
+    "103": 7,
+    "104": 13,
+    "105": 1
+   },
+   "2026-09-04": {
+    "101": 1,
+    "102": 5,
+    "103": 7,
+    "104": 12,
+    "105": 1
+   },
+   "2026-09-05": {
+    "101": 1,
+    "102": 5,
+    "103": 5,
+    "104": 12,
+    "105": 1,
+    "106": 14
+   },
+   "2026-09-06": {
+    "101": 1,
+    "102": 5,
+    "103": 5,
+    "104": 12,
+    "105": 1,
+    "106": 14
+   },
+   "2026-09-07": {
+    "101": 14,
+    "102": 4,
+    "103": 4,
+    "104": 12,
+    "105": 11,
+    "106": 14
+   },
+   "2026-09-08": {
+    "101": 13,
+    "102": 3,
+    "103": 4,
+    "104": 12,
+    "105": 11,
+    "106": 14
+   },
+   "2026-09-09": {
+    "101": 13,
+    "102": 2,
+    "103": 4,
+    "104": 9,
+    "105": 11,
+    "106": 14
+   },
+   "2026-09-10": {
+    "101": 10,
+    "102": 1,
+    "103": 4,
+    "104": 8,
+    "105": 11,
+    "106": 14
+   },
+   "2026-09-11": {
+    "101": 10,
+    "102": 1,
+    "103": 3,
+    "104": 8,
+    "105": 11,
+    "106": 14
+   },
+   "2026-09-12": {
+    "101": 7,
+    "102": 14,
+    "103": 2,
+    "104": 8,
+    "105": 11,
+    "106": 14
+   },
+   "2026-09-13": {
+    "101": 7,
+    "102": 14,
+    "103": 2,
+    "104": 8,
+    "105": 11,
+    "106": 14
+   },
+   "2026-09-14": {
+    "101": 6,
+    "102": 13,
+    "103": 2,
+    "104": 8,
+    "105": 10,
+    "106": 12
+   },
+   "2026-09-15": {
+    "101": 6,
+    "102": 11,
+    "103": 15,
+    "104": 7,
+    "105": 10,
+    "106": 12
+   },
+   "2026-09-16": {
+    "101": 6,
+    "102": 11,
+    "103": 14,
+    "104": 4,
+    "105": 10,
+    "106": 12
+   },
+   "2026-09-17": {
+    "101": 6,
+    "102": 9,
+    "103": 13,
+    "104": 4,
+    "105": 10,
+    "106": 12
+   },
+   "2026-09-18": {
+    "101": 6,
+    "102": 8,
+    "103": 13,
+    "104": 3,
+    "105": 9,
+    "106": 11
+   },
+   "2026-09-19": {
+    "101": 4,
+    "102": 6,
+    "103": 13,
+    "104": 2,
+    "105": 7,
+    "106": 11
+   },
+   "2026-09-20": {
+    "101": 4,
+    "102": 6,
+    "103": 13,
+    "104": 2,
+    "105": 7,
+    "106": 11
+   },
+   "2026-09-21": {
+    "101": 3,
+    "102": 6,
+    "103": 13,
+    "104": 2,
+    "105": 7,
+    "106": 11
+   },
+   "2026-09-22": {
+    "101": 2,
+    "102": 5,
+    "103": 12,
+    "104": 8,
+    "105": 7,
+    "106": 11
+   },
+   "2026-09-23": {
+    "101": 1,
+    "102": 1,
+    "103": 11,
+    "104": 8,
+    "105": 6,
+    "106": 10
+   },
+   "2026-09-24": {
+    "101": 1,
+    "102": 1,
+    "103": 11,
+    "104": 7,
+    "105": 3,
+    "106": 10
+   },
+   "2026-09-25": {
+    "101": 12,
+    "102": 1,
+    "103": 10,
+    "104": 7,
+    "105": 3,
+    "106": 9
+   },
+   "2026-09-26": {
+    "101": 12,
+    "102": 9,
+    "103": 9,
+    "104": 7,
+    "105": 3,
+    "106": 8
+   },
+   "2026-09-27": {
+    "101": 12,
+    "102": 9,
+    "103": 9,
+    "104": 7,
+    "105": 3,
+    "106": 8
+   },
+   "2026-09-28": {
+    "101": 7,
+    "102": 9,
+    "103": 8,
+    "104": 6,
+    "105": 3,
+    "106": 8
+   },
+   "2026-09-29": {
+    "101": 7,
+    "102": 9,
+    "103": 8,
+    "104": 4,
+    "105": 1,
+    "106": 8
+   },
+   "2026-09-30": {
+    "101": 6,
+    "102": 8,
+    "103": 7,
+    "104": 4,
+    "105": 1,
+    "106": 7
+   },
+   "2026-10-01": {
+    "101": 6,
+    "102": 8,
+    "103": 8,
+    "104": 2,
+    "105": 1,
+    "106": 7
+   },
+   "2026-10-02": {
+    "101": 6,
+    "102": 7,
+    "103": 8,
+    "104": 2,
+    "105": 12,
+    "106": 6
+   },
+   "2026-10-03": {
+    "101": 6,
+    "102": 7,
+    "103": 8,
+    "104": 2,
+    "105": 12,
+    "106": 6
+   },
+   "2026-10-04": {
+    "101": 6,
+    "102": 7,
+    "103": 8,
+    "104": 2,
+    "105": 12,
+    "106": 6
+   },
+   "2026-10-05": {
+    "101": 6,
+    "102": 7,
+    "103": 8,
+    "104": 14,
+    "105": 12,
+    "106": 6
+   },
+   "2026-10-06": {
+    "101": 5,
+    "102": 7,
+    "103": 8,
+    "104": 14,
+    "105": 12,
+    "106": 4
+   },
+   "2026-10-07": {
+    "101": 3,
+    "102": 6,
+    "103": 7,
+    "104": 14,
+    "105": 12,
+    "106": 3
+   },
+   "2026-10-08": {
+    "101": 3,
+    "102": 2,
+    "103": 7,
+    "104": 12,
+    "105": 11,
+    "106": 3
+   },
+   "2026-10-09": {
+    "101": 2,
+    "102": 1,
+    "103": 6,
+    "104": 11,
+    "105": 11,
+    "106": 3
+   },
+   "2026-10-10": {
+    "101": 1,
+    "102": 1,
+    "103": 5,
+    "104": 10,
+    "105": 11,
+    "106": 3
+   },
+   "2026-10-11": {
+    "101": 1,
+    "102": 1,
+    "103": 5,
+    "104": 10,
+    "105": 11,
+    "106": 3
+   },
+   "2026-10-12": {
+    "101": 11,
+    "102": 13,
+    "103": 4,
+    "104": 10,
+    "105": 11,
+    "106": 3
+   },
+   "2026-10-13": {
+    "101": 11,
+    "102": 12,
+    "103": 4,
+    "104": 10,
+    "105": 11,
+    "106": 3
+   },
+   "2026-10-14": {
+    "101": 11,
+    "102": 11,
+    "103": 3,
+    "104": 10,
+    "105": 10,
+    "106": 3
+   },
+   "2026-10-15": {
+    "101": 8,
+    "102": 11,
+    "103": 3,
+    "104": 10,
+    "105": 10,
+    "106": 3
+   },
+   "2026-10-16": {
+    "101": 8,
+    "102": 11,
+    "103": 1,
+    "104": 9,
+    "105": 10,
+    "106": 2
+   },
+   "2026-10-17": {
+    "101": 8,
+    "102": 11,
+    "103": 1,
+    "104": 9,
+    "105": 10,
+    "106": 2
+   },
+   "2026-10-18": {
+    "101": 8,
+    "102": 11,
+    "103": 1,
+    "104": 9,
+    "105": 10,
+    "106": 2
+   },
+   "2026-10-19": {
+    "101": 8,
+    "102": 11,
+    "103": 14,
+    "104": 9,
+    "105": 10,
+    "106": 15
+   },
+   "2026-10-20": {
+    "101": 4,
+    "102": 12,
+    "103": 10,
+    "104": 9,
+    "105": 10,
+    "106": 14
+   },
+   "2026-10-21": {
+    "101": 4,
+    "102": 10,
+    "103": 10,
+    "104": 8,
+    "105": 8,
+    "106": 14
+   },
+   "2026-10-22": {
+    "101": 4,
+    "102": 8,
+    "103": 9,
+    "104": 7,
+    "105": 8,
+    "106": 14
+   },
+   "2026-10-23": {
+    "101": 2,
+    "102": 8,
+    "103": 9,
+    "104": 7,
+    "105": 7,
+    "106": 13
+   },
+   "2026-10-24": {
+    "101": 1,
+    "102": 8,
+    "103": 8,
+    "104": 7,
+    "105": 8,
+    "106": 13
+   },
+   "2026-10-25": {
+    "101": 1,
+    "102": 8,
+    "103": 8,
+    "104": 7,
+    "105": 8,
+    "106": 13
+   },
+   "2026-10-26": {
+    "101": 9,
+    "102": 6,
+    "103": 8,
+    "104": 7,
+    "105": 6,
+    "106": 13
+   },
+   "2026-10-27": {
+    "101": 9,
+    "102": 6,
+    "103": 8,
+    "104": 7,
+    "105": 6,
+    "106": 12
+   },
+   "2026-10-28": {
+    "101": 9,
+    "102": 6,
+    "103": 7,
+    "104": 7,
+    "105": 6,
+    "106": 12
+   },
+   "2026-10-29": {
+    "101": 9,
+    "102": 6,
+    "103": 7,
+    "104": 7,
+    "105": 5,
+    "106": 12
+   },
+   "2026-10-30": {
+    "101": 9,
+    "102": 6,
+    "103": 7,
+    "104": 6,
+    "105": 4,
+    "106": 12
+   },
+   "2026-10-31": {
+    "101": 8,
+    "102": 6,
+    "103": 6,
+    "104": 6,
+    "105": 3,
+    "106": 12
+   }
+  }
+ },
+ "hendelser": {
+  "H1": "varenummer med ledende nuller i varesystemet og nettbutikken (004711), uten i kassen og lageret (4711)",
+  "H2": "varesystemet: desimalkomma og dd.MM.yyyy",
+  "H3": "004711 UTPRIS 1299,00 -> 1399,00 i uttrekket 2026-10-01T05:00:00",
+  "H4": "003178 (Løpesekk 12 l) LOP03 -> FRI03 i uttrekket 2026-09-01T05:00:00",
+  "H5": "106 i aktor fra uttrekket 2026-09-01T05:00:00, AAPNET_DT 05.09.2026, salg fra 2026-09-05",
+  "H6": "006652 (Sykkellykt basic) STATUS U i uttrekket 2026-10-01T05:00:00",
+  "H7": "7792 av 19845 kvitteringer uten memberNo",
+  "H8": "6 linjer med sku 9999 på salgsdato 2026-08-14",
+  "H9": "746 returlinjer (negativ qty)",
+  "H10": "campaignCode i kvitteringslinje fra salgsdato 2026-10-01 (filen 2026-10-02T06:00:00)",
+  "H11": "én linje to ganger i data/landing/kassio/kvitteringslinje/kvitteringslinje_20260822T0600.csv",
+  "H12": "filene for 2026-09-12 kom 2026-09-14T09:30:00 (ingen kassefil 2026-09-13T06:00)",
+  "H13": "44 kvitteringer og 150 nettordrer med UTC-dato dagen før norsk dato",
+  "H14": "300042 SILVER -> GOLD i uttrekket 2026-09-20, postnummer 0367 -> 7014 i uttrekket 2026-10-10",
+  "H15": "nettordre fra 300999 (ikke i kundeklubben) på salgsdato 2026-10-03",
+  "H16": "ingen lagerfil på søndager",
+  "H17": "vare 004492 tom i butikk 102 fra 2026-09-29 til 2026-10-05 (uke 40)"
+ }
+}

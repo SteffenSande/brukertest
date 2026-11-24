@@ -1,0 +1,63 @@
+bundle:
+  name: specly-kurs
+
+# Katalog, skjema og volum er variabler: hver deltaker har sin egen Databricks.
+# Standard i Databricks Free: katalog workspace, skjema toppfart. Endre med --var, f.eks.
+#   databricks bundle deploy --var="skjema=toppfart_kari"
+# Arbeidsflaten kommer fra Databricks CLI-profilen (databricks auth login), ikke fra denne filen.
+
+# Én utrullingstilstand per skjema. Uten dette deler alle skjemaene samme tilstand, og en utrulling til et nytt skjema
+# ville flyttet pipelinen og skjemaet fra det forrige.
+workspace:
+  root_path: ~/.bundle/${bundle.name}/${var.skjema}
+variables:
+  katalog:
+    description: Katalogen tabellene lages i.
+    default: workspace
+  skjema:
+    description: Skjemaet tabellene lages i.
+    default: toppfart
+  volum:
+    description: Volumet med landingsfilene (landing/<kilde>/<objekt>/<objekt>_ÅÅÅÅMMDDThhmm.<filtype>).
+    default: landing
+
+# Bare koden trenger å ligge i arbeidsflaten.
+sync:
+  exclude:
+    - data/**
+    - fasit/**
+    - tester/**
+    - docs/**
+    - specly/**
+    - tools/**
+
+resources:
+  schemas:
+    skjema:
+      catalog_name: ${var.katalog}
+      name: ${var.skjema}
+      comment: Specly-kurset (Toppfart Sport AS). Tabellene lages av pipelinen, fra Specly-kontraktene.
+  volumes:
+    landing:
+      catalog_name: ${var.katalog}
+      schema_name: ${resources.schemas.skjema.name}
+      name: ${var.volum}
+      volume_type: MANAGED
+      comment: Filene slik kildene leverer dem.
+  pipelines:
+    toppfart:
+      name: Specly-kurs ${var.skjema}
+      serverless: true
+      development: true
+      catalog: ${var.katalog}
+      schema: ${resources.schemas.skjema.name}
+      # Mappen legges i sys.path, så tabellfilene kan importere funksjonspakken `plattform`.
+      root_path: ./databricks/pyspark
+      configuration:
+        plattform.landing: /Volumes/${var.katalog}/${var.skjema}/${var.volum}
+        # salg_dato regnes fra UTC til norsk tid med from_utc_timestamp, som forutsetter at økten står i UTC.
+        spark.sql.session.timeZone: UTC
+      libraries:
+        # Generert av ./generer fra kontraktene. Ikke rediger for hånd.
+        - glob:
+            include: ./databricks/pyspark/tabeller/**

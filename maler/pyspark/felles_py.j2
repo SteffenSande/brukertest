@@ -1,0 +1,45 @@
+{#- Felles makroer for malene. Hver mal får bare `data_contract` (én kontrakt); kryss-fakta står i modell.j2
+    (tools/modell.py). -#}
+
+{#- Tekst som Python-streng. -#}
+{%- macro s(x) -%}
+"{{ (x or '')|string|replace('\\', '\\\\')|replace('"', '\\"')|replace('\n', '\\n') }}"
+{%- endmacro -%}
+
+{#- Liste av tekster som Python-liste. -#}
+{%- macro liste(xs) -%}
+[{% for x in xs %}{{ s(x) }}{{ ', ' if not loop.last }}{% endfor %}]
+{%- endmacro -%}
+
+{#- Toppen av filen: kontraktens beskrivelse som docstring, og hvor filen kommer fra. -#}
+{%- macro topp(dc, t) -%}
+{%- set sc = dc.schema_[0] -%}
+"""{{ t.navn }}: {{ (sc.description or '')|replace('"""', "'''") }}
+
+GENERERT av ./generer (maler/pyspark/{{ t.mal }}.py.j2) fra kontrakten {{ t.fil }}.
+Endre kontrakten (i Specly eller Git) og generer på nytt. En endring for hånd her overskrives ved neste generering.
+"""
+{%- endmacro -%}
+
+{#- Kolonnelisten fra kontrakten: navn, datatype, beskrivelse. -#}
+{%- macro kolonner(dc) -%}
+KOLONNER = [
+{%- for c in dc.schema_[0].properties %}
+    Kolonne({{ s(c.name) }}, {{ s(c.physicalType) }}, {{ s(c.description) }}),
+{%- endfor %}
+]
+{%- endmacro -%}
+
+{#- Dekoratoren: tabellnavn, beskrivelse, skjema og tabellegenskaper fra kontrakten. Uten beskrivelse ingen comment,
+    så Catalog Explorer ikke viser en tom kommentar. -#}
+{%- macro dekorator(dc, hva) -%}
+{%- set sc = dc.schema_[0] -%}
+@dp.{{ hva }}(
+    name={{ s(sc.name) }},
+{%- if (sc.description or '')|trim %}
+    comment={{ s(sc.description) }},
+{%- endif %}
+    schema=ddl(KOLONNER),
+    table_properties=egenskaper({{ s(dc.id) }}, {{ s(dc.status) }}),
+)
+{%- endmacro -%}

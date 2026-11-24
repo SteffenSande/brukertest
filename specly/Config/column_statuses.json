@@ -1,0 +1,29 @@
+[
+  {
+    "uuid": "7d18d05b-c16d-44fa-a665-42f187918c2e",
+    "name": "Skisse",
+    "description": "",
+    "statusType": "not_started",
+    "color": "#94a3b8",
+    "isActive": true,
+    "order": 0
+  },
+  {
+    "uuid": "4a66074f-bb33-4cd3-8ad2-72c49fb0b373",
+    "name": "Under arbeid",
+    "description": "",
+    "statusType": "in_progress",
+    "color": "#3b82f6",
+    "isActive": true,
+    "order": 1
+  },
+  {
+    "uuid": "a3efaf87-d00f-453e-9416-763a66f8e992",
+    "name": "Ferdig",
+    "description": "",
+    "statusType": "done",
+    "color": "#22c55e",
+    "isActive": true,
+    "order": 2
+  }
+]

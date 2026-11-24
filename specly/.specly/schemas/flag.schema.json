@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/V3ConfigFlag",
+  "definitions": {
+    "V3ConfigFlag": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "systemKey": {
+          "type": "string",
+          "description": "ODCS `primaryKey`/`businessKey`/`required`/`unique` slot this flag fills on export; at most one flag per key project-wide."
+        },
+        "phasingOut": {
+          "type": "boolean",
+          "description": "Governance: the flag is being phased out — still allowed, but a column carrying it is a warning (`flag.phasingOut:<name>`). Absent = false."
+        },
+        "phasingOutNote": {
+          "type": "string",
+          "description": "Why the flag is being phased out, or what to use instead. Absent = none."
+        }
+      },
+      "required": [
+        "name",
+        "description"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

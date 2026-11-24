@@ -1,0 +1,48 @@
+{%- import 'felles_py.j2' as f -%}
+{%- from 'modell.j2' import modell -%}
+{#- Bronze: rensing og typer med kildesystemets format, så historikk (SCD2) over alle leveransene i raw. -#}
+{%- set dc = data_contract -%}
+{%- set t = modell.tabeller[dc.schema_[0].name] -%}
+{%- set ks = modell.kildesystemer[t.kildesystem] -%}
+{%- set data = t.kolonner|rejectattr('navn', 'in', t.standard)|list -%}
+{%- set raw = data[0].opp[0].rsplit('.', 1)[0] -%}
+{%- set format = [] -%}
+{%- for felt, arg in [('datoformat', 'dato'), ('tidsformat', 'tid'), ('desimaltegn', 'desimaltegn'), ('tidssone', 'tidssone')] -%}
+{%- if ks[felt] %}{% set _ = format.append(arg ~ '=' ~ f.s(ks[felt])) %}{% endif -%}
+{%- endfor -%}
+{{ f.topp(dc, t) }}
+from pyspark import pipelines as dp
+
+from plattform.bronze import Kildeformat, Rens, rens_og_cast
+from plattform.felles import Kolonne, ddl, egenskaper, les_tabell, velg
+from plattform.historikk import lag_historikk
+
+{{ f.kolonner(dc) }}
+
+# Kildesystemet {{ t.kildesystem }}: slik tekst blir dato, tidspunkt og desimaltall.
+KILDEFORMAT = Kildeformat({{ format|join(', ') }})
+
+
+{{ f.dekorator(dc, 'materialized_view') }}
+def {{ t.navn }}():
+    """Rensing, typer og historikk (SCD2) over {{ raw }}. Uttrekk: {{ ks.uttrekk }}."""
+    renset = rens_og_cast(
+        les_tabell({{ f.s(raw) }}),
+        kildeformat=KILDEFORMAT,
+        kolonner=[
+{%- for c in data %}
+{%- set kilde = modell.kolonne[c.opp[0]] %}
+{%- set args = [f.s(c.navn)] %}
+{%- if c.rensing %}{% set _ = args.append('rensing=' ~ f.liste(c.rensing)) %}{% endif %}
+{%- if (kilde.type or '')|lower != (c.type or '')|lower %}{% set _ = args.append('til_type=' ~ f.s(c.type)) %}{% endif %}
+            Rens({{ args|join(', ') }}),
+{%- endfor %}
+        ],
+    )
+    versjoner = lag_historikk(
+        renset,
+        nokkel={{ f.liste(t.kolonner|selectattr('bk')|map(attribute='navn')|list) }},
+        tabell={{ f.s(t.navn) }},
+        fullt_uttrekk={{ 'True' if ks.uttrekk == 'Fullt' else 'False' }},
+    )
+    return velg(versjoner, KOLONNER)

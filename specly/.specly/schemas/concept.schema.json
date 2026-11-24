@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/V3Concept",
+  "definitions": {
+    "V3Concept": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "downstreamName": {
+          "type": "string"
+        },
+        "developerNote": {
+          "type": "string"
+        },
+        "dataType": {
+          "type": "string",
+          "description": "Resolved data-type name, omitted when unset."
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/V3ConceptColumn"
+          }
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/V3ConceptRule"
+          }
+        }
+      },
+      "description": "`Concepts/<name>.md` frontmatter — the human-editable business-concept format that replaced the `Config/business_concept*.json` triad. `name` is written on export and preferred on import (`parse_concept_files`, `services/sync/src/github_builders/import_parser.rs`) over the file's own basename, since the basename is sanitized to `[a-zA-Z0-9-_]` and can't carry a name like \"Leverandør\" intact; a hand-authored file with no `name:` key still falls back to its basename. `columns` links to `<table>.<column>` name paths (a literal `.` escaped as `\\.`, mirroring `V3Diagram.folder`'s `\\/`).",
+      "additionalProperties": true
+    },
+    "V3ConceptColumn": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/V3ConceptColumnLink"
+        }
+      ]
+    },
+    "V3ConceptColumnLink": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string",
+          "enum": [
+            "linked",
+            "excluded",
+            "linkedWithExceptions"
+          ]
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "manual",
+            "ruleBased"
+          ],
+          "description": "Omitted for a manual link; export writes `ruleBased` for a link a concept rule created."
+        },
+        "columnUuid": {
+          "type": "string",
+          "description": "Rename fallback when `path` no longer resolves on import; also written by export (and resolved first, ahead of `path`) when the path's table name is shared by more than one table and would otherwise be ambiguous."
+        },
+        "uuid": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "additionalProperties": false,
+      "description": "A `columns[]` entry's object form — a bare string is shorthand for a plain `linked` entry with no exceptions."
+    },
+    "V3ConceptRule": {
+      "type": "object",
+      "properties": {
+        "columnNamePattern": {
+          "type": "string"
+        },
+        "matchField": {
+          "type": "string"
+        },
+        "isRegex": {
+          "type": "boolean"
+        },
+        "tableNamePattern": {
+          "type": "string"
+        },
+        "tableTypeFilter": {
+          "type": "string"
+        },
+        "dataProductFilter": {
+          "type": "string"
+        },
+        "tableStatusFilter": {
+          "type": "string"
+        },
+        "columnTypeFilter": {
+          "type": "string"
+        },
+        "metadataFilter": {
+          "type": "string"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "order": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "columnNamePattern"
+      ],
+      "description": "`uuid`/`businessConceptUuid` are always minted/injected on import, never authored, so they carry no slot here — same as `V3QualityRule`'s `uuid`."
+    }
+  }
+}

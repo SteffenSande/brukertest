@@ -1,0 +1,37 @@
+[
+  {
+    "uuid": "fccb93b1-0493-423e-84aa-c1eb4ad1bd1a",
+    "name": "string",
+    "description": "Tekst. Databricks STRING."
+  },
+  {
+    "uuid": "71fa495b-f723-4cd0-bbea-59163967b361",
+    "name": "int",
+    "description": "32-bits heltall. Numre fra kildene (butikk, aktør, linje), antall og kalenderdeler."
+  },
+  {
+    "uuid": "c7a1312b-268b-406d-9772-b7efbf27a075",
+    "name": "bigint",
+    "description": "64-bits heltall. Nøklene: pk__, bk__, fb__ og fk__."
+  },
+  {
+    "uuid": "9c5d9695-c022-413f-8f4d-e7dcf695420c",
+    "name": "decimal(10,2)",
+    "description": "Desimaltall med to desimaler. Beløp i kroner."
+  },
+  {
+    "uuid": "0282f99c-f03d-40ce-9235-167ab2f5f94c",
+    "name": "date",
+    "description": "Dato uten klokkeslett."
+  },
+  {
+    "uuid": "9a393942-05e8-4868-9069-fd228b276c8c",
+    "name": "timestamp",
+    "description": "Tidspunkt, alltid i UTC."
+  },
+  {
+    "uuid": "750a3d0e-9b11-4ea2-a598-edc2c4a395b4",
+    "name": "boolean",
+    "description": "Sann/usann."
+  }
+]

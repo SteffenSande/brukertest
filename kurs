@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Kurskommandoene. Finnes bare fordi dette er et kurs; et ekte prosjekt har bare ./generer og ./kjor.
+#   ./kurs oppsett        skjema, landingsvolum, filene og kildetabellene i din Databricks
+#   ./kurs til M4         setter alt til starten av modul 4 (også bakover); til fasit/M5 gir sluttpunktet
+#   ./kurs fyll M4        legger inn tabellene modul 4 ikke ber deg lage selv
+#   ./kurs sjekk M4       sammenligner kontraktene og tallene med fasit for modul 2 til og med 4
+#                         (fra modul 8 også styringen og taggene, fra modul 9 begrepene, fra modul 10 dataproduktet)
+# Miljø: DATABRICKS_PROFILE (standard kurs), KATALOG (workspace), SKJEMA (toppfart). Se tools/kurs.py.
+set -euo pipefail
+cd "$(dirname "$0")"
+command -v uv >/dev/null || { echo "Fant ikke uv. Se moduler/M0.md, steg 6 (terminalsporet)."; exit 1; }
+exec uv run -q --no-project --with pyyaml python3 tools/kurs.py "$@"

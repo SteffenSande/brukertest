@@ -1,0 +1,267 @@
+[
+  {
+    "uuid": "7d5df8fe-e386-40d4-842c-0a50758601f5",
+    "name": "raw",
+    "description": "Kildens filer som de kom, i tabellform. Alle leveranser ligger oppå hverandre. Bare filformatet endres; systemkolonnene sier når, fra hvilken fil og fra hvilket kildesystem raden kom.",
+    "regexPattern": "^raw__",
+    "delimiter": "__",
+    "order": 0,
+    "columnTemplates": [
+      {
+        "name": "sys__lastet_tidspunkt",
+        "dataTypeUuid": "9a393942-05e8-4868-9069-fd228b276c8c",
+        "dataType": "timestamp"
+      },
+      {
+        "name": "sys__kildefil",
+        "dataTypeUuid": "fccb93b1-0493-423e-84aa-c1eb4ad1bd1a",
+        "dataType": "string"
+      },
+      {
+        "name": "sys__ukjente_kolonner",
+        "dataTypeUuid": "fccb93b1-0493-423e-84aa-c1eb4ad1bd1a",
+        "dataType": "string"
+      },
+      {
+        "name": "sys__kildesystem",
+        "dataTypeUuid": "fccb93b1-0493-423e-84aa-c1eb4ad1bd1a",
+        "dataType": "string"
+      }
+    ],
+    "columnFieldDefUuids": [
+      "eb59a8f1-4a22-46b8-966b-be22ee1354e8",
+      "8315bf1e-6c44-43dd-9d66-35be564dfd5b"
+    ],
+    "columnFields": [
+      "description",
+      "developerNote"
+    ],
+    "metadataFieldDefUuids": [],
+    "tableFields": [],
+    "showDownstreamName": true,
+    "disableUpstreamColumns": false
+  },
+  {
+    "uuid": "0647fa8a-1198-4a75-bf29-f288330cdd10",
+    "name": "bronze",
+    "description": "1:1 med kildetabellen: kildens kolonnenavn, rensing, datatyper, nøkkel og historikk (alltid SCD2). Ingen sammenslåing. Hver kolonne som brukes videre, har et nedstrømsnavn: navnet den får i sølv.",
+    "regexPattern": "^brz__",
+    "delimiter": "__",
+    "order": 1,
+    "columnTemplates": [
+      {
+        "name": "pk__{table_name}",
+        "flagUuids": [
+          "256fdbca-c359-4d1a-92f4-b82cf800392f"
+        ],
+        "dataTypeUuid": "c7a1312b-268b-406d-9772-b7efbf27a075",
+        "dataType": "bigint",
+        "flags": [
+          "PK"
+        ]
+      },
+      {
+        "name": "bk__{table_name}",
+        "dataTypeUuid": "c7a1312b-268b-406d-9772-b7efbf27a075",
+        "dataType": "bigint"
+      },
+      {
+        "name": "sys__gyldig_fra",
+        "dataTypeUuid": "9a393942-05e8-4868-9069-fd228b276c8c",
+        "dataType": "timestamp"
+      },
+      {
+        "name": "sys__gyldig_til",
+        "dataTypeUuid": "9a393942-05e8-4868-9069-fd228b276c8c",
+        "dataType": "timestamp"
+      },
+      {
+        "name": "sys__kildesystem",
+        "dataTypeUuid": "fccb93b1-0493-423e-84aa-c1eb4ad1bd1a",
+        "dataType": "string"
+      }
+    ],
+    "columnFieldDefUuids": [
+      "eb59a8f1-4a22-46b8-966b-be22ee1354e8",
+      "8315bf1e-6c44-43dd-9d66-35be564dfd5b",
+      "d68921e9-b40b-4567-992f-c4783f823859"
+    ],
+    "columnFields": [
+      "description",
+      "developerNote",
+      "rensing"
+    ],
+    "metadataFieldDefUuids": [],
+    "tableFields": [],
+    "showDownstreamName": true,
+    "disableUpstreamColumns": false
+  },
+  {
+    "uuid": "88c1dbfb-0ddd-4c8d-9021-de0f9614509c",
+    "name": "sølv",
+    "description": "Felles modell for bedriften: én tabell per forretningsobjekt, uansett kilde. Forretningens navn på norsk. Historikken følger bronze. Koblinger med fb__ mot en annen sølvtabells bk__.",
+    "regexPattern": "^slv__",
+    "delimiter": "__",
+    "order": 2,
+    "columnTemplates": [
+      {
+        "name": "pk__{table_name}",
+        "flagUuids": [
+          "256fdbca-c359-4d1a-92f4-b82cf800392f"
+        ],
+        "dataTypeUuid": "c7a1312b-268b-406d-9772-b7efbf27a075",
+        "dataType": "bigint",
+        "flags": [
+          "PK"
+        ]
+      },
+      {
+        "name": "bk__{table_name}",
+        "dataTypeUuid": "c7a1312b-268b-406d-9772-b7efbf27a075",
+        "dataType": "bigint"
+      },
+      {
+        "name": "sys__gyldig_fra",
+        "dataTypeUuid": "9a393942-05e8-4868-9069-fd228b276c8c",
+        "dataType": "timestamp"
+      },
+      {
+        "name": "sys__gyldig_til",
+        "dataTypeUuid": "9a393942-05e8-4868-9069-fd228b276c8c",
+        "dataType": "timestamp"
+      },
+      {
+        "name": "sys__kildesystem",
+        "dataTypeUuid": "fccb93b1-0493-423e-84aa-c1eb4ad1bd1a",
+        "dataType": "string"
+      }
+    ],
+    "columnFieldDefUuids": [
+      "eb59a8f1-4a22-46b8-966b-be22ee1354e8",
+      "8315bf1e-6c44-43dd-9d66-35be564dfd5b",
+      "d37c7d2f-bc0d-4e49-a500-07100e0a78cb"
+    ],
+    "columnFields": [
+      "description",
+      "developerNote",
+      "beregning"
+    ],
+    "metadataFieldDefUuids": [
+      "d54f8ca0-c326-4c79-a789-645a3d9fe1be",
+      "ca2f103f-3fd9-46e2-9b99-f646d09416e9"
+    ],
+    "tableFields": [
+      "radfilter",
+      "union_av"
+    ],
+    "showDownstreamName": true,
+    "disableUpstreamColumns": false
+  },
+  {
+    "uuid": "9a3e8478-228d-4055-a2fa-37e22610ac62",
+    "name": "gull dimensjon",
+    "description": "Dimensjon i en stjerne: én rad per forretningsobjekt (SCD1) eller per versjon (SCD2), etter feltet Historikk. Har alltid to spesialrader: -1 (Ukjent) og -2 (Mangler).",
+    "regexPattern": "^gld__d__",
+    "delimiter": "__",
+    "order": 3,
+    "columnTemplates": [
+      {
+        "name": "pk__{table_name}",
+        "flagUuids": [
+          "256fdbca-c359-4d1a-92f4-b82cf800392f"
+        ],
+        "dataTypeUuid": "c7a1312b-268b-406d-9772-b7efbf27a075",
+        "dataType": "bigint",
+        "flags": [
+          "PK"
+        ]
+      },
+      {
+        "name": "bk__{table_name}",
+        "dataTypeUuid": "c7a1312b-268b-406d-9772-b7efbf27a075",
+        "dataType": "bigint"
+      },
+      {
+        "name": "sys__kildesystem",
+        "dataTypeUuid": "fccb93b1-0493-423e-84aa-c1eb4ad1bd1a",
+        "dataType": "string"
+      }
+    ],
+    "columnFieldDefUuids": [
+      "eb59a8f1-4a22-46b8-966b-be22ee1354e8",
+      "8315bf1e-6c44-43dd-9d66-35be564dfd5b",
+      "4ef60f08-cddf-452a-8cef-d44d9488a8f3"
+    ],
+    "columnFields": [
+      "description",
+      "developerNote",
+      "klassifisering"
+    ],
+    "metadataFieldDefUuids": [
+      "bcb0228a-dd28-4305-a2e0-4f6d2cb2e67a",
+      "2124ef1a-2e4b-430d-b3dd-fad4f1525ea8"
+    ],
+    "tableFields": [
+      "historikk",
+      "eier"
+    ],
+    "showDownstreamName": true,
+    "gitFolder": "gull_dimensjon",
+    "disableUpstreamColumns": false
+  },
+  {
+    "uuid": "f4a9c1d3-56fc-4c5a-87d2-4bf5c26281a0",
+    "name": "gull fakta",
+    "description": "Fakta i en stjerne: én rad per hendelse, fra gjeldende versjoner i sølv. fk__ slår opp dimensjonens pk__: -1 når nøkkelen ikke finnes i dimensjonen, -2 når den var tom i kilden.",
+    "regexPattern": "^gld__f__",
+    "delimiter": "__",
+    "order": 4,
+    "columnTemplates": [
+      {
+        "name": "pk__{table_name}",
+        "flagUuids": [
+          "256fdbca-c359-4d1a-92f4-b82cf800392f"
+        ],
+        "dataTypeUuid": "c7a1312b-268b-406d-9772-b7efbf27a075",
+        "dataType": "bigint",
+        "flags": [
+          "PK"
+        ]
+      },
+      {
+        "name": "sys__kildesystem",
+        "dataTypeUuid": "fccb93b1-0493-423e-84aa-c1eb4ad1bd1a",
+        "dataType": "string"
+      }
+    ],
+    "columnFieldDefUuids": [
+      "eb59a8f1-4a22-46b8-966b-be22ee1354e8",
+      "8315bf1e-6c44-43dd-9d66-35be564dfd5b",
+      "d37c7d2f-bc0d-4e49-a500-07100e0a78cb",
+      "a75cc7ca-1faf-41a4-bd65-5c167404834c",
+      "4ef60f08-cddf-452a-8cef-d44d9488a8f3"
+    ],
+    "columnFields": [
+      "description",
+      "developerNote",
+      "beregning",
+      "datoeffektiv_pa",
+      "klassifisering"
+    ],
+    "metadataFieldDefUuids": [
+      "d54f8ca0-c326-4c79-a789-645a3d9fe1be",
+      "2fd22808-9f1f-4294-9db7-68a81b984792",
+      "2124ef1a-2e4b-430d-b3dd-fad4f1525ea8",
+      "6af3f004-6961-4f09-8815-9244c6947609"
+    ],
+    "tableFields": [
+      "radfilter",
+      "faktatype",
+      "eier",
+      "granularitet"
+    ],
+    "showDownstreamName": true,
+    "gitFolder": "gull_fakta",
+    "disableUpstreamColumns": false
+  }
+]

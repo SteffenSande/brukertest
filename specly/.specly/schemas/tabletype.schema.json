@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/V3ConfigTableType",
+  "definitions": {
+    "V3ConfigTableType": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "regexPattern": {
+          "type": "string"
+        },
+        "delimiter": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "columnTemplates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/V3ConfigColumnTemplate"
+          }
+        },
+        "columnFieldDefUuids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Metadata/column field-definition references — each element is a definition's `uuid`, or (new in the same push) its `key`."
+        },
+        "columnFields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "metadataFieldDefUuids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tableFields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "color": {
+          "type": "string"
+        },
+        "showDownstreamName": {
+          "type": "boolean"
+        },
+        "shortNameTemplate": {
+          "type": "string"
+        },
+        "gitFolder": {
+          "type": "string"
+        },
+        "disableUpstreamColumns": {
+          "type": "boolean"
+        },
+        "requiredFieldDefUuids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Governance: keys of the type's table fields a table of the type must fill (`field.required:<key>`). Absent = none."
+        },
+        "requiredColumnFieldDefUuids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Governance: keys of the type's column fields every column must fill (`field.required:<key>`). Absent = none."
+        },
+        "allowedFlagUuids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Governance: names of the flags a column of the type may carry (`flag.notAllowed:<name>`). Absent = every flag."
+        },
+        "systemColumnPattern": {
+          "type": "string",
+          "description": "Governance: a regex on column names; a matching column that is none of the type's `columnTemplates` is an unknown system column (`systemColumn.unknown`). Absent = no check."
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "regexPattern"
+      ],
+      "additionalProperties": false,
+      "description": "`columnFields`/`tableFields` are the readable companions of `columnFieldDefUuids`/`metadataFieldDefUuids` — each referenced definition's `key`, in the same order (a uuid naming no definition is skipped). With the uuid list present the two must agree or the import is rejected; alone, each key resolves to its definition. Companions are never stored: the export derives them again."
+    },
+    "V3ConfigColumnTemplate": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "dataTypeUuid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dataType": {
+          "type": "string"
+        },
+        "flagUuids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "required": {
+          "type": "boolean",
+          "description": "Governance: every table of the type must have this column (`systemColumn.missing:<name>`). Absent = false."
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false,
+      "description": "A standard column a table type adds. `dataType` is the readable companion of `dataTypeUuid` (the datatype's `name`), and `flags` of `flagUuids` (each flag's `name`): the import rejects the two disagreeing, and resolves the names when the uuids are absent."
+    }
+  }
+}

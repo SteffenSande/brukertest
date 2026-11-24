@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "rootFolder": "specly",
+  "configFolder": "Config",
+  "tablesFolder": "Tables",
+  "diagramsFolder": "Diagrams",
+  "dataProductsFolder": "DataProducts",
+  "tableTypeSubfolders": true,
+  "speclyJson": false,
+  "contracts": true,
+  "host": "https://test.specly.no",
+  "protectedBranches": []
+}

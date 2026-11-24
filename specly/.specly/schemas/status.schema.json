@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/V3ConfigStatus",
+  "definitions": {
+    "V3ConfigStatus": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "statusType": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "order": {
+          "type": "number"
+        },
+        "odcsStatus": {
+          "type": "string",
+          "description": "The ODCS lifecycle value (`active`, `retired`, …) a contract's `status` is read as this status from."
+        },
+        "isDefault": {
+          "type": "boolean",
+          "description": "The list's «standard» status: a table or column made in Specly gets it. At most one per file; absent = false."
+        }
+      },
+      "required": [
+        "name",
+        "description"
+      ],
+      "additionalProperties": false,
+      "description": "Shared shape for `table_statuses.json`, `column_statuses.json`, `diagram_statuses.json` and `data_product_statuses.json` — one schema for all four registries."
+    }
+  }
+}

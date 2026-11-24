@@ -1,0 +1,73 @@
+{%- import 'felles_py.j2' as f -%}
+{%- import 'plattform.j2' as p -%}
+{%- from 'modell.j2' import modell -%}
+{#- Gull fakta: fra gjeldende versjoner i sølv (+ Radfilter).
+    fk__ (relasjon mot en dimensjons pk__): hashen av oppstrømsverdiene (et fb__ er allerede hashen) slås opp mot
+    dimensjonens bk__ og blir dimensjonens pk__; tom nøkkel = -2, ingen treff = -1. Mot en SCD2-dimensjon datoeffektivt.
+    Beregning regnes etter de andre kolonnene, over faktaens navn. pk__ = hash av BK-kolonnene.
+    Faktatype «Periodisk øyeblikksbilde»: én rad per nøkkel i hovedtabellen og dag i kalenderen (den andre
+    oppstrømstabellen, med én BK-kolonne av typen date), med versjonen som gjaldt ved slutten av dagen. -#}
+{%- set dc = data_contract -%}
+{%- set t = modell.tabeller[dc.schema_[0].name] -%}
+{%- set bk = t.kolonner|selectattr('bk')|list -%}
+{%- set hoved = bk[0].opp[0].rsplit('.', 1)[0] -%}
+{%- set data = t.kolonner|rejectattr('navn', 'in', t.standard)|list -%}
+{%- set oppslag = [] -%}
+{%- for c in data %}{% for r in c.rel %}{% set tt, tk = r.rsplit('.', 1) %}{% if tk == 'pk__' ~ tt %}{% set _ = oppslag.append({'k': c, 'dim': modell.tabeller[tt]}) %}{% endif %}{% endfor %}{% endfor -%}
+{%- set fk = oppslag|map(attribute='k')|map(attribute='navn')|list -%}
+{%- set oyeblikk = t.faktatype == 'Periodisk øyeblikksbilde' -%}
+{%- set kalender = [] -%}
+{%- for c in data if oyeblikk %}{% for o in c.opp %}{% set tb = o.rsplit('.', 1)[0] %}{% if tb != hoved and tb not in kalender %}{% set _ = kalender.append(tb) %}{% endif %}{% endfor %}{% endfor -%}
+{%- if oyeblikk %}{% set dag = kalender[0] ~ '.' ~ (modell.tabeller[kalender[0]].kolonner|selectattr('bk')|first).navn %}{% endif -%}
+{%- set kopier = data|rejectattr('beregning')|list -%}
+{%- set beregnet = data|selectattr('beregning')|list -%}
+
+{#- Verdien til en kolonne som ikke er Beregning: fk__ = nøkkelhashen (et fb__ kopieres, det er hashen), ellers kopi. -#}
+{%- macro verdi(c) -%}
+{%- if c.navn in fk and not (c.opp|length == 1 and c.opp[0].rsplit('.', 1)[1].startswith('fb__')) -%}
+nokkel_av({% for o in c.opp %}{{ f.s(o) }}{{ ', ' if not loop.last }}{% endfor %})
+{%- else -%}
+kopi({{ f.s(c.opp[0]) }})
+{%- endif -%}
+{%- endmacro -%}
+{%- set ns = namespace(nokkel=false) -%}
+{%- for c in kopier %}{% if verdi(c).startswith('nokkel_av') %}{% set ns.nokkel = true %}{% endif %}{% endfor -%}
+{{ f.topp(dc, t) }}
+from pyspark import pipelines as dp
+
+from plattform.felles import Kolonne, ddl, egenskaper, kopi, {{ 'nokkel_av, ' if ns.nokkel }}velg
+{%- if oyeblikk %}
+from plattform.gull import lag_kolonner, med_primaernokkel, oyeblikksbilde{{ ', sla_opp_nokkel' if oppslag }}
+{%- else %}
+from plattform.gull import gjeldende_versjoner, lag_kolonner, med_primaernokkel{{ ', sla_opp_nokkel' if oppslag }}
+{%- endif %}
+
+{{ f.kolonner(dc) }}
+
+
+{{ f.dekorator(dc, 'materialized_view') }}
+def {{ t.navn }}():
+{%- if oyeblikk %}
+    """Periodisk øyeblikksbilde: én rad per rad i {{ hoved }} og dag i {{ kalender[0] }}, med versjonen som gjaldt ved slutten av dagen."""
+    rader = oyeblikksbilde({{ f.s(hoved) }}, kalender={{ f.s(kalender[0]) }}, dag={{ f.s(dag) }}{% if t.radfilter %}, radfilter={{ f.s(t.radfilter) }}{% endif %})
+{%- else %}
+    """Fakta fra gjeldende versjoner i {{ hoved }}."""
+    rader = gjeldende_versjoner({{ f.s(hoved) }}{% if t.radfilter %}, radfilter={{ f.s(t.radfilter) }}{% endif %})
+{%- endif %}
+    fakta = lag_kolonner(rader, {
+{%- for c in kopier %}
+        {{ f.s(c.navn) }}: {{ verdi(c) }},
+{%- endfor %}
+{%- if p.kildesystem in t.standard %}
+        {{ f.s(p.kildesystem) }}: kopi({{ f.s(hoved ~ '.' ~ p.kildesystem) }}),
+{%- endif %}
+    }{% if beregnet %}, beregninger={
+{%- for c in beregnet %}
+        {{ f.s(c.navn) }}: ({{ f.s(c.beregning) }}, {{ f.s(c.type) }}),
+{%- endfor %}
+    }{% endif %})
+{%- for o in oppslag %}
+    fakta = sla_opp_nokkel(fakta, {{ f.s(o.k.navn) }}, dimensjon={{ f.s(o.dim.navn) }}{% if o.dim.historikk == 'SCD2' %}, datoeffektiv_pa={{ f.s(o.k.datoeffektiv) }}{% endif %}{% set n = o.dim.kolonner|selectattr('bk')|list|length %}{% if n != 1 %}, nokkeldeler={{ n }}{% endif %})
+{%- endfor %}
+    fakta = med_primaernokkel(fakta, nokkel={{ f.liste(bk|map(attribute='navn')|list) }}, tabell={{ f.s(t.navn) }})
+    return velg(fakta, KOLONNER)

@@ -1,0 +1,29 @@
+{%- import 'felles_py.j2' as f -%}
+{%- from 'modell.j2' import modell -%}
+{#- Raw: streaming-tabell med Auto Loader. Stien er <kildesystem>/<objekt>/<objekt>_*.<filformat>, der objektet er
+    siste del av tabellnavnet raw__<kilde>__<objekt>. Filformat og skilletegn fra kildesystemet. -#}
+{%- set dc = data_contract -%}
+{%- set t = modell.tabeller[dc.schema_[0].name] -%}
+{%- set ks = modell.kildesystemer[t.kildesystem] -%}
+{%- set objekt = t.navn.split('__')[2] -%}
+{{ f.topp(dc, t) }}
+from pyspark import pipelines as dp
+
+from plattform.felles import Kolonne, ddl, egenskaper
+from plattform.raw import les_landingsfiler
+
+{{ f.kolonner(dc) }}
+
+
+{{ f.dekorator(dc, 'table') }}
+def {{ t.navn }}():
+    """Nye filer fra {{ t.kildesystem }} ({{ ks.filformat }}). Felt filen har som kontrakten ikke kjenner, havner i sys__ukjente_kolonner."""
+    return les_landingsfiler(
+        {{ f.s(t.kildesystem ~ '/' ~ objekt ~ '/' ~ objekt ~ '_*.' ~ ks.filformat) }},
+        filformat={{ f.s(ks.filformat) }},
+{%- if ks.filformat == 'csv' %}
+        skilletegn={{ f.s(ks.skilletegn) }},
+{%- endif %}
+        kildesystem={{ f.s(t.kildesystem) }},
+        kolonner=KOLONNER,
+    )
